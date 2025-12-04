@@ -1061,12 +1061,6 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:0:420192731',
-      'hacks': 'HPP',
-      'description': ''
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:1:919331020',
       'hacks': 'HPP, KNIFEBOT',
       'description': ''
