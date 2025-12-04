@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS 1.6 HNS-Players Database</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="dark-theme">
+    <div class="container">
+        <div class="header">
+            <h1 class="title">
+                <i class="fas fa-users"></i>
+                CS 1.6 HNS-Players Database
+            </h1>
+            <div class="header-buttons">
+                <button class="faq-toggle" id="faqToggle" title="FAQ">
+                    <i class="fas fa-question-circle"></i>
+                </button>
+                <button class="theme-toggle" id="themeToggle" title="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Поиск по нику, Steam ID (2/64), читам или описанию..."
+                    maxlength="50" />
+                <div id="searchCounter" class="search-counter">0/50</div>
+            </div>
+            <button id="sortToggle" class="sort-btn" type="button" title="Сортировка таблицы">
+                <i class="fas fa-sort"></i>
+            </button>
+            <button id="clearSearch" class="clear-btn" type="button" aria-label="Очистить поиск">
+                <i class="fas fa-backspace"></i>
+            </button>
+        </div>
+
+        <div class="table-container">
+            <table id="playersTable">
+                <thead>
+                    <tr>
+                        <th><i class="fas fa-user"></i> Никнейм</th>
+                        <th><i class="fab fa-steam"></i> Steam ID</th>
+                        <th><i class="fas fa-bug"></i> Читы</th>
+                        <th><i class="fas fa-info-circle"></i> Описание</th>
+                    </tr>
+                </thead>
+                <tbody id="playersTableBody">
+                    <tr>
+                        <td colspan="4" class="loading">
+                            <div class="loading-spinner"></div>
+                            Загрузка данных...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="stats" class="stats">
+            <i class="fas fa-chart-bar"></i>
+            Найдено игроков: <span id="playersCount">0</span>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="faqModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" aria-label="Закрыть">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <h2 class="modal-title">
+                <i class="fas fa-info-circle"></i>
+                О базе данных
+            </h2>
+
+            <div class="modal-body">
+                <section class="faq-section">
+                    <h3>Что это за сайт?</h3>
+                    <p>Это база данных игроков Counter-Strike 1.6 играющих на HNS (Hide and Seek) режиме. Она помогает
+                        новым игрокам заранее понимать, с кем они сталкиваются на серверах этого режима.</p>
+                </section>
+
+                <section class="faq-section">
+                    <h3>Виды читов</h3>
+                    <ul class="cheats-list">
+                        <li><strong>FURION</strong> — мультичит.</li>
+                        <li><strong>HPP</strong> — мультичит.</li>
+                        <li><strong>BLUE MONDAY</strong> — hns-чит.</li>
+                        <li><strong>KILABEEZ PREFIX</strong> — hns-чит.</li>
+                        <li><strong>ENHANDED</strong> — hns-чит.</li>
+                        <li><strong>RW</strong> — hns-чит.</li>
+                        <li><strong>NSTE RECORDER/NSTE HACK</strong> — hns-читы.</li>
+                        <li><strong>GAREY RECORDER/GAREY CRASHER</strong> — hns-читы.</li>
+                        <li><strong>SHREK</strong> — BLUE MONDAY.</li>
+                        <li><strong>ANTI FLASH</strong> — читерская функция, позволяющая не слепнуть от прямого
+                            попадания флеш‑гранаты.</li>
+                        <li><strong>KNIFEBOT</strong> — читерская функция, автоматически бьющая ножом с идеальной
+                            дистанцией и реакцией.</li>
+                        <li><strong>SCROLL HELPER</strong> — читерская функция, помогающая лучше бхопить или же
+                            ддранить/сгсить.</li>
+                        <li><strong>STRAFE HELPER</strong> — читерская функция, улучшающая стрейфы, тем самым помогающая
+                            лучше двигаться и набирать скорость.</li>
+                        <li><strong>RAGE STRAFE</strong> — читерская функция для набора скорости без использования
+                            стрейфов.</li>
+                        <li><strong>AUTO STRAFE</strong> — то же самое, что и «RAGE STRAFE», только уже с использованием
+                            стрейфов.</li>
+                    </ul>
+                </section>
+
+                <section class="faq-section">
+                    <h3>Как добавить игрока в базу?</h3>
+                    <p>Свяжитесь с администраторами через Telegram-канал, предоставив никнейм, Steam ID и доказательства
+                        использования читов (демо, скриншоты).</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="sortModal">
+        <div class="modal-content modal-sort">
+            <button class="modal-close" id="closeSortModal" aria-label="Закрыть">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <h2 class="modal-title">
+                <i class="fas fa-sort"></i>
+                Сортировка таблицы
+            </h2>
+
+            <div class="modal-body">
+                <div class="sort-group">
+                    <label for="hackFilter">Чит или его функция:</label>
+                    <select id="hackFilter" class="sort-select">
+                        <option value="">Не важно</option>
+                        <option value="none-first">Сначала не читеры</option>
+                        <option value="none-only">Только не читеры</option>
+                        <option value="FURION">FURION</option>
+                        <option value="HPP">HPP</option>
+                        <option value="BLUE MONDAY">BLUE MONDAY</option>
+                        <option value="KILABEEZ PREFIX">KILABEEZ PREFIX</option>
+                        <option value="ENHANDED">ENHANDED</option>
+                        <option value="RW">RW</option>
+                        <option value="NSTE RECORDER">NSTE RECORDER</option>
+                        <option value="NSTE HACK">NSTE HACK</option>
+                        <option value="GAREY RECORDER">GAREY RECORDER</option>
+                        <option value="GAREY CRASHER">GAREY CRASHER</option>
+                        <option value="SHREK">SHREK</option>
+                        <option value="ANTI FLASH">ANTI FLASH</option>
+                        <option value="KNIFEBOT">KNIFEBOT</option>
+                        <option value="SCROLL HELPER">SCROLL HELPER</option>
+                        <option value="STRAFE HELPER">STRAFE HELPER</option>
+                        <option value="RAGE STRAFE">RAGE STRAFE</option>
+                        <option value="AUTO STRAFE">AUTO STRAFE</option>
+                    </select>
+                </div>
+
+                <div class="sort-group">
+                    <label for="descFilter">Описание:</label>
+                    <select id="descFilter" class="sort-select">
+                        <option value="">Не важно</option>
+                        <option value="none-first">Сначала отсутствует</option>
+                        <option value="none-only">Только отсутствует</option>
+                        <option value="present-first">Сначала присутствует</option>
+                        <option value="present-only">Только присутствует</option>
+                    </select>
+                </div>
+
+                <div class="sort-group">
+                    <label for="alphaSort">Алфавит по нику:</label>
+                    <select id="alphaSort" class="sort-select">
+                        <option value="">Не важно</option>
+                        <option value="asc">от А до Я (по)</option>
+                        <option value="desc">от Я до А (против)</option>
+                    </select>
+                </div>
+
+                <div class="sort-actions">
+                    <button id="applySortBtn" class="apply-sort-btn">
+                        <i class="fas fa-check"></i>
+                        Применить
+                    </button>
+                    <button id="resetSortBtn" class="reset-sort-btn">
+                        <i class="fas fa-undo"></i>
+                        Сбросить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://t.me/originalHNS" target="_blank" rel="noopener noreferrer" class="source-button" title="Источник">
+        <i class="fab fa-telegram-plane"></i>
+        <span class="source-label">Источник</span>
+    </a>
+
+    <script src="JS/database.js"></script>
+    <script src="JS/scripts.js"></script>
+</body>
+
+</html>
