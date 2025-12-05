@@ -1952,6 +1952,12 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:444002779',
       'hacks': 'HPP, KNIFEBOT',
       'description': ''
+    },
+    {
+      'nickname': 'm_t',
+      'steamID': 'STEAM_0:1:780956870',
+      'hacks': '',
+      'description': 'Норм игрок, хорошо слайдит'
     }
   ]
 };
