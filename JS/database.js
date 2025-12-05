@@ -1259,7 +1259,7 @@ window.DATABASE_JSON = {
       'nickname': 'Xpika!',
       'steamID': 'STEAM_0:1:712341768',
       'hacks': 'NSTE HACK, BLUE MONDAY',
-      'description': 'Sale BLUE MONDAY, Кидает майнеры людям'
+      'description': ''
     },
     {
       'nickname': '',
@@ -2024,4 +2024,5 @@ window.DATABASE_JSON = {
       'description': '40 летний не скуф, легенда хнс, занимается ютубом'
     }
   ]
+
 };
