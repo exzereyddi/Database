@@ -212,6 +212,12 @@ window.DATABASE_JSON = {
       'hacks': 'BLUE MONDAY',
       'description': 'Сын щлюхи'
     },
+     {
+      'nickname': 'Alfoso',
+      'steamID': '',
+      'hacks': 'ENHANDED',
+      'description': 'Сын щлюхи'
+    },
     {
       'nickname': 'night knight',
       'steamID': 'STEAM_0:1:500898415',
@@ -2030,4 +2036,5 @@ window.DATABASE_JSON = {
       'description': '40 летний не скуф, легенда хнс, занимается ютубом'
     }
   ]
+
 };
