@@ -194,12 +194,6 @@ window.DATABASE_JSON = {
           'aka vladdEftw, неплохо играет, но читер (если верить на слово бездарному скуфу — Proffi)'
     },
     {
-      'nickname': 'c0du #.?',
-      'steamID': 'STEAM_0:0:619833432',
-      'hacks': '',
-      'description': 'Бездарный долбоеб'
-    },
-    {
       'nickname': '[Svarog] Naruto',
       'steamID': 'STEAM_0:0:14313003',
       'hacks': '',
