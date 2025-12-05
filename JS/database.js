@@ -958,7 +958,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'tahoma',
       'steamID': 'STEAM_0:0:607296763',
-      'hacks': '',
+      'hacks': 'BROKOLY',
       'description': 'Бездарный хохлятский долбоеб'
     },
     {
@@ -2032,6 +2032,7 @@ window.DATABASE_JSON = {
   ]
 
 };
+
 
 
 
