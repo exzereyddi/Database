@@ -1100,9 +1100,9 @@ window.DATABASE_JSON = {
       'description': 'strafe'
     },
     {
-      'nickname': '',
+      'nickname': 'say message',
       'steamID': 'STEAM_0:1:526723171',
-      'hacks': 'HPP, STRAFE HELPER',
+      'hacks': 'FURION, HPP, STRAFE HELPER',
       'description': ''
     },
     {
@@ -2032,6 +2032,7 @@ window.DATABASE_JSON = {
   ]
 
 };
+
 
 
 
