@@ -917,11 +917,11 @@ window.DATABASE_JSON = {
       'hacks': 'BLUE MONDAY, KNIFEBOT',
       'description': 'Все думают что это девочка, а на деле парень'
     },
-    {
+   {
       'nickname': 'deamon',
       'steamID': 'STEAM_0:0:801203093',
-      'hacks': '',
-      'description': 'Норм игрок'
+      'hacks': 'ENHANDED',
+      'description': ''
     },
     {
       'nickname': 'Михос',
@@ -2032,6 +2032,7 @@ window.DATABASE_JSON = {
   ]
 
 };
+
 
 
 
