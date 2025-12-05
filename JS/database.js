@@ -439,7 +439,8 @@ window.DATABASE_JSON = {
       'nickname': 'baby flopcha',
       'steamID': 'STEAM_0:1:157280968',
       'hacks': 'HPP, ENHANDED',
-      'description': 'Зачем-то ее друг хотел меня задоксить хоть я и мирняк, не смогли('
+      'description':
+          'Зачем-то ее друг хотел меня задоксить хоть я и мирняк, не смогли('
     },
     {
       'nickname': 'hapk0tuk',
@@ -475,7 +476,7 @@ window.DATABASE_JSON = {
       'nickname': 'Horus',
       'steamID': 'STEAM_0:1:709305184',
       'hacks': 'SCROLL HELPER',
-      'description': 'Сын щлюхи'
+      'description': 'Сын щлюхи и хохол'
     },
     {
       'nickname': 'jake morton',
@@ -643,7 +644,8 @@ window.DATABASE_JSON = {
       'nickname': 'm1rc',
       'steamID': 'STEAM_0:1:72395838',
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
-      'description': 'Был админом на тимтахоме, спалили что с бмом, отняли админку'
+      'description':
+          'Был админом на тимтахоме, спалили что с бмом, отняли админку'
     },
     {
       'nickname': 'makenz',
@@ -840,7 +842,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Anti G2a KenT',
       'steamID': 'STEAM_0:0:85613058',
-      'hacks': 'BHOP HACK',
+      'hacks': 'BHOP',
       'description': 'Тупой хохол'
     },
     {
@@ -886,9 +888,21 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
+      'nickname': 'dUcey',
+      'steamID': 'STEAM_0:0:39450068',
+      'hacks': 'HPP',
+      'description': ''
+    },
+    {
       'nickname': 'z1Ndo^',
       'steamID': 'STEAM_0:0:162426195',
       'hacks': 'KNIFEBOT',
+      'description': ''
+    },
+    {
+      'nickname': 'kotak',
+      'steamID': 'STEAM_0:0:442978560',
+      'hacks': 'HPP, FURION',
       'description': ''
     },
     {
@@ -898,10 +912,23 @@ window.DATABASE_JSON = {
       'description': 'Все думают что это девочка, а на деле парень'
     },
     {
+      'nickname': 'deamon',
+      'steamID': 'STEAM_0:0:801203093',
+      'hacks': '',
+      'description': 'Норм игрок'
+    },
+    {
+      'nickname': 'Михос',
+      'steamID': 'STEAM_0:0:194266708',
+      'hacks': '',
+      'description': 'Скуф, ютубер'
+    },
+    {
       'nickname': 'КОТЭ',
       'steamID': 'STEAM_0:0:178230123',
       'hacks': 'HPP, STRAFE HELPER',
-      'description': 'Тупой казах, использует free-ip-stresser и ложит игроков с хнса'
+      'description':
+          'Тупой казах, использует free-ip-stresser и ложит игроков с хнса'
     },
     {
       'nickname': 'exzereyddi',
@@ -915,11 +942,12 @@ window.DATABASE_JSON = {
       'hacks': 'FURION',
       'description': 'Создатель данного чита'
     },
-     {
+    {
       'nickname': 'meachester',
       'steamID': '',
       'hacks': 'HPP',
-      'description': 'Бывший другалёк hpp forever\'a, играл только на проекте MakeFrag'
+      'description':
+          'Бывший другалёк hpp forever\'a, играл только на проекте MakeFrag'
     },
     {
       'nickname': 'tahoma',
@@ -960,12 +988,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:219829090',
-      'hacks': 'HPP',
-      'description': ''
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:24326663',
       'hacks': 'HPP',
       'description': ''
     },
@@ -1234,6 +1256,12 @@ window.DATABASE_JSON = {
       'description': 'Sale BLUE MONDAY, Кидает майнеры людям'
     },
     {
+      'nickname': 'Xpika!',
+      'steamID': 'STEAM_0:1:712341768',
+      'hacks': 'NSTE HACK, BLUE MONDAY',
+      'description': 'Sale BLUE MONDAY, Кидает майнеры людям'
+    },
+    {
       'nickname': '',
       'steamID': 'STEAM_0:1:841302560',
       'hacks': 'HPP, BLUE MONDAY',
@@ -1249,6 +1277,18 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:915282759',
       'hacks': 'HPP',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:180884837',
+      'hacks': 'NSTE HACK',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:851536371',
+      'hacks': 'BLUE MONDAY',
       'description': ''
     },
     {
@@ -1285,6 +1325,12 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:1293576',
       'hacks': 'RAGE STRAFE',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:901734902',
+      'hacks': 'HPP',
       'description': ''
     },
     {
@@ -1487,12 +1533,6 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:0:607296763',
-      'hacks': 'HPP',
-      'description': ''
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:1:772389605',
       'hacks': 'BLUE MONDAY',
       'description': ''
@@ -1579,12 +1619,6 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:775400681',
       'hacks': 'HPP, BLUE MONDAY, KILABEEZ PREFIX, ENHANDED',
-      'description': ''
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:500898415',
-      'hacks': 'FURION',
       'description': ''
     },
     {
@@ -1871,6 +1905,24 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
+      'steamID': 'STEAM_0:0:418649797',
+      'hacks': 'BLUE MONDAY',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:634860455',
+      'hacks': 'NSTE HACK',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:854034058',
+      'hacks': 'NSTE HACK',
+      'description': ''
+    },
+    {
+      'nickname': '',
       'steamID': 'STEAM_0:1:941963032',
       'hacks': 'HPP, ENHANDED, NSTE RECORDER (maybe)',
       'description': ''
@@ -1953,12 +2005,14 @@ window.DATABASE_JSON = {
       'hacks': '',
       'description': 'Норм игрок, хорошо слайдит'
     },
-    {  'nickname': 'KauZeR',
+    {
+      'nickname': 'KauZeR',
       'steamID': 'STEAM_0:0:2159073',
       'hacks': '',
       'description': '30 летний скуф с детьми, только начал играть'
     },
-    {  'nickname': 'z1za',
+    {
+      'nickname': 'z1za',
       'steamID': 'STEAM_0:0:31346261',
       'hacks': '',
       'description': '30 летний скуф, только начал играть'

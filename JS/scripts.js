@@ -324,6 +324,21 @@ class PlayersDatabase {
       });
     }
 
+    result.sort((a, b) => {
+      const nicknameA = (a.nickname || '').toString().trim();
+      const nicknameB = (b.nickname || '').toString().trim();
+
+      const emptyA = nicknameA === '';
+      const emptyB = nicknameB === '';
+
+      if (emptyA && emptyB) return 0;
+      if (!emptyA && !emptyB) return 0;
+      if (emptyA) return 1;
+      if (emptyB) return -1;
+
+      return 0;
+    });
+
     this.filteredPlayers = result;
     this.renderTable();
     this.updateStats();
