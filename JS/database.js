@@ -921,6 +921,12 @@ window.DATABASE_JSON = {
       'hacks': 'FURION',
       'description': 'Создатель данного чита'
     },
+     {
+      'nickname': 'meachester',
+      'steamID': '',
+      'hacks': 'HPP',
+      'description': 'Бывший другалёк hpp forever\'a, играл только на проекте MakeFrag'
+    },
     {
       'nickname': 'tahoma',
       'steamID': 'STEAM_0:0:607296763',
