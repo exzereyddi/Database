@@ -1958,6 +1958,22 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:780956870',
       'hacks': '',
       'description': 'Норм игрок, хорошо слайдит'
+    },
+    {  'nickname': 'KauZeR',
+      'steamID': 'STEAM_0:0:2159073',
+      'hacks': '',
+      'description': '30 летний скуф с детьми, только начал играть'
+    },
+    {  'nickname': 'z1za',
+      'steamID': 'STEAM_0:0:31346261',
+      'hacks': '',
+      'description': '30 летний скуф, только начал играть'
+    },
+    {
+      'nickname': 'Наглый Голый',
+      'steamID': 'STEAM_0:0:11533687',
+      'hacks': '',
+      'description': '40 летний не скуф, легенда хнс, занимается ютубом'
     }
   ]
 };
