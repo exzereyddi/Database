@@ -906,6 +906,12 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
+      'nickname': '[SvaRoG] + ANTIMAT +',
+      'steamID': '',
+      'hacks': 'BLUE MONDAY, STEAMID CHANGER',
+      'description': 'Тупой чурка и лицемер'
+    },
+    {
       'nickname': 'безумна',
       'steamID': 'STEAM_0:0:142055738',
       'hacks': 'BLUE MONDAY, KNIFEBOT',
@@ -2024,5 +2030,4 @@ window.DATABASE_JSON = {
       'description': '40 летний не скуф, легенда хнс, занимается ютубом'
     }
   ]
-
 };
