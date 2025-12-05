@@ -509,12 +509,6 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
-      'nickname': 'katsumi',
-      'steamID': 'STEAM_0:1:567928255',
-      'hacks': 'BLUE MONDAY',
-      'description': 'Twink 1'
-    },
-    {
       'nickname': 'kentuha',
       'steamID': 'STEAM_0:1:580669724',
       'hacks': 'HPP, FURION',
@@ -2038,3 +2032,4 @@ window.DATABASE_JSON = {
   ]
 
 };
+
