@@ -138,7 +138,7 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:634091515',
       'hacks': 'BLUE MONDAY, GAREY RECORDER',
       'description': '',
-      'country residence': '🇷🇺'
+      'country residence': '🇧🇾'
     },
     {
       'nickname': 'Loncu',
@@ -2199,4 +2199,5 @@ window.DATABASE_JSON = {
       'proofs': 'https://t.me/database_proofs/39'
     }
   ]
+
 };
