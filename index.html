@@ -39,6 +39,9 @@
             <button id="sortToggle" class="sort-btn" type="button" title="Сортировка таблицы">
                 <i class="fas fa-sort"></i>
             </button>
+            <button id="resetSortTable" class="reset-sort-table-btn" type="button" title="Сбросить сортировку таблицы">
+                <i class="fas fa-undo"></i>
+            </button>
             <button id="clearSearch" class="clear-btn" type="button" aria-label="Очистить поиск">
                 <i class="fas fa-backspace"></i>
             </button>
@@ -52,11 +55,12 @@
                         <th><i class="fab fa-steam"></i> Steam ID</th>
                         <th><i class="fas fa-bug"></i> Читы</th>
                         <th><i class="fas fa-info-circle"></i> Описание</th>
+                        <th><i class="fas fa-globe-europe"></i> Страна проживания</th>
                     </tr>
                 </thead>
                 <tbody id="playersTableBody">
                     <tr>
-                        <td colspan="4" class="loading">
+                        <td colspan="5" class="loading">
                             <div class="loading-spinner"></div>
                             Загрузка данных...
                         </td>
@@ -98,7 +102,7 @@
                         <li><strong>KILABEEZ PREFIX</strong> — hns-чит.</li>
                         <li><strong>ENHANDED</strong> — hns-чит.</li>
                         <li><strong>RW</strong> — hns-чит.</li>
-						<li><strong>BROKOLY</strong> — hns-чит.</li>
+                        <li><strong>BROKOLY</strong> — hns-чит.</li>
                         <li><strong>NSTE RECORDER/NSTE HACK</strong> — hns-читы.</li>
                         <li><strong>GAREY RECORDER/GAREY CRASHER</strong> — hns-читы.</li>
                         <li><strong>SHREK</strong> — BLUE MONDAY.</li>
@@ -154,7 +158,7 @@
                         <option value="KILABEEZ PREFIX">KILABEEZ PREFIX</option>
                         <option value="ENHANDED">ENHANDED</option>
                         <option value="RW">RW</option>
-						<option value="BROKOLY">BROKOLY</option>
+                        <option value="BROKOLY">BROKOLY</option>
                         <option value="NSTE RECORDER">NSTE RECORDER</option>
                         <option value="NSTE HACK">NSTE HACK</option>
                         <option value="GAREY RECORDER">GAREY RECORDER</option>
@@ -191,6 +195,14 @@
                     </select>
                 </div>
 
+                <div class="sort-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="exactSteamId" checked>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Точное совпадение SteamID при поиске</span>
+                    </label>
+                </div>
+
                 <div class="sort-actions">
                     <button id="applySortBtn" class="apply-sort-btn">
                         <i class="fas fa-check"></i>
@@ -214,4 +226,4 @@
     <script src="JS/scripts.js"></script>
 </body>
 
-</html>
+</html>>
