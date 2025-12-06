@@ -1532,12 +1532,6 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:0:764235363',
-      'hacks': 'HPP',
-      'description': '66_alt'
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:0:205954164',
       'hacks': 'HPP',
       'description': ''
@@ -2240,3 +2234,4 @@ window.DATABASE_JSON = {
     }
   ]
 };
+
