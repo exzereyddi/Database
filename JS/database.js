@@ -4,7 +4,7 @@ window.DATABASE_JSON = {
       'nickname': '123',
       'steamID': 'STEAM_0:0:21942084',
       'hacks': 'HPP, SCROLL HELPER',
-      'description': 'Хуй знает какой из (популярный ник)'
+      'description': 'K1REEE !CH'
     },
     {
       'nickname': '666PRADA',
@@ -2032,6 +2032,7 @@ window.DATABASE_JSON = {
   ]
 
 };
+
 
 
 
