@@ -2224,6 +2224,14 @@ window.DATABASE_JSON = {
       'country residence': '🇺🇿'
     },
     {
+      'nickname': 'ceska',
+      'steamID': 'STEAM_0:1:4161816',
+      'hacks': 'HPP',
+      'description': '',
+      'proofs': 'https://t.me/database_proofs/51',
+      'country residence': '🇷🇺'
+    },
+    {
       'nickname': '	f0bosS',
       'steamID': 'STEAM_0:1:188789945',
       'hacks': 'BLUE MONDAY',
@@ -2231,7 +2239,4 @@ window.DATABASE_JSON = {
       'proofs': 'https://t.me/database_proofs/39'
     }
   ]
-
 };
-
-
