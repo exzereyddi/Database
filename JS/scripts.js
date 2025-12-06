@@ -1,7 +1,25 @@
+const COUNTRY_TOOLTIPS = {
+  '🇦🇱': 'Албания (Albania)',
+  '🇧🇾': 'Беларусь (Belarus)',
+  '🇩🇪': 'Германия (Germany)',
+  '🇩🇰': 'Дания (Danmark)',
+  '🇬🇧': 'Великобритания (Great Britain)',
+  '🇬🇪': 'Грузия (Georgia)',
+  '🇰🇿': 'Казахстан (Kazakhstan)',
+  '🇱🇹': 'Литва (Lithuania)',
+  '🇷🇺': 'Россия (Russian Federation)',
+  '🇹🇷': 'Турция (Turkey)',
+  '🇺🇦': 'Украина (Ukraine)',
+  '🇺🇸': 'США (United States of America)',
+  '🇺🇿': 'Узбекистан (Uzbekistan)',
+  '🇮🇱': 'Израиль (Israel)',
+  '🇪🇸': 'Испания (Spain)'
+};
+
 class PlayersDatabase {
   constructor() {
     this.sortFilters = {hack: '', description: '', alpha: ''};
-
+    this.exactSteamIdMatch = true;
     this.currentQuery = '';
 
     this.waitForDatabase()
@@ -39,6 +57,7 @@ class PlayersDatabase {
     this.initThemeToggle();
     this.initSearch();
     this.initSortControls();
+    this.initResetSortTable();
     this.applySorting();
   }
 
@@ -126,10 +145,12 @@ class PlayersDatabase {
       const hackSelect = document.getElementById('hackFilter');
       const descSelect = document.getElementById('descFilter');
       const alphaSelect = document.getElementById('alphaSort');
+      const exactCheckbox = document.getElementById('exactSteamId');
 
       if (hackSelect) hackSelect.value = this.sortFilters.hack || '';
       if (descSelect) descSelect.value = this.sortFilters.description || '';
       if (alphaSelect) alphaSelect.value = this.sortFilters.alpha || '';
+      if (exactCheckbox) exactCheckbox.checked = this.exactSteamIdMatch;
     };
 
     const closeModalFn = () => {
@@ -151,10 +172,12 @@ class PlayersDatabase {
       const hackSelect = document.getElementById('hackFilter');
       const descSelect = document.getElementById('descFilter');
       const alphaSelect = document.getElementById('alphaSort');
+      const exactCheckbox = document.getElementById('exactSteamId');
 
       this.sortFilters.hack = hackSelect ? hackSelect.value : '';
       this.sortFilters.description = descSelect ? descSelect.value : '';
       this.sortFilters.alpha = alphaSelect ? alphaSelect.value : '';
+      this.exactSteamIdMatch = exactCheckbox ? exactCheckbox.checked : true;
 
       this.applySorting();
       closeModalFn();
@@ -164,13 +187,29 @@ class PlayersDatabase {
       const hackSelect = document.getElementById('hackFilter');
       const descSelect = document.getElementById('descFilter');
       const alphaSelect = document.getElementById('alphaSort');
+      const exactCheckbox = document.getElementById('exactSteamId');
 
       if (hackSelect) hackSelect.value = '';
       if (descSelect) descSelect.value = '';
       if (alphaSelect) alphaSelect.value = '';
+      if (exactCheckbox) exactCheckbox.checked = false;
 
       this.sortFilters = {hack: '', description: '', alpha: ''};
+      this.exactSteamIdMatch = false;
       this.applySorting();
+    });
+  }
+
+  initResetSortTable() {
+    const resetBtn = document.getElementById('resetSortTable');
+    if (!resetBtn) return;
+
+    resetBtn.addEventListener('click', () => {
+      this.sortFilters = {hack: '', description: '', alpha: ''};
+      this.exactSteamIdMatch = false;
+      this.applySorting();
+
+      resetBtn.blur();
     });
   }
 
@@ -224,7 +263,9 @@ class PlayersDatabase {
         const nicknameMatch = nickname.includes(q);
         const hacksMatch = hacks.includes(q);
         const descriptionMatch = description.includes(q);
-        const steamIdMatch = steamID === q;
+
+        const steamIdMatch =
+            this.exactSteamIdMatch ? steamID === q : steamID.includes(q);
 
         return nicknameMatch || hacksMatch || descriptionMatch || steamIdMatch;
       });
@@ -267,7 +308,9 @@ class PlayersDatabase {
         const nicknameMatch = nickname.includes(q);
         const hacksMatch = hacks.includes(q);
         const descriptionMatch = description.includes(q);
-        const steamIdMatch = steamID === q;
+
+        const steamIdMatch =
+            this.exactSteamIdMatch ? steamID === q : steamID.includes(q);
 
         return nicknameMatch || hacksMatch || descriptionMatch || steamIdMatch;
       });
@@ -392,38 +435,73 @@ class PlayersDatabase {
     const steamProfileUrl =
         steamId64 ? `http://steamcommunity.com/profiles/${steamId64}` : '';
 
-    const steamIdCellHtml = hasSteamId ?
-        `
+    const steamIdCellHtml = hasSteamId ? `
       <td class="steamid steamid-filled">
         <span class="steamid-text">${this.escapeHtml(steamIdDisplay)}</span>
         ${
-            steamProfileUrl ?
-                `
+                                             steamProfileUrl ? `
           <div class="steam-profile-btn-container">
-            <a href="${
-                    steamProfileUrl}" target="_blank" rel="noopener noreferrer"
-               class="steam-profile-btn" title="Открыть профиль Steam">
+            <a href="${steamProfileUrl}"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="steam-profile-btn"
+               title="Открыть профиль Steam">
               <i class="fab fa-steam"></i>
               <span>Профиль</span>
             </a>
           </div>
         ` :
-                ''}
+                                                               ''}
       </td>
     ` :
-        `
+                                                               `
       <td class="steamid steamid-empty">
         <span class="steamid-value">—</span>
       </td>
     `;
 
+    const hasProofs = player.proofs && player.proofs.trim() !== '';
+
+    const hacksColumnHtml = `
+      <td class="hacks-text">
+        <div class="hacks-content">
+          <span class="hacks-value">${
+        this.escapeHtml(this.getOrDash(hacksText))}</span>
+          ${
+        hasProofs ? `
+            <div class="proof-btn-container">
+              <a href="${this.escapeHtml(player.proofs)}"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="proof-btn"
+                 title="Открыть доказательство">
+                <i class="fas fa-file-alt"></i>
+                <span>Доказательство</span>
+              </a>
+            </div>
+          ` :
+                    ''}
+        </div>
+      </td>
+    `;
+
+    const countryRaw = (player['country residence'] ?? '').toString().trim();
+    const countryValue = this.getOrDash(countryRaw);
+    const countryTitle = COUNTRY_TOOLTIPS[countryRaw] && countryRaw !== '' ?
+        COUNTRY_TOOLTIPS[countryRaw] :
+        '';
+
     row.innerHTML = `
       <td class="nickname">${
         this.escapeHtml(this.getOrDash(player.nickname))}</td>
       ${steamIdCellHtml}
-      <td class="hacks-text">${this.escapeHtml(this.getOrDash(hacksText))}</td>
+      ${hacksColumnHtml}
       <td class="description">${
         this.escapeHtml(this.getOrDash(player.description))}</td>
+      <td class="country" ${
+        countryTitle ? `title="${this.escapeHtml(countryTitle)}"` : ''}>
+        ${this.escapeHtml(countryValue)}
+      </td>
     `;
 
     return row;
