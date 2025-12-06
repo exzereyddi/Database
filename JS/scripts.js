@@ -13,7 +13,8 @@ const COUNTRY_TOOLTIPS = {
   '🇺🇸': 'США (United States of America)',
   '🇺🇿': 'Узбекистан (Uzbekistan)',
   '🇮🇱': 'Израиль (Israel)',
-  '🇪🇸': 'Испания (Spain)'
+  '🇪🇸': 'Испания (Spain)',
+  '🇧🇾': 'Беларусь (Belarus)'
 };
 
 class PlayersDatabase {
@@ -581,4 +582,5 @@ document.addEventListener('keydown', (e) => {
     faqModal.classList.remove('active');
     document.body.style.overflow = '';
   }
+
 });
