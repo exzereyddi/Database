@@ -746,7 +746,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'osmanli',
       'steamID': 'STEAM_0:0:23865989',
-      'hacks': 'BLUE MONDAY',
+      'hacks': 'BLUE MONDAY, ENHANDED',
       'description': ''
     },
     {
@@ -2032,6 +2032,7 @@ window.DATABASE_JSON = {
   ]
 
 };
+
 
 
 
