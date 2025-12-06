@@ -2028,19 +2028,6 @@ window.DATABASE_JSON = {
       'hacks': 'HPP, KNIFEBOT',
       'description': ''
     }
+   }
   ]
-
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
