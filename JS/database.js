@@ -1328,12 +1328,6 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:813980756',
-      'hacks': 'HPP',
-      'description': ''
-    },
-    {
       'nickname': 'bloody',
       'steamID': 'STEAM_0:0:3674836',
       'hacks': 'HPP',
@@ -2236,5 +2230,6 @@ window.DATABASE_JSON = {
     }
   ]
 };
+
 
 
