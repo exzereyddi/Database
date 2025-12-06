@@ -4,7 +4,7 @@ window.DATABASE_JSON = {
       'nickname': '123',
       'steamID': 'STEAM_0:0:21942084',
       'hacks': 'HPP, SCROLL HELPER',
-      'description': 'K1REEE !CH'
+      'description': 'aka K1REEE !CH. Владелец сервера NetherWorld, плагины делала бездарность на hedqi'
     },
     {
       'nickname': '666PRADA',
@@ -1007,6 +1007,7 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:0:455785082',
       'hacks': 'BLUE MONDAY',
       'description': '40 летний не скуф'
+    },
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:585427957',
@@ -2030,6 +2031,7 @@ window.DATABASE_JSON = {
   ]
 
 };
+
 
 
 
