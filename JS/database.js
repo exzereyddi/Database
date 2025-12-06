@@ -2115,10 +2115,12 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
-      'nickname': '',
+      'nickname': 'arrogance',
       'steamID': 'STEAM_0:1:2183031',
       'hacks': 'HPP, BLUE MONDAY',
-      'description': ''
+      'description': 'aka desu',
+      'proofs': 'https://t.me/database_proofs/52',
+      'country residence': '🇷🇺'
     },
     {
       'nickname': '',
@@ -2234,4 +2236,5 @@ window.DATABASE_JSON = {
     }
   ]
 };
+
 
