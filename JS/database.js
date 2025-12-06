@@ -2192,6 +2192,30 @@ window.DATABASE_JSON = {
       'description': 'Норм игрок, 15 лет играет'
     },
     {
+      'nickname': 'bind',
+      'steamID': 'STEAM_0:1:777465701',
+      'hacks': '',
+      'description': 'Норм игрок, хорошо слайдит'
+    },
+    {
+      'nickname': 'acaid',
+      'steamID': 'STEAM_0:0:614270587',
+      'hacks': '',
+      'description': 'Слабость'
+    },
+     {
+      'nickname': 'Myamoto',
+      'steamID': 'STEAM_0:1:813980756',
+      'hacks': '',
+      'description': 'Агрессивная слабость'
+    },
+    {
+      'nickname': 'Billy Nogami',
+      'steamID': 'STEAM_0:0:582328556',
+      'hacks': '',
+      'description': 'Норм игрок'
+    },
+    {
       'nickname': '	f0bosS',
       'steamID': 'STEAM_0:1:188789945',
       'hacks': 'BLUE MONDAY',
@@ -2201,3 +2225,4 @@ window.DATABASE_JSON = {
   ]
 
 };
+
