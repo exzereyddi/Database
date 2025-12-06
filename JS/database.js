@@ -980,11 +980,39 @@ window.DATABASE_JSON = {
       'description': 'Слабый зек'
     },
     {
+      'nickname': 'm_t',
+      'steamID': 'STEAM_0:1:780956870',
+      'hacks': '',
+      'description': 'Норм игрок, хорошо слайдит'
+    },
+    {
+      'nickname': 'KauZeR',
+      'steamID': 'STEAM_0:0:2159073',
+      'hacks': '',
+      'description': '30 летний скуф с детьми, только начал играть'
+    },
+    {
+      'nickname': 'z1za',
+      'steamID': 'STEAM_0:0:31346261',
+      'hacks': '',
+      'description': '30 летний скуф, только начал играть'
+    },
+    {
+      'nickname': 'Наглый Голый',
+      'steamID': 'STEAM_0:0:11533687',
+      'hacks': '',
+      'description': '40 летний не скуф, легенда хнс, занимается ютубом'
+    {
       'nickname': '',
       'steamID': 'STEAM_0:0:455785082',
       'hacks': 'SCROLL HELPER, STRAFE HELPER',
       'description': ''
     },
+    {
+      'nickname': '	f0bosS',
+      'steamID': 'STEAM_0:0:455785082',
+      'hacks': 'BLUE MONDAY',
+      'description': '40 летний не скуф'
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:585427957',
@@ -1847,7 +1875,7 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:657460540',
       'hacks': 'BLUE MONDAY, ENHANDED, FURION',
-      'description': ''
+      'description': 'Брат игрока strafer'
     },
     {
       'nickname': '',
@@ -2004,34 +2032,11 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:444002779',
       'hacks': 'HPP, KNIFEBOT',
       'description': ''
-    },
-    {
-      'nickname': 'm_t',
-      'steamID': 'STEAM_0:1:780956870',
-      'hacks': '',
-      'description': 'Норм игрок, хорошо слайдит'
-    },
-    {
-      'nickname': 'KauZeR',
-      'steamID': 'STEAM_0:0:2159073',
-      'hacks': '',
-      'description': '30 летний скуф с детьми, только начал играть'
-    },
-    {
-      'nickname': 'z1za',
-      'steamID': 'STEAM_0:0:31346261',
-      'hacks': '',
-      'description': '30 летний скуф, только начал играть'
-    },
-    {
-      'nickname': 'Наглый Голый',
-      'steamID': 'STEAM_0:0:11533687',
-      'hacks': '',
-      'description': '40 летний не скуф, легенда хнс, занимается ютубом'
     }
   ]
 
 };
+
 
 
 
