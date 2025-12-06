@@ -2216,6 +2216,14 @@ window.DATABASE_JSON = {
       'description': 'Норм игрок'
     },
     {
+      'nickname': 'MILKYWAY',
+      'steamID': 'STEAM_0:0:837537886',
+      'hacks': 'BLUE MONDAY',
+      'description': 'aka ZOOBA, Sale BLUE MONDAY',
+      'proofs': 'https://t.me/database_proofs/50',
+      'country residence': '🇺🇿'
+    },
+    {
       'nickname': '	f0bosS',
       'steamID': 'STEAM_0:1:188789945',
       'hacks': 'BLUE MONDAY',
@@ -2225,4 +2233,5 @@ window.DATABASE_JSON = {
   ]
 
 };
+
 
