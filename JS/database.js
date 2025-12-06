@@ -906,12 +906,6 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
-      'nickname': '[SvaRoG] + ANTIMAT +',
-      'steamID': '',
-      'hacks': 'BLUE MONDAY, STEAMID CHANGER',
-      'description': 'Тупой чурка и лицемер'
-    },
-    {
       'nickname': 'безумна',
       'steamID': 'STEAM_0:0:142055738',
       'hacks': 'BLUE MONDAY, KNIFEBOT',
@@ -927,7 +921,7 @@ window.DATABASE_JSON = {
       'nickname': 'Михос',
       'steamID': 'STEAM_0:0:194266708',
       'hacks': '',
-      'description': 'Скуф, ютубер'
+      'description': '40 летний скуф ютубер, владелец добрый сервер ( дерьмо )'
     },
     {
       'nickname': 'КОТЭ',
@@ -2036,6 +2030,7 @@ window.DATABASE_JSON = {
   ]
 
 };
+
 
 
 
