@@ -2230,6 +2230,14 @@ window.DATABASE_JSON = {
       'country residence': '🇰🇿'
     },
     {
+      'nickname': 'awero',
+      'steamID': 'STEAM_0:1:683705116',
+      'hacks': 'FURION',
+      'description': '',
+      'proofs': 'https://t.me/database_proofs/53',
+      'country residence': '🇷🇺'
+    },
+    {
       'nickname': '	f0bosS',
       'steamID': 'STEAM_0:1:188789945',
       'hacks': 'BLUE MONDAY',
@@ -2238,3 +2246,4 @@ window.DATABASE_JSON = {
     }
   ]
 };
+
