@@ -532,7 +532,7 @@ window.DATABASE_JSON = {
       'nickname': 'hedqi',
       'steamID': 'STEAM_0:1:467208095',
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
-      'description': 'Sale BLUE MONDAY, Сын щлюхи',
+      'description': 'Sale BLUE MONDAY, сын щлюхи',
       'proofs': 'https://t.me/database_proofs/6',
       'country residence': '🇷🇺'
     },
@@ -2112,7 +2112,7 @@ window.DATABASE_JSON = {
       'nickname': 'arrogance',
       'steamID': 'STEAM_0:1:2183031',
       'hacks': 'HPP, BLUE MONDAY',
-      'description': 'aka desu',
+      'description': 'aka desu, токсичный сын щлюхи и лицемер',
       'proofs': 'https://t.me/database_proofs/52',
       'country residence': '🇷🇺'
     },
@@ -2221,6 +2221,14 @@ window.DATABASE_JSON = {
       'proofs': 'https://t.me/database_proofs/51',
       'country residence': '🇷🇺'
     },
+     {
+      'nickname': 'kitkat',
+      'steamID': 'STEAM_0:1:229896918',
+      'hacks': '',
+      'description': 'Слабый даун',
+      'proofs': '',
+      'country residence': '🇰🇿'
+    },
     {
       'nickname': '	f0bosS',
       'steamID': 'STEAM_0:1:188789945',
@@ -2230,6 +2238,3 @@ window.DATABASE_JSON = {
     }
   ]
 };
-
-
-
