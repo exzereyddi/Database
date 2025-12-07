@@ -201,7 +201,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'baber',
       'steamID': 'STEAM_0:1:615192879',
-      'hacks': 'FURION',
+      'hacks': 'FURION, BLUE MONDAY, HPP',
       'description': '',
       'country residence': '🇧🇾'
     },
@@ -334,7 +334,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Sloyan',
       'steamID': 'STEAM_0:1:36253853',
-      'hacks': 'HPP, SCROLL HELPER, BLUE MONDAY',
+      'hacks': 'BROKOLY, HPP, SCROLL HELPER, BLUE MONDAY',
       'description': '',
       'proofs': 'https://t.me/database_proofs/42',
       'country residence': '🇹🇷'
@@ -574,7 +574,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Laura',
       'steamID': 'STEAM_0:0:646666',
-      'hacks': 'BLUE MONDAY, NSTE HACK, RECORDER',
+      'hacks': 'BLUE MONDAY, NSTE RECORDER, RECORDER',
       'description': 'aka jj',
       'proofs': 'https://t.me/database_proofs/26',
       'country residence': '🇷🇺'
@@ -582,7 +582,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Laura',
       'steamID': 'STEAM_0:0:747777',
-      'hacks': 'BLUE MONDAY, NSTE HACK, RECORDER',
+      'hacks': 'BLUE MONDAY, NSTE RECORDER, RECORDER',
       'description': 'Twink 1'
     },
     {
@@ -745,7 +745,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'matd3n',
       'steamID': 'STEAM_0:1:622552337',
-      'hacks': 'BLUE MONDAY, NSTE HACK',
+      'hacks': 'BLUE MONDAY, NSTE RECORDER',
       'description': '',
       'proofs': 'https://t.me/database_proofs/46',
       'country residence': '🇧🇾'
@@ -841,7 +841,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'opoznay menya',
       'steamID': 'STEAM_0:0:624979419',
-      'hacks': 'SCROLL HELPER',
+      'hacks': 'BROKOLY, SCROLL HELPER',
       'description': 'aka red666, занимается ютубом',
       'proofs': 'https://t.me/database_proofs/13',
       'country residence': '🇷🇺'
@@ -1338,7 +1338,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:596601242',
-      'hacks': 'HPP, BLUE MONDAY',
+      'hacks': 'HPP, BLUE MONDAY, BROKOLY',
       'description': ''
     },
     {
@@ -1356,7 +1356,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:618927939',
-      'hacks': 'HPP',
+      'hacks': 'HPP, BROKOLY',
       'description': ''
     },
     {
@@ -1400,7 +1400,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Xpika!',
       'steamID': 'STEAM_0:1:712341768',
-      'hacks': 'NSTE HACK, BLUE MONDAY',
+      'hacks': 'NSTE RECORDER, BLUE MONDAY',
       'description': '',
       'country residence': '🇪🇸'
     },
@@ -1425,13 +1425,13 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:180884837',
-      'hacks': 'NSTE HACK',
+      'hacks': 'NSTE RECORDER',
       'description': ''
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:851536371',
-      'hacks': 'BLUE MONDAY',
+      'hacks': 'BLUE MONDAY, BROKOLY',
       'description': ''
     },
     {
@@ -1443,7 +1443,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:639891820',
-      'hacks': 'KNIFEBOT',
+      'hacks': 'KNIFEBOT, NSTE RECORDER, HPP',
       'description': ''
     },
     {
@@ -1569,7 +1569,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:868530077',
-      'hacks': 'KILABEEZ PREFIX, ENHANDED, NSTE HACK',
+      'hacks': 'KILABEEZ PREFIX, ENHANDED, NSTE RECORDER',
       'description': ''
     },
     {
@@ -1677,7 +1677,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:45467806',
-      'hacks': 'HPP',
+      'hacks': 'HPP, ENHANDED, NSTE RECORDER',
       'description': ''
     },
     {
@@ -1719,7 +1719,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:176057829',
-      'hacks': 'HPP',
+      'hacks': 'HPP, NSTE RECORDER',
       'description': ''
     },
     {
@@ -1787,13 +1787,13 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:950164887',
-      'hacks': 'KILABEEZ PREFIX, ENHANDED, NSTE HACK',
+      'hacks': 'KILABEEZ PREFIX, ENHANDED, NSTE RECORDER',
       'description': 'Twink for STEAM_0:1:868530077'
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:840396124',
-      'hacks': 'KILABEEZ PREFIX, ENHANDED',
+      'hacks': 'KILABEEZ PREFIX, ENHANDED, BROKOLY, BLUE MONDAY',
       'description': ''
     },
     {
@@ -1805,13 +1805,13 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:862422049',
-      'hacks': 'HPP',
+      'hacks': 'HPP, BLUE MONDAY, BROKOLY',
       'description': ''
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:465467816',
-      'hacks': 'BLUE MONDAY, ENHANDED',
+      'hacks': 'BLUE MONDAY, ENHANDED, NSTE RECORDER, HPP',
       'description': ''
     },
     {
@@ -1907,13 +1907,13 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:20791436',
-      'hacks': 'HPP',
+      'hacks': 'HPP, ENHANDED',
       'description': 'Twink for STEAM_0:1:8219593'
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:194764024',
-      'hacks': 'BLUE MONDAY AKA GAREY HACK (WITH CRASHER)',
+      'hacks': 'BROKOLY, BLUE MONDAY AKA GAREY HACK (WITH CRASHER)',
       'description': ''
     },
     {
@@ -1979,7 +1979,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:657460540',
-      'hacks': 'BLUE MONDAY, ENHANDED, FURION',
+      'hacks': 'BLUE MONDAY, ENHANDED, FURION, NSTE RECORDER',
       'description': 'Брат игрока strafer'
     },
     {
@@ -1997,7 +1997,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:57571964',
-      'hacks': 'HPP, NSTE RECORDER (maybe)',
+      'hacks': 'HPP, NSTE RECORDER',
       'description': ''
     },
     {
@@ -2045,19 +2045,19 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:418649797',
-      'hacks': 'BLUE MONDAY',
+      'hacks': 'BLUE MONDAY, BROKOLY',
       'description': ''
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:634860455',
-      'hacks': 'NSTE HACK',
+      'hacks': 'NSTE RECORDER',
       'description': ''
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:854034058',
-      'hacks': 'NSTE HACK',
+      'hacks': 'NSTE RECORDER, HPP',
       'description': ''
     },
     {
@@ -2099,7 +2099,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:601483625',
-      'hacks': 'BLUE MONDAY',
+      'hacks': 'BLUE MONDAY, BROKOLY',
       'description': ''
     },
     {
@@ -2246,4 +2246,5 @@ window.DATABASE_JSON = {
     }
   ]
 };
+
 
