@@ -1,25 +1,26 @@
 const COUNTRY_TOOLTIPS = {
-  '🇦🇱': 'Албания (Albania)',
-  '🇧🇾': 'Беларусь (Belarus)',
-  '🇩🇪': 'Германия (Germany)',
-  '🇩🇰': 'Дания (Danmark)',
-  '🇬🇧': 'Великобритания (Great Britain)',
-  '🇬🇪': 'Грузия (Georgia)',
-  '🇰🇿': 'Казахстан (Kazakhstan)',
-  '🇱🇹': 'Литва (Lithuania)',
-  '🇷🇺': 'Россия (Russian Federation)',
-  '🇹🇷': 'Турция (Turkey)',
-  '🇺🇦': 'Украина (Ukraine)',
-  '🇺🇸': 'США (United States of America)',
-  '🇺🇿': 'Узбекистан (Uzbekistan)',
-  '🇮🇱': 'Израиль (Israel)',
-  '🇪🇸': 'Испания (Spain)',
-  '🇧🇾': 'Беларусь (Belarus)'
+  '🇦🇱': 'Албания',
+  '🇧🇾': 'Беларусь',
+  '🇩🇪': 'Германия',
+  '🇩🇰': 'Дания',
+  '🇬🇧': 'Великобритания',
+  '🇬🇪': 'Грузия',
+  '🇰🇿': 'Казахстан',
+  '🇱🇹': 'Литва',
+  '🇷🇺': 'Россия',
+  '🇹🇷': 'Турция',
+  '🇺🇦': 'Украина',
+  '🇺🇸': 'США',
+  '🇺🇿': 'Узбекистан',
+  '🇦🇿': 'Азербайджан',
+  '🇮🇱': 'Израиль',
+  '🇪🇸': 'Испания',
+  '🇧🇾': 'Беларусь'
 };
 
 class PlayersDatabase {
   constructor() {
-    this.sortFilters = {hack: '', description: '', alpha: ''};
+    this.sortFilters = {hack: '', description: '', alpha: '', country: ''};
     this.exactSteamIdMatch = true;
     this.currentQuery = '';
 
@@ -147,11 +148,13 @@ class PlayersDatabase {
       const descSelect = document.getElementById('descFilter');
       const alphaSelect = document.getElementById('alphaSort');
       const exactCheckbox = document.getElementById('exactSteamId');
+      const countrySelect = document.getElementById('countryFilter');
 
       if (hackSelect) hackSelect.value = this.sortFilters.hack || '';
       if (descSelect) descSelect.value = this.sortFilters.description || '';
       if (alphaSelect) alphaSelect.value = this.sortFilters.alpha || '';
       if (exactCheckbox) exactCheckbox.checked = this.exactSteamIdMatch;
+      if (countrySelect) countrySelect.value = this.sortFilters.country || '';
     };
 
     const closeModalFn = () => {
@@ -173,11 +176,13 @@ class PlayersDatabase {
       const hackSelect = document.getElementById('hackFilter');
       const descSelect = document.getElementById('descFilter');
       const alphaSelect = document.getElementById('alphaSort');
+      const countrySelect = document.getElementById('countryFilter');
       const exactCheckbox = document.getElementById('exactSteamId');
 
       this.sortFilters.hack = hackSelect ? hackSelect.value : '';
       this.sortFilters.description = descSelect ? descSelect.value : '';
       this.sortFilters.alpha = alphaSelect ? alphaSelect.value : '';
+      this.sortFilters.country = countrySelect ? countrySelect.value : '';
       this.exactSteamIdMatch = exactCheckbox ? exactCheckbox.checked : true;
 
       this.applySorting();
@@ -188,14 +193,16 @@ class PlayersDatabase {
       const hackSelect = document.getElementById('hackFilter');
       const descSelect = document.getElementById('descFilter');
       const alphaSelect = document.getElementById('alphaSort');
+      const countrySelect = document.getElementById('countryFilter');
       const exactCheckbox = document.getElementById('exactSteamId');
 
       if (hackSelect) hackSelect.value = '';
       if (descSelect) descSelect.value = '';
       if (alphaSelect) alphaSelect.value = '';
+      if (countrySelect) countrySelect.value = '';
       if (exactCheckbox) exactCheckbox.checked = false;
 
-      this.sortFilters = {hack: '', description: '', alpha: ''};
+      this.sortFilters = {hack: '', description: '', alpha: '', country: ''};
       this.exactSteamIdMatch = false;
       this.applySorting();
     });
@@ -206,7 +213,7 @@ class PlayersDatabase {
     if (!resetBtn) return;
 
     resetBtn.addEventListener('click', () => {
-      this.sortFilters = {hack: '', description: '', alpha: ''};
+      this.sortFilters = {hack: '', description: '', alpha: '', country: ''};
       this.exactSteamIdMatch = false;
       this.applySorting();
 
@@ -354,6 +361,14 @@ class PlayersDatabase {
       result = [...withDesc, ...noDesc];
     }
 
+    if (this.sortFilters.country) {
+      const targetCountry = this.sortFilters.country;
+      result = result.filter(p => {
+        const country = (p['country residence'] || '').toString().trim();
+        return country === targetCountry;
+      });
+    }
+
     if (this.sortFilters.alpha === 'asc') {
       result.sort((a, b) => {
         const nameA = (a.nickname || '').toLowerCase();
@@ -426,7 +441,15 @@ class PlayersDatabase {
 
   createPlayerRow(player) {
     const row = document.createElement('tr');
-    const hacksText = player.hacks || '';
+
+    let hacksText = player.hacks || '';
+    if (hacksText && hacksText !== '—' && hacksText.trim() !== '') {
+      const hacksArray =
+          hacksText.split(',').map(h => h.trim()).filter(h => h.length > 0);
+      hacksArray.sort(
+          (a, b) => a.toLowerCase().localeCompare(b.toLowerCase(), 'ru'));
+      hacksText = hacksArray.join(', ');
+    }
 
     const rawSteamId = (player.steamID ?? '').toString().trim();
     const hasSteamId = rawSteamId.length > 0;
@@ -582,5 +605,4 @@ document.addEventListener('keydown', (e) => {
     faqModal.classList.remove('active');
     document.body.style.overflow = '';
   }
-
 });
