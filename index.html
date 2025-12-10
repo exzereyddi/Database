@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
+
 <body class="dark-theme">
     <div class="container">
         <div class="header">
@@ -20,6 +22,9 @@
                 CS 1.6 HNS-Players Database
             </h1>
             <div class="header-buttons">
+                <button class="stats-toggle" id="statsToggle" title="Статистика">
+                    <i class="fas fa-chart-pie"></i>
+                </button>
                 <button class="faq-toggle" id="faqToggle" title="FAQ">
                     <i class="fas fa-question-circle"></i>
                 </button>
@@ -28,6 +33,7 @@
                 </button>
             </div>
         </div>
+
 
         <div class="search-container">
             <div class="search-wrapper">
@@ -46,6 +52,7 @@
                 <i class="fas fa-backspace"></i>
             </button>
         </div>
+
 
         <div class="table-container">
             <table id="playersTable">
@@ -69,11 +76,36 @@
             </table>
         </div>
 
+
         <div id="stats" class="stats">
             <i class="fas fa-chart-bar"></i>
             Найдено игроков: <span id="playersCount">0</span>
         </div>
     </div>
+
+
+    <div class="modal-overlay" id="statsModal">
+        <div class="modal-content modal-stats">
+            <button class="modal-close" id="closeStatsModal" aria-label="Закрыть">
+                <i class="fas fa-times"></i>
+            </button>
+
+
+            <h2 class="modal-title">
+                <i class="fas fa-chart-pie"></i>
+                Статистика базы данных
+            </h2>
+
+
+            <div class="modal-body" id="statsModalBody">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    Загрузка статистики...
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="modal-overlay" id="faqModal">
         <div class="modal-content">
@@ -81,10 +113,12 @@
                 <i class="fas fa-times"></i>
             </button>
 
+
             <h2 class="modal-title">
                 <i class="fas fa-info-circle"></i>
                 О базе данных
             </h2>
+
 
             <div class="modal-body">
                 <section class="faq-section">
@@ -92,6 +126,7 @@
                     <p>Это база данных игроков Counter-Strike 1.6 играющих на HNS (Hide and Seek) режиме. Она помогает
                         новым игрокам заранее понимать, с кем они сталкиваются на серверах этого режима.</p>
                 </section>
+
 
                 <section class="faq-section">
                     <h3>Виды читов</h3>
@@ -108,6 +143,7 @@
                         <li><strong>NSTE RECORDER/NSTE HACK</strong> — hns-читы.</li>
                         <li><strong>GAREY RECORDER/GAREY CRASHER</strong> — hns-читы.</li>
                         <li><strong>SHREK</strong> — BLUE MONDAY.</li>
+                        <li><strong>RECORDER</strong> — читерская функция для записи движений.</li>
                         <li><strong>ANTI FLASH</strong> — читерская функция, позволяющая не слепнуть от прямого
                             попадания флеш‑гранаты.</li>
                         <li><strong>KNIFEBOT</strong> — читерская функция, автоматически бьющая ножом с идеальной
@@ -124,8 +160,13 @@
                             стрейфов.</li>
                         <li><strong>AUTO STRAFE</strong> — то же самое, что и «RAGE STRAFE», только уже с использованием
                             стрейфов.</li>
+                        <li><strong>BACKTRACK</strong> — читерская функция, позволяющая стрелять по старым позициям
+                            игроков.</li>
+                        <li><strong>FAKE LAG</strong> — читерская функция, создающая искусственные задержки для
+                            усложнения попадания по игроку.</li>
                     </ul>
                 </section>
+
 
                 <section class="faq-section">
                     <h3>Как добавить игрока в базу?</h3>
@@ -136,16 +177,19 @@
         </div>
     </div>
 
+
     <div class="modal-overlay" id="sortModal">
         <div class="modal-content modal-sort">
             <button class="modal-close" id="closeSortModal" aria-label="Закрыть">
                 <i class="fas fa-times"></i>
             </button>
 
+
             <h2 class="modal-title">
                 <i class="fas fa-sort"></i>
                 Сортировка таблицы
             </h2>
+
 
             <div class="modal-body">
                 <div class="sort-group">
@@ -156,7 +200,10 @@
                         <option value="none-only">Только не читеры</option>
                         <option value="FURION">FURION</option>
                         <option value="HPP">HPP</option>
+                        <option value="HPP 6">HPP 6</option>
                         <option value="BLUE MONDAY">BLUE MONDAY</option>
+                        <option value="BLUE MONDAY AKA GAREY HACK (WITH CRASHER)">BLUE MONDAY AKA GAREY HACK (WITH
+                            CRASHER)</option>
                         <option value="KILABEEZ PREFIX">KILABEEZ PREFIX</option>
                         <option value="ENHANDED">ENHANDED</option>
                         <option value="RW">RW</option>
@@ -164,18 +211,24 @@
                         <option value="NSTE RECORDER">NSTE RECORDER</option>
                         <option value="NSTE HACK">NSTE HACK</option>
                         <option value="GAREY RECORDER">GAREY RECORDER</option>
+                        <option value="GAREY RECORDER/CRASHER AND MORE">GAREY RECORDER/CRASHER AND MORE</option>
                         <option value="GAREY CRASHER">GAREY CRASHER</option>
                         <option value="SHREK">SHREK</option>
+                        <option value="RECORDER">RECORDER</option>
                         <option value="ANTI FLASH">ANTI FLASH</option>
                         <option value="KNIFEBOT">KNIFEBOT</option>
                         <option value="STEAMID CHANGER">STEAMID CHANGER</option>
                         <option value="BHOP">BHOP</option>
                         <option value="SCROLL HELPER">SCROLL HELPER</option>
                         <option value="STRAFE HELPER">STRAFE HELPER</option>
+                        <option value="STRAFE HELPERP">STRAFE HELPERP</option>
                         <option value="RAGE STRAFE">RAGE STRAFE</option>
                         <option value="AUTO STRAFE">AUTO STRAFE</option>
+                        <option value="BACKTRACK">BACKTRACK</option>
+                        <option value="FAKE LAG">FAKE LAG</option>
                     </select>
                 </div>
+
 
                 <div class="sort-group">
                     <label for="descFilter">Описание:</label>
@@ -188,6 +241,7 @@
                     </select>
                 </div>
 
+
                 <div class="sort-group">
                     <label for="alphaSort">Алфавит по нику:</label>
                     <select id="alphaSort" class="sort-select">
@@ -196,6 +250,7 @@
                         <option value="desc">от Я до А (против)</option>
                     </select>
                 </div>
+
 
                 <div class="sort-group">
                     <label for="countryFilter">Страна проживания:</label>
@@ -217,8 +272,10 @@
                         <option value="🇱🇹">🇱🇹 Литва</option>
                         <option value="🇩🇰">🇩🇰 Дания</option>
                         <option value="🇦🇱">🇦🇱 Албания</option>
+                        <option value="🇷🇸">🇷🇸 Сербия</option>
                     </select>
                 </div>
+
 
                 <div class="sort-group checkbox-group">
                     <label class="checkbox-label">
@@ -227,6 +284,7 @@
                         <span class="checkbox-text">Точное совпадение SteamID при поиске</span>
                     </label>
                 </div>
+
 
                 <div class="sort-actions">
                     <button id="applySortBtn" class="apply-sort-btn">
@@ -242,13 +300,16 @@
         </div>
     </div>
 
+
     <a href="https://t.me/originalHNS" target="_blank" rel="noopener noreferrer" class="source-button" title="Источник">
         <i class="fab fa-telegram-plane"></i>
         <span class="source-label">Источник</span>
     </a>
 
+
     <script src="JS/database.js"></script>
     <script src="JS/scripts.js"></script>
 </body>
+
 
 </html>
