@@ -461,9 +461,9 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Horus',
       'steamID': 'STEAM_0:1:709305184',
-      'hacks': 'SCROLL HELPER',
-      'description': 'Сын щлюхи и хохол',
-      'country residence': '🇺🇦'
+      'hacks': '',
+      'description': 'Норм парень, ютубер',
+      'country residence': '🇷🇺'
     },
     {
       'nickname': 'hpp forever',
@@ -841,17 +841,23 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': 'Neo',
-      'steamID': 'STEAM_0:0:589387110',
-      'hacks': 'BLUE MONDAY, SCROLL HELPER',
-      'description': 'Twink 1'
-    },
-    {
-      'nickname': 'Neo Ventura',
       'steamID': 'STEAM_0:0:19302488',
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': '',
       'proofs': 'https://t.me/database_proofs/19',
       'country residence': '🇷🇺'
+    },
+    {
+      'nickname': 'Neo',
+      'steamID': 'STEAM_0:0:589387110',
+      'hacks': 'BLUE MONDAY, SCROLL HELPER',
+      'description': 'Twink 1'
+    },
+    {
+      'nickname': 'Neo',
+      'steamID': 'STEAM_0:1:444002779',
+      'hacks': 'BLUE MONDAY, SCROLL HELPER',
+      'description': 'Twink 2'
     },
     {
       'nickname': 'Nicotine',
@@ -1642,12 +1648,6 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:1:444002779',
-      'hacks': 'HPP, KNIFEBOT',
-      'description': ''
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:1:444212613',
       'hacks': 'RAGE STRAFE, FURION',
       'description': ''
@@ -2348,4 +2348,5 @@ window.DATABASE_JSON = {
       'proofs': 'https://t.me/database_proofs/60'
     }
   ]
+
 };
