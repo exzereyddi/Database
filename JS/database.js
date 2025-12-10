@@ -2346,7 +2346,13 @@ window.DATABASE_JSON = {
       'description': 'Фрик',
       'country residence': '🇷🇸',
       'proofs': 'https://t.me/database_proofs/60'
+    },
+    {
+      'nickname': 'm0NKEY',
+      'steamID': 'STEAM_0:0:416666364',
+      'hacks': 'SCROLL HELPER',
+      'description': '',
+      'proofs': 'https://t.me/database_proofs/62'
     }
   ]
-
 };
