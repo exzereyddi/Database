@@ -15,14 +15,16 @@ const COUNTRY_TOOLTIPS = {
   '🇦🇿': 'Азербайджан',
   '🇮🇱': 'Израиль',
   '🇪🇸': 'Испания',
-  '🇧🇾': 'Беларусь'
+  '🇷🇸': 'Сербия'
 };
+
 
 class PlayersDatabase {
   constructor() {
     this.sortFilters = {hack: '', description: '', alpha: '', country: ''};
     this.exactSteamIdMatch = true;
     this.currentQuery = '';
+
 
     this.waitForDatabase()
         .then(() => {
@@ -33,9 +35,10 @@ class PlayersDatabase {
         .catch(err => {
           console.error('Ошибка загрузки database.js:', err);
           document.getElementById('playersTableBody').innerHTML =
-              '<tr><td colspan="4" style="text-align: center; padding: 50px; color: var(--danger);">Ошибка загрузки database.js</td></tr>';
+              '<tr><td colspan="5" style="text-align: center; padding: 50px; color: var(--danger);">Ошибка загрузки database.js</td></tr>';
         });
   }
+
 
   waitForDatabase(attempts = 50) {
     return new Promise((resolve, reject) => {
@@ -53,6 +56,7 @@ class PlayersDatabase {
     });
   }
 
+
   init() {
     this.renderTable();
     this.updateStats();
@@ -60,22 +64,28 @@ class PlayersDatabase {
     this.initSearch();
     this.initSortControls();
     this.initResetSortTable();
+    this.initStatsModal();
     this.applySorting();
   }
+
 
   initThemeToggle() {
     const toggle = document.getElementById('themeToggle');
     const icon = toggle.querySelector('i');
 
+
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-theme');
       document.body.classList.toggle('light-theme');
 
+
       const isDark = document.body.classList.contains('dark-theme');
       icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
 
+
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
+
 
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
@@ -85,12 +95,15 @@ class PlayersDatabase {
     }
   }
 
+
   initSearch() {
     const searchInput = document.getElementById('searchInput');
     const clearBtn = document.getElementById('clearSearch');
 
+
     const counter = document.getElementById('searchCounter');
     const maxLen = 50;
+
 
     const updateClearState = () => {
       if (searchInput.value.trim().length > 0) {
@@ -102,26 +115,32 @@ class PlayersDatabase {
       }
     };
 
+
     searchInput.addEventListener('input', (e) => {
       if (e.target.value.length > maxLen) {
         e.target.value = e.target.value.slice(0, maxLen);
       }
+
 
       const len = e.target.value.length;
       if (counter) {
         counter.textContent = `${len}/${maxLen}`;
       }
 
+
       searchInput.classList.add('searching');
       this.search(e.target.value);
       updateClearState();
     });
 
+
     clearBtn.addEventListener('click', () => {
       if (searchInput.value.trim().length === 0) return;
 
+
       searchInput.value = '';
       if (counter) counter.textContent = `0/${maxLen}`;
+
 
       this.search('');
       searchInput.classList.remove('searching');
@@ -129,8 +148,10 @@ class PlayersDatabase {
       updateClearState();
     });
 
+
     updateClearState();
   }
+
 
   initSortControls() {
     const sortToggle = document.getElementById('sortToggle');
@@ -139,16 +160,19 @@ class PlayersDatabase {
     const applySortBtn = document.getElementById('applySortBtn');
     const resetSortBtn = document.getElementById('resetSortBtn');
 
+
     const openModal = () => {
       if (!sortModal) return;
       sortModal.classList.add('active');
       document.body.style.overflow = 'hidden';
+
 
       const hackSelect = document.getElementById('hackFilter');
       const descSelect = document.getElementById('descFilter');
       const alphaSelect = document.getElementById('alphaSort');
       const exactCheckbox = document.getElementById('exactSteamId');
       const countrySelect = document.getElementById('countryFilter');
+
 
       if (hackSelect) hackSelect.value = this.sortFilters.hack || '';
       if (descSelect) descSelect.value = this.sortFilters.description || '';
@@ -157,20 +181,24 @@ class PlayersDatabase {
       if (countrySelect) countrySelect.value = this.sortFilters.country || '';
     };
 
+
     const closeModalFn = () => {
       if (!sortModal) return;
       sortModal.classList.remove('active');
       document.body.style.overflow = '';
     };
 
+
     sortToggle && sortToggle.addEventListener('click', openModal);
     closeSortModal && closeSortModal.addEventListener('click', closeModalFn);
+
 
     sortModal && sortModal.addEventListener('click', (e) => {
       if (e.target === sortModal) {
         closeModalFn();
       }
     });
+
 
     applySortBtn && applySortBtn.addEventListener('click', () => {
       const hackSelect = document.getElementById('hackFilter');
@@ -179,15 +207,18 @@ class PlayersDatabase {
       const countrySelect = document.getElementById('countryFilter');
       const exactCheckbox = document.getElementById('exactSteamId');
 
+
       this.sortFilters.hack = hackSelect ? hackSelect.value : '';
       this.sortFilters.description = descSelect ? descSelect.value : '';
       this.sortFilters.alpha = alphaSelect ? alphaSelect.value : '';
       this.sortFilters.country = countrySelect ? countrySelect.value : '';
       this.exactSteamIdMatch = exactCheckbox ? exactCheckbox.checked : true;
 
+
       this.applySorting();
       closeModalFn();
     });
+
 
     resetSortBtn && resetSortBtn.addEventListener('click', () => {
       const hackSelect = document.getElementById('hackFilter');
@@ -196,44 +227,356 @@ class PlayersDatabase {
       const countrySelect = document.getElementById('countryFilter');
       const exactCheckbox = document.getElementById('exactSteamId');
 
+
       if (hackSelect) hackSelect.value = '';
       if (descSelect) descSelect.value = '';
       if (alphaSelect) alphaSelect.value = '';
       if (countrySelect) countrySelect.value = '';
       if (exactCheckbox) exactCheckbox.checked = false;
 
+
       this.sortFilters = {hack: '', description: '', alpha: '', country: ''};
       this.exactSteamIdMatch = false;
       this.applySorting();
     });
   }
 
+
   initResetSortTable() {
     const resetBtn = document.getElementById('resetSortTable');
     if (!resetBtn) return;
+
 
     resetBtn.addEventListener('click', () => {
       this.sortFilters = {hack: '', description: '', alpha: '', country: ''};
       this.exactSteamIdMatch = false;
       this.applySorting();
 
+
       resetBtn.blur();
     });
   }
 
+
+  initStatsModal() {
+    const statsToggle = document.getElementById('statsToggle');
+    const statsModal = document.getElementById('statsModal');
+    const closeStatsModal = document.getElementById('closeStatsModal');
+
+
+    const openStatsModal = () => {
+      if (!statsModal) return;
+      statsModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      this.generateStatistics();
+    };
+
+
+    const closeStatsModalFn = () => {
+      if (!statsModal) return;
+      statsModal.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+
+    statsToggle && statsToggle.addEventListener('click', openStatsModal);
+    closeStatsModal &&
+        closeStatsModal.addEventListener('click', closeStatsModalFn);
+
+
+    statsModal && statsModal.addEventListener('click', (e) => {
+      if (e.target === statsModal) {
+        closeStatsModalFn();
+      }
+    });
+  }
+
+
+  generateStatistics() {
+    const statsBody = document.getElementById('statsModalBody');
+    if (!statsBody) return;
+
+
+    const totalPlayers = this.players.length;
+
+
+    const isNoCheat = (p) =>
+        !p.hacks || p.hacks.trim() === '' || p.hacks === '—';
+
+
+    const cheaters = this.players.filter(p => !isNoCheat(p));
+    const nonCheaters = this.players.filter(isNoCheat);
+
+
+    const cheatersCount = cheaters.length;
+    const nonCheatersCount = nonCheaters.length;
+
+
+    const cheatersPercent = totalPlayers > 0 ?
+        ((cheatersCount / totalPlayers) * 100).toFixed(1) :
+        '0.0';
+    const nonCheatersPercent = totalPlayers > 0 ?
+        ((nonCheatersCount / totalPlayers) * 100).toFixed(1) :
+        '0.0';
+
+
+
+    const countryStats = {};
+    let noCountryCount = 0;
+
+    this.players.forEach(player => {
+      const country = (player['country residence'] || '').toString().trim();
+      if (country && country !== '—') {
+        if (!countryStats[country]) {
+          countryStats[country] = 0;
+        }
+        countryStats[country]++;
+      } else {
+        noCountryCount++;
+      }
+    });
+
+    const sortedCountries =
+        Object.entries(countryStats).sort((a, b) => b[1] - a[1]);
+
+
+    const cheaterCountryStats = {};
+    let cheaterNoCountryCount = 0;
+
+    cheaters.forEach(player => {
+      const country = (player['country residence'] || '').toString().trim();
+      if (country && country !== '—') {
+        if (!cheaterCountryStats[country]) {
+          cheaterCountryStats[country] = 0;
+        }
+        cheaterCountryStats[country]++;
+      } else {
+        cheaterNoCountryCount++;
+      }
+    });
+
+    const sortedCheaterCountries =
+        Object.entries(cheaterCountryStats).sort((a, b) => b[1] - a[1]);
+
+
+    const hackStats = {};
+    cheaters.forEach(player => {
+      const hacks = (player.hacks || '').trim();
+      if (hacks && hacks !== '—') {
+        const hacksList = hacks.split(',').map(h => h.trim());
+        hacksList.forEach(hack => {
+          if (hack) {
+            if (!hackStats[hack]) {
+              hackStats[hack] = {total: 0, countries: {}, noCountry: 0};
+            }
+            hackStats[hack].total++;
+
+
+            const country =
+                (player['country residence'] || '').toString().trim();
+            if (country && country !== '—') {
+              if (!hackStats[hack].countries[country]) {
+                hackStats[hack].countries[country] = 0;
+              }
+              hackStats[hack].countries[country]++;
+            } else {
+              hackStats[hack].noCountry++;
+            }
+          }
+        });
+      }
+    });
+
+
+    const sortedHacks =
+        Object.entries(hackStats).sort((a, b) => b[1].total - a[1].total);
+
+
+    let html = `
+      <section class="stats-section">
+        <h3><i class="fas fa-user-secret"></i> Статистика читеров по странам</h3>
+        <div class="stats-list">
+    `;
+
+
+    sortedCheaterCountries.forEach(([country, count]) => {
+      const percent = cheatersCount > 0 ?
+          ((count / cheatersCount) * 100).toFixed(1) :
+          '0.0';
+      const countryName = COUNTRY_TOOLTIPS[country] || 'Неизвестно';
+      html += `
+        <div class="stat-item">
+          <span class="stat-label">${country} ${countryName}</span>
+          <span class="stat-value">${count} (${percent}%)</span>
+        </div>
+      `;
+    });
+
+    if (cheaterNoCountryCount > 0) {
+      const percent = cheatersCount > 0 ?
+          ((cheaterNoCountryCount / cheatersCount) * 100).toFixed(1) :
+          '0.0';
+      html += `
+        <div class="stat-item">
+          <span class="stat-label">❓ Без страны</span>
+          <span class="stat-value">${cheaterNoCountryCount} (${
+          percent}%)</span>
+        </div>
+      `;
+    }
+
+    html += `
+        </div>
+      </section>
+
+
+      <section class="stats-section">
+        <h3><i class="fas fa-flag"></i> Статистика всех игроков по странам</h3>
+        <div class="stats-list">
+    `;
+
+
+    sortedCountries.forEach(([country, count]) => {
+      const percent =
+          totalPlayers > 0 ? ((count / totalPlayers) * 100).toFixed(1) : '0.0';
+      const countryName = COUNTRY_TOOLTIPS[country] || 'Неизвестно';
+      html += `
+        <div class="stat-item">
+          <span class="stat-label">${country} ${countryName}</span>
+          <span class="stat-value">${count} (${percent}%)</span>
+        </div>
+      `;
+    });
+
+    if (noCountryCount > 0) {
+      const percent = totalPlayers > 0 ?
+          ((noCountryCount / totalPlayers) * 100).toFixed(1) :
+          '0.0';
+      html += `
+        <div class="stat-item">
+          <span class="stat-label">❓ Без страны</span>
+          <span class="stat-value">${noCountryCount} (${percent}%)</span>
+        </div>
+      `;
+    }
+
+
+    html += `
+        </div>
+      </section>
+
+
+      <section class="stats-section">
+        <h3><i class="fas fa-bug"></i> Статистика по читам и функциям</h3>
+        <div class="stats-list">
+    `;
+
+
+    sortedHacks.forEach(([hack, data]) => {
+      const percent = totalPlayers > 0 ?
+          ((data.total / totalPlayers) * 100).toFixed(1) :
+          '0.0';
+
+
+      html += `
+        <div class="stat-item-hack">
+          <div class="hack-header">
+            <span class="stat-label-hack">${this.escapeHtml(hack)}</span>
+            <span class="stat-value-hack">${data.total} (${
+          percent}% от всех игроков)</span>
+          </div>
+      `;
+
+
+      const sortedHackCountries =
+          Object.entries(data.countries).sort((a, b) => b[1] - a[1]);
+
+
+      if (sortedHackCountries.length > 0 || data.noCountry > 0) {
+        html += `<div class="hack-countries">`;
+
+        sortedHackCountries.forEach(([country, count]) => {
+          const countryPercent =
+              data.total > 0 ? ((count / data.total) * 100).toFixed(1) : '0.0';
+          const countryName = COUNTRY_TOOLTIPS[country] || 'Неизвестно';
+          html += `
+            <div class="hack-country-item">
+              <span class="hack-country-label">${country} ${countryName}</span>
+              <span class="hack-country-value">${count} (${
+              countryPercent}% от чита)</span>
+            </div>
+          `;
+        });
+
+        if (data.noCountry > 0) {
+          const countryPercent = data.total > 0 ?
+              ((data.noCountry / data.total) * 100).toFixed(1) :
+              '0.0';
+          html += `
+            <div class="hack-country-item">
+              <span class="hack-country-label">❓ Без страны</span>
+              <span class="hack-country-value">${data.noCountry} (${
+              countryPercent}% от чита)</span>
+            </div>
+          `;
+        }
+
+        html += `</div>`;
+      }
+
+
+      html += `</div>`;
+    });
+
+
+    html += `
+        </div>
+      </section>
+
+
+      <section class="stats-section">
+        <h3><i class="fas fa-chart-pie"></i> Читеры vs Не читеры</h3>
+        <div class="stats-list">
+          <div class="stat-item stat-item-highlight">
+            <span class="stat-label"><i class="fas fa-user-secret"></i> Читеры</span>
+            <span class="stat-value stat-value-danger">${cheatersCount} (${
+        cheatersPercent}%)</span>
+          </div>
+          <div class="stat-item stat-item-highlight">
+            <span class="stat-label"><i class="fas fa-user-check"></i> Не читеры</span>
+            <span class="stat-value stat-value-success">${nonCheatersCount} (${
+        nonCheatersPercent}%)</span>
+          </div>
+          <div class="stat-item stat-item-highlight">
+            <span class="stat-label"><i class="fas fa-users"></i> Всего игроков</span>
+            <span class="stat-value stat-value-primary">${
+        totalPlayers} (100%)</span>
+          </div>
+        </div>
+      </section>
+    `;
+
+    statsBody.innerHTML = html;
+  }
+
+
   steamId64ToSteamId(steamId64) {
     if (!steamId64) return '';
+
 
     try {
       const BASE = 76561197960265728n;
       const id = BigInt(steamId64);
       if (id < BASE) return '';
 
+
       const accountId = id - BASE;
       const Y = accountId % 2n;
       const Z = (accountId - Y) / 2n;
 
+
       const X = 0n;
+
 
       return `STEAM_${X}:${Y.toString()}:${Z.toString()}`;
     } catch {
@@ -241,14 +584,17 @@ class PlayersDatabase {
     }
   }
 
+
   search(query) {
     let q = query.trim();
+
 
     const profileMatch =
         q.toLowerCase().match(/steamcommunity\.com\/profiles\/(\d{17})/);
     if (profileMatch) {
       q = profileMatch[1];
     }
+
 
     if (/^\d{17}$/.test(q)) {
       const steamId = this.steamId64ToSteamId(q);
@@ -259,6 +605,7 @@ class PlayersDatabase {
       q = q.toLowerCase();
     }
 
+
     if (!q) {
       this.filteredPlayers = [...this.players];
     } else {
@@ -268,23 +615,29 @@ class PlayersDatabase {
         const hacks = (player.hacks ?? '').toLowerCase();
         const description = (player.description ?? '').toLowerCase();
 
+
         const nicknameMatch = nickname.includes(q);
         const hacksMatch = hacks.includes(q);
         const descriptionMatch = description.includes(q);
 
+
         const steamIdMatch =
             this.exactSteamIdMatch ? steamID === q : steamID.includes(q);
+
 
         return nicknameMatch || hacksMatch || descriptionMatch || steamIdMatch;
       });
     }
 
+
     this.currentQuery = (query || '').trim();
     this.applySorting();
   }
 
+
   applySorting() {
     let q = this.currentQuery;
+
 
     if (q) {
       const profileMatch =
@@ -292,6 +645,7 @@ class PlayersDatabase {
       if (profileMatch) {
         q = profileMatch[1];
       }
+
 
       if (/^\d{17}$/.test(q)) {
         const steamId = this.steamId64ToSteamId(q);
@@ -303,6 +657,7 @@ class PlayersDatabase {
       }
     }
 
+
     let base;
     if (!q) {
       base = [...this.players];
@@ -313,21 +668,27 @@ class PlayersDatabase {
         const hacks = (player.hacks ?? '').toLowerCase();
         const description = (player.description ?? '').toLowerCase();
 
+
         const nicknameMatch = nickname.includes(q);
         const hacksMatch = hacks.includes(q);
         const descriptionMatch = description.includes(q);
 
+
         const steamIdMatch =
             this.exactSteamIdMatch ? steamID === q : steamID.includes(q);
+
 
         return nicknameMatch || hacksMatch || descriptionMatch || steamIdMatch;
       });
     }
 
+
     let result = base;
+
 
     const isNoCheat = (p) =>
         !p.hacks || p.hacks.trim() === '' || p.hacks === '—';
+
 
     if (this.sortFilters.hack === 'none-only') {
       result = result.filter(isNoCheat);
@@ -344,8 +705,10 @@ class PlayersDatabase {
       });
     }
 
+
     const hasDescription = (p) =>
         p.description && p.description.trim() !== '' && p.description !== '—';
+
 
     if (this.sortFilters.description === 'none-only') {
       result = result.filter(p => !hasDescription(p));
@@ -361,6 +724,7 @@ class PlayersDatabase {
       result = [...withDesc, ...noDesc];
     }
 
+
     if (this.sortFilters.country) {
       const targetCountry = this.sortFilters.country;
       result = result.filter(p => {
@@ -368,6 +732,7 @@ class PlayersDatabase {
         return country === targetCountry;
       });
     }
+
 
     if (this.sortFilters.alpha === 'asc') {
       result.sort((a, b) => {
@@ -383,35 +748,43 @@ class PlayersDatabase {
       });
     }
 
+
     result.sort((a, b) => {
       const nicknameA = (a.nickname || '').toString().trim();
       const nicknameB = (b.nickname || '').toString().trim();
 
+
       const emptyA = nicknameA === '';
       const emptyB = nicknameB === '';
+
 
       if (emptyA && emptyB) return 0;
       if (!emptyA && !emptyB) return 0;
       if (emptyA) return 1;
       if (emptyB) return -1;
 
+
       return 0;
     });
+
 
     this.filteredPlayers = result;
     this.renderTable();
     this.updateStats();
   }
 
+
   renderTable() {
     const tbody = document.getElementById('playersTableBody');
     tbody.innerHTML = '';
 
+
     if (this.filteredPlayers.length === 0) {
       tbody.innerHTML =
-          '<tr><td colspan="4" class="no-results">Ничего не найдено 😔</td></tr>';
+          '<tr><td colspan="5" class="no-results">Ничего не найдено 😔</td></tr>';
       return;
     }
+
 
     this.filteredPlayers.forEach(player => {
       const row = this.createPlayerRow(player);
@@ -419,28 +792,36 @@ class PlayersDatabase {
     });
   }
 
+
   getOrDash(value) {
     const v = (value ?? '').toString().trim();
     return v.length > 0 ? v : '—';
   }
 
+
   steamIdToSteamId64(steamId) {
     if (!steamId || steamId === '—') return '';
+
 
     const match = steamId.match(/^STEAM_(\d+):(\d+):(\d+)$/i);
     if (!match) return '';
 
+
     const [, X, Y, Z] = match.map(Number);
+
 
     const BASE_STEAMID64 = 76561197960265728n;
     const accountId = (BigInt(Z) * 2n) + BigInt(Y);
     const steamId64 = BASE_STEAMID64 + accountId;
 
+
     return steamId64.toString();
   }
 
+
   createPlayerRow(player) {
     const row = document.createElement('tr');
+
 
     let hacksText = player.hacks || '';
     if (hacksText && hacksText !== '—' && hacksText.trim() !== '') {
@@ -451,13 +832,16 @@ class PlayersDatabase {
       hacksText = hacksArray.join(', ');
     }
 
+
     const rawSteamId = (player.steamID ?? '').toString().trim();
     const hasSteamId = rawSteamId.length > 0;
+
 
     const steamIdDisplay = hasSteamId ? rawSteamId : '—';
     const steamId64 = hasSteamId ? this.steamIdToSteamId64(rawSteamId) : '';
     const steamProfileUrl =
         steamId64 ? `http://steamcommunity.com/profiles/${steamId64}` : '';
+
 
     const steamIdCellHtml = hasSteamId ? `
       <td class="steamid steamid-filled">
@@ -484,7 +868,9 @@ class PlayersDatabase {
       </td>
     `;
 
+
     const hasProofs = player.proofs && player.proofs.trim() !== '';
+
 
     const hacksColumnHtml = `
       <td class="hacks-text">
@@ -509,11 +895,13 @@ class PlayersDatabase {
       </td>
     `;
 
+
     const countryRaw = (player['country residence'] ?? '').toString().trim();
     const countryValue = this.getOrDash(countryRaw);
     const countryTitle = COUNTRY_TOOLTIPS[countryRaw] && countryRaw !== '' ?
         COUNTRY_TOOLTIPS[countryRaw] :
         '';
+
 
     row.innerHTML = `
       <td class="nickname">${
@@ -528,13 +916,16 @@ class PlayersDatabase {
       </td>
     `;
 
+
     return row;
   }
+
 
   updateStats() {
     document.getElementById('playersCount').textContent =
         this.filteredPlayers.length;
   }
+
 
   escapeHtml(text) {
     const div = document.createElement('div');
@@ -543,13 +934,16 @@ class PlayersDatabase {
   }
 }
 
+
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 
+
 window.onbeforeunload = function() {
   window.scrollTo(0, 0);
 };
+
 
 window.addEventListener('load', () => {
   const searchInput = document.getElementById('searchInput');
@@ -558,10 +952,13 @@ window.addEventListener('load', () => {
   }
 });
 
+
 let dbInstance = null;
+
 
 document.addEventListener('DOMContentLoaded', () => {
   dbInstance = new PlayersDatabase();
+
 
   const sourceBtn = document.querySelector('.source-button');
   if (sourceBtn) {
@@ -570,28 +967,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
+
 
   window.onbeforeunload = function() {
     window.scrollTo(0, 0);
   };
 });
 
+
 const faqToggle = document.getElementById('faqToggle');
 const faqModal = document.getElementById('faqModal');
 const closeModal = document.getElementById('closeModal');
+
 
 faqToggle && faqToggle.addEventListener('click', () => {
   faqModal.classList.add('active');
   document.body.style.overflow = 'hidden';
 });
 
+
 closeModal && closeModal.addEventListener('click', () => {
   faqModal.classList.remove('active');
   document.body.style.overflow = '';
 });
+
 
 faqModal && faqModal.addEventListener('click', (e) => {
   if (e.target === faqModal) {
@@ -600,9 +1003,17 @@ faqModal && faqModal.addEventListener('click', (e) => {
   }
 });
 
+
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && faqModal.classList.contains('active')) {
-    faqModal.classList.remove('active');
-    document.body.style.overflow = '';
+  if (e.key === 'Escape') {
+    if (faqModal && faqModal.classList.contains('active')) {
+      faqModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    const statsModal = document.getElementById('statsModal');
+    if (statsModal && statsModal.classList.contains('active')) {
+      statsModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
   }
 });
