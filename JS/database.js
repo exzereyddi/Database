@@ -823,7 +823,8 @@ window.DATABASE_JSON = {
       'nickname': 'Myamoto',
       'steamID': 'STEAM_0:1:813980756',
       'hacks': '',
-      'description': 'Агрессивная слабость'
+      'description': 'Агрессивная слабость',
+      'country residence': '🇷🇺'
     },
     {
       'nickname': 'MyDRJIk',
@@ -2356,3 +2357,4 @@ window.DATABASE_JSON = {
     }
   ]
 };
+
