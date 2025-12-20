@@ -4,8 +4,7 @@ window.DATABASE_JSON = {
       'nickname': '123',
       'steamID': 'STEAM_0:0:21942084',
       'hacks': 'HPP, SCROLL HELPER',
-      'description':
-          'aka K1REEE !CH. Владелец сервера NetherWorld, плагины делала бездарность на hedqi',
+      'description': 'aka K1REEE !CH. Владелец сервера NetherWorld, плагины делала бездарность на hedqi',
       'country residence': '🇷🇺'
     },
     {
@@ -16,10 +15,16 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '666PRADA',
-      'steamID': 'STEAM_0:1:64697142',
-      'hacks': 'BLUE MONDAY',
-      'description': '',
+      'steamID': 'STEAM_0:0:43304075',
+      'hacks': '',
+      'description': 'aka 1[Tricks]',
       'country residence': '🇷🇺'
+    },
+    {
+      'nickname': '666PRADA',
+      'steamID': 'STEAM_0:1:64697142',
+      'hacks': '',
+      'description': 'Twink 1',
     },
     {
       'nickname': '9z',
@@ -30,7 +35,7 @@ window.DATABASE_JSON = {
       'country residence': '🇦🇱'
     },
     {
-      'nickname': 'безумна',
+      'nickname': 'Безумна',
       'steamID': 'STEAM_0:0:142055738',
       'hacks': 'BLUE MONDAY, KNIFEBOT',
       'description': 'Все думают что это девочка, а на деле парень',
@@ -41,8 +46,7 @@ window.DATABASE_JSON = {
       'nickname': 'КОТЭ',
       'steamID': 'STEAM_0:0:178230123',
       'hacks': 'HPP, STRAFE HELPER',
-      'description':
-          'Тупой казах, использует free-ip-stresser и ложит игроков с хнса',
+      'description': 'Тупой казах, использует free-ip-stresser и ложит игроков с хнса',
       'proofs': 'https://t.me/database_proofs/4',
       'country residence': '🇰🇿'
     },
@@ -63,8 +67,7 @@ window.DATABASE_JSON = {
       'nickname': '[Svarog] Naruto',
       'steamID': 'STEAM_0:0:14313003',
       'hacks': '',
-      'description':
-          '\'Создатель\' самого худшего хнс сервера в истории хнс режима — Краснодар |05| HNS [100aa]',
+      'description':'\'Создатель\' самого худшего хнс сервера в истории хнс режима — Краснодар |05| HNS [100aa]',
       'country residence': '🇷🇺'
     },
     {
@@ -79,6 +82,12 @@ window.DATABASE_JSON = {
       'hacks': 'ENHANDED',
       'description': 'Сын щлюхи',
       'proofs': 'https://t.me/database_proofs/49'
+    },
+    {
+      'nickname': 'Alfoso',
+      'steamID': 'STEAM_0:1:600964',
+      'hacks': 'ENHANDED',
+      'description': 'Twink 1'
     },
     {
       'nickname': 'aN1m3^',
@@ -152,6 +161,12 @@ window.DATABASE_JSON = {
       'proofs': 'https://t.me/database_proofs/25'
     },
     {
+      'nickname': 'asdset',
+      'steamID': 'STEAM_0:1:812057238',
+      'hacks': 'BLUE MONDAY, SCROLL HELPER',
+      'description': 'Twink 3'
+    },
+    {
       'nickname': 'Astral',
       'steamID': 'STEAM_0:0:186244463',
       'hacks': 'HPP',
@@ -184,8 +199,7 @@ window.DATABASE_JSON = {
       'nickname': 'baby flopcha',
       'steamID': 'STEAM_0:1:157280968',
       'hacks': 'HPP, ENHANDED',
-      'description':
-          'Зачем-то ее друг хотел меня задоксить хоть я и мирняк, не смогли(',
+      'description': 'Зачем-то ее друг хотел меня задоксить хоть я и мирняк, не смогли(',
       'proofs': 'https://t.me/database_proofs/32',
       'country residence': '🇷🇺'
     },
@@ -724,8 +738,7 @@ window.DATABASE_JSON = {
       'nickname': 'm1rc',
       'steamID': 'STEAM_0:1:72395838',
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
-      'description':
-          'Был админом на тимтахоме, спалили что с бмом, отняли админку',
+      'description': 'Был админом на тимтахоме, спалили что с бмом, отняли админку',
       'country residence': '🇷🇺'
     },
     {
@@ -773,8 +786,7 @@ window.DATABASE_JSON = {
       'nickname': 'meachester',
       'steamID': '',
       'hacks': 'HPP',
-      'description':
-          'Бывший другалёк hpp forever\'a, играл только на проекте MakeFrag',
+      'description': 'Бывший другалёк hpp forever\'a, играл только на проекте MakeFrag',
       'country residence': '🇺🇦'
     },
     {
@@ -782,6 +794,13 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:40230262',
       'hacks': 'HPP',
       'description': '',
+      'country residence': '🇷🇺'
+    },
+    {
+      'nickname': 'MsK._ _',
+      'steamID': 'STEAM_0:0:67551134',
+      'hacks': '',
+      'description': 'Про игрок и слайдер, первый в хнс взял стекло на hns_etheral',
       'country residence': '🇷🇺'
     },
     {
@@ -814,7 +833,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Morph',
       'steamID': 'STEAM_0:1:461291328',
-      'hacks': 'NSTE HACK, ENHANDED',
+      'hacks': 'NSTE RECORDER, ENHANDED',
       'description': 'Админ на MIXTIME сервере с читом',
       'country residence': '🇷🇺',
       'proofs': 'https://t.me/database_proofs/55'
@@ -823,8 +842,7 @@ window.DATABASE_JSON = {
       'nickname': 'Myamoto',
       'steamID': 'STEAM_0:1:813980756',
       'hacks': '',
-      'description': 'Агрессивная слабость',
-      'country residence': '🇷🇺'
+      'description': 'Агрессивная слабость'
     },
     {
       'nickname': 'MyDRJIk',
@@ -890,8 +908,7 @@ window.DATABASE_JSON = {
       'nickname': 'night knight',
       'steamID': 'STEAM_0:1:500898415',
       'hacks': 'FURION',
-      'description':
-          'aka динозаврик aka ybiica, ноет по кд на читеров, но сам является читером — лицемерная тварь',
+      'description': 'aka динозаврик aka ybiica, ноет по кд на читеров, но сам является читером — лицемерная тварь',
       'proofs': 'https://t.me/database_proofs/40',
       'country residence': '🇷🇺'
     },
@@ -1162,6 +1179,13 @@ window.DATABASE_JSON = {
       'country residence': '🇺🇦'
     },
     {
+      'nickname': 'tahoma',
+      'steamID': 'STEAM_0:1:1430561',
+      'hacks': 'BROKOLY',
+      'description': 'Twink  1',
+      'proofs': '',
+    },
+    {
       'nickname': 'Temper',
       'steamID': 'STEAM_0:1:926062275',
       'hacks': '',
@@ -1183,6 +1207,18 @@ window.DATABASE_JSON = {
       'description': 'Twink 1'
     },
     {
+      'nickname': 'tHEYAMBO',
+      'steamID': 'STEAM_0:0:507253605',
+      'hacks': 'BLUE MONDAY, SCROLL HELPER',
+      'description': 'Twink 2'
+    },
+    {
+      'nickname': 'tHEYAMBO',
+      'steamID': 'STEAM_0:0:507253605',
+      'hacks': 'BLUE MONDAY, SCROLL HELPER',
+      'description': 'Twink 3'
+    },
+    {
       'nickname': 'toizmode',
       'steamID': 'STEAM_0:0:173114928',
       'hacks': 'SCROLL HELPER, STRAFE HELPER',
@@ -1201,8 +1237,7 @@ window.DATABASE_JSON = {
       'nickname': 'translusent ',
       'steamID': 'STEAM_0:1:3998810',
       'hacks': '',
-      'description':
-          'aka vladdEftw, неплохо играет, но читер (если верить на слово бездарному скуфу — Proffi)',
+      'description': 'aka vladdEftw, неплохо играет, но читер (если верить на слово бездарному скуфу — Proffi)',
       'country residence': '🇷🇺'
     },
     {
@@ -1241,6 +1276,12 @@ window.DATABASE_JSON = {
       'description': 'Twink 1'
     },
     {
+      'nickname': 'Woody',
+      'steamID': 'STEAM_0:0:452865955',
+      'hacks': 'BLUE MONDAY, SCROLL HELPER',
+      'description': 'Twink 2'
+    },
+    {
       'nickname': 'Xpika!',
       'steamID': 'STEAM_0:1:712341768',
       'hacks': 'NSTE RECORDER, BLUE MONDAY',
@@ -1255,6 +1296,21 @@ window.DATABASE_JSON = {
       'country residence': '🇷🇺'
     },
     {
+      'nickname': 'Amsoooo',
+      'steamID': 'STEAM_0:1:534592974',
+      'hacks': 'KNIFEBOT, STRAFE HELPER',
+      'description': 'Фрик',
+      'country residence': '🇷🇸',
+      'proofs': 'https://t.me/database_proofs/60'
+    },
+    {
+      'nickname': 'm0NKEY',
+      'steamID': 'STEAM_0:0:416666364',
+      'hacks': 'SCROLL HELPER',
+      'description': '',
+      'proofs': 'https://t.me/database_proofs/62'
+    },
+    {
       'nickname': 'z1zza',
       'steamID': 'STEAM_0:0:31346261',
       'hacks': '',
@@ -1262,10 +1318,18 @@ window.DATABASE_JSON = {
       'country residence': '🇷🇺'
     },
     {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:600964',
-      'hacks': 'BLUE MONDAY',
-      'description': ''
+      'nickname': 'topoviygus',
+      'steamID': 'STEAM_0:1:26097265',
+      'hacks': '',
+      'description': 'Норм игрок kreedz',
+      'country residence': '🇷🇺'
+    },
+    {
+      'nickname': 'PLE',
+      'steamID': 'STEAM_0:1:555147092',
+      'hacks': '',
+      'description': 'Бомж, был обоссан другом neverfixa',
+      'country residence': '🇷🇺'
     },
     {
       'nickname': '',
@@ -1579,7 +1643,7 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:198111876',
       'hacks': 'BLUE MONDAY',
-      'description': ''
+      'description': 'aka sora1'
     },
     {
       'nickname': '',
@@ -1741,7 +1805,7 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:532776009',
       'hacks': 'HPP',
-      'description': ''
+      'description': 'Хорошо поёт'
     },
     {
       'nickname': '',
@@ -1852,7 +1916,7 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:612823789',
       'hacks': 'BLUE MONDAY',
-      'description': ''
+      'description': 'aka roy, ютубер на бомжах'
     },
     {
       'nickname': '',
@@ -2114,12 +2178,6 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:1:812057238',
-      'hacks': 'BLUE MONDAY, SCROLL HELPER',
-      'description': ''
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:0:818633035',
       'hacks': 'FURION',
       'description': ''
@@ -2336,25 +2394,27 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:1:6172674161',
+      'steamID': 'STEAM_0:1:617267416',
       'hacks': 'HPP, BACKTRACK, KNIFEBOT',
       'description': ''
     },
     {
-      'nickname': 'Amsoooo',
-      'steamID': 'STEAM_0:1:534592974',
-      'hacks': 'KNIFEBOT, STRAFE HELPER',
-      'description': 'Фрик',
-      'country residence': '🇷🇸',
-      'proofs': 'https://t.me/database_proofs/60'
+      'nickname': '',
+      'steamID': 'STEAM_0:1:527749601',
+      'hacks': 'FURION',
+      'description': 'jumpbug за карту'
     },
     {
-      'nickname': 'm0NKEY',
-      'steamID': 'STEAM_0:0:416666364',
-      'hacks': 'SCROLL HELPER',
-      'description': '',
-      'proofs': 'https://t.me/database_proofs/62'
+      'nickname': '',
+      'steamID': 'STEAM_0:1:107820689',
+      'hacks': '',
+      'description': 'Лсный бомж всасывает с раном 3-0, без скилла'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:741765007',
+      'hacks': 'FURION',
+      'description': 'Jumpbug'
     }
   ]
 };
-
