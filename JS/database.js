@@ -1193,6 +1193,12 @@ window.DATABASE_JSON = {
       'country residence': '🇺🇦'
     },
     {
+      'nickname': 'Temper',
+      'steamID': 'STEAM_0:0:4747360',
+      'hacks': '',
+      'description': 'Twink 1 (Старый Мейн)',
+    },
+    {
       'nickname': 'tHEYAMBO',
       'steamID': 'STEAM_0:1:526277001',
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
@@ -2238,12 +2244,6 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:1:851536371',
-      'hacks': 'BLUE MONDAY, BROKOLY',
-      'description': ''
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:1:852750479',
       'hacks': 'HPP',
       'description': ''
@@ -2415,6 +2415,24 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:0:741765007',
       'hacks': 'FURION',
       'description': 'Jumpbug'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:923620156',
+      'hacks': 'FURION',
+      'description': 'longjump 270'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:960804608',
+      'hacks': 'ENHANDED',
+      'description': 'aka xenon, брат дрища'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:851536371',
+      'hacks': 'ENHANDED',
+      'description': 'aka xenon, брат дрища'
     }
   ]
 };
