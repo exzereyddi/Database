@@ -632,6 +632,12 @@ window.DATABASE_JSON = {
       'description': 'Twink 11 (weta)'
     },
     {
+      'nickname': 'kirito',
+      'steamID': 'STEAM_0:1:617267416',
+      'hacks': 'HPP, SCROLL HELPER, ENHANDED',
+      'description': 'Twink 12 (burindi)'
+    },
+    {
       'nickname': 'kitkat',
       'steamID': 'STEAM_0:1:229896918',
       'hacks': '',
@@ -657,7 +663,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Laura',
       'steamID': 'STEAM_0:0:646666',
-      'hacks': 'BLUE MONDAY, NSTE RECORDER, RECORDER',
+      'hacks': 'BLUE MONDAY, NSTE RECORDER',
       'description': 'aka jj',
       'proofs': 'https://t.me/database_proofs/26',
       'country residence': '🇷🇺'
@@ -665,7 +671,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Laura',
       'steamID': 'STEAM_0:0:747777',
-      'hacks': 'BLUE MONDAY, NSTE RECORDER, RECORDER',
+      'hacks': 'BLUE MONDAY, NSTE RECORDER',
       'description': 'Twink 1'
     },
     {
@@ -2251,7 +2257,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:854034058',
-      'hacks': 'NSTE RECORDER, HPP',
+      'hacks': 'BLUE MONDAY, NSTE RECORDER, HPP',
       'description': ''
     },
     {
@@ -2394,12 +2400,6 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:1:617267416',
-      'hacks': 'HPP, BACKTRACK, KNIFEBOT',
-      'description': ''
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:1:527749601',
       'hacks': 'FURION',
       'description': 'jumpbug за карту'
@@ -2433,6 +2433,30 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:851536371',
       'hacks': 'ENHANDED',
       'description': 'aka xenon, брат дрища'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:948298033',
+      'hacks': 'NSTE RECORDER',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:571249521',
+      'hacks': 'BLUE MONDAY',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:864628536',
+      'hacks': 'BLUE MONDAY',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:932980934',
+      'hacks': 'ENHANDED',
+      'description': ''
     }
   ]
 };
