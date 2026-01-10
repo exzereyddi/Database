@@ -980,19 +980,6 @@ window.DATABASE_JSON = {
       'country residence': '🇷🇺'
     },
     {
-      'nickname': 'oneshot',
-      'steamID': 'STEAM_0:0:1143083',
-      'hacks': 'BLUE MONDAY, GAREY RECORDER',
-      'description': '',
-      'country residence': '🇷🇺'
-    },
-    {
-      'nickname': 'oneshot ',
-      'steamID': 'STEAM_0:0:1252986',
-      'hacks': 'BLUE MONDAY, GAREY RECORDER',
-      'description': 'Twink 1'
-    },
-    {
       'nickname': 'opoznay menya',
       'steamID': 'STEAM_0:0:624979419',
       'hacks': 'BROKOLY, SCROLL HELPER',
@@ -2456,6 +2443,24 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:932980934',
       'hacks': 'ENHANDED',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:102528403',
+      'hacks': 'ENHANDED',
+      'description': 'aka Ray'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_1',
+      'hacks': '1',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM1',
+      'hacks': '1',
       'description': ''
     }
   ]
