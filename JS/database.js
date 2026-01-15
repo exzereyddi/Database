@@ -1212,12 +1212,6 @@ window.DATABASE_JSON = {
       'description': 'Twink 2'
     },
     {
-      'nickname': 'tHEYAMBO',
-      'steamID': 'STEAM_0:0:507253605',
-      'hacks': 'BLUE MONDAY, SCROLL HELPER',
-      'description': 'Twink 3'
-    },
-    {
       'nickname': 'toizmode',
       'steamID': 'STEAM_0:0:173114928',
       'hacks': 'SCROLL HELPER, STRAFE HELPER',
@@ -1643,6 +1637,12 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:0:198111876',
       'hacks': 'BLUE MONDAY',
       'description': 'aka sora1'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:566005603',
+      'hacks': 'BLUE MONDAY',
+      'description': 'Twink 1, aka sora1'
     },
     {
       'nickname': '',
@@ -2453,15 +2453,9 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_1',
-      'hacks': '1',
-      'description': ''
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM1',
-      'hacks': '1',
-      'description': ''
+      'steamID': 'STEAM_0:1:78002471',
+      'hacks': 'BLUE MONDAY',
+      'description': 'aka skazka'
     }
   ]
 };
