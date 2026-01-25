@@ -566,7 +566,7 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': 'kilabeez',
-      'steamID': 'STEAM_0:1:507194122',
+      'steamID': 'STEAM_0:1:228538537',
       'hacks': 'HPP, KILABEEZ PREFIX',
       'description': 'Twink 3 ( maybe ), jumpbug hack, msl detected on ppc-zone(December 25, 2023 year)'
     },
