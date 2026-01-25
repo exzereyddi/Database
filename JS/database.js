@@ -565,6 +565,12 @@ window.DATABASE_JSON = {
       'description': 'Twink 2'
     },
     {
+      'nickname': 'kilabeez',
+      'steamID': 'STEAM_0:1:507194122',
+      'hacks': 'HPP, KILABEEZ PREFIX',
+      'description': 'Twink 3 ( maybe ), jumpbug hack, msl detected on ppc-zone(December 25, 2023 year)'
+    },
+    {
       'nickname': 'kirito',
       'steamID': 'STEAM_0:1:4562823',
       'hacks': 'HPP, SCROLL HELPER, ENHANDED',
@@ -1053,7 +1059,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'rockstar',
       'steamID': 'STEAM_0:0:459730030',
-      'hacks': 'HPP, BLUE MONDAY, SHREK',
+      'hacks': 'ENHANDED, NSTE RECORDER, HPP, BLUE MONDAY',
       'description': 'Отлетает от са и покупает разбаны',
       'proofs': 'https://t.me/database_proofs/43',
       'country residence': '🇷🇺'
@@ -2395,13 +2401,13 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:107820689',
       'hacks': '',
-      'description': 'Лсный бомж всасывает с раном 3-0, без скилла'
+      'description': 'Лсный бомж сосал с раном 3-0'
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:741765007',
       'hacks': 'FURION',
-      'description': 'Jumpbug'
+      'description': 'jumpbug'
     },
     {
       'nickname': '',
@@ -2456,6 +2462,30 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:78002471',
       'hacks': 'BLUE MONDAY',
       'description': 'aka skazka'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:581017342',
+      'hacks': 'BLUE MONDAY',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:621445343',
+      'hacks': 'BLUE MONDAY, BROKOLY',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:725985064',
+      'hacks': 'HPP',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:764774461',
+      'hacks': 'BLUE MONDAY',
+      'description': ''
     }
   ]
 };
