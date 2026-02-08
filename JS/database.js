@@ -80,7 +80,7 @@ window.DATABASE_JSON = {
       'nickname': 'Alfoso',
       'steamID': 'STEAM_0:1:617507182',
       'hacks': 'ENHANDED',
-      'description': 'Сын щлюхи',
+      'description': 'Сын шлюхи',
       'proofs': 'https://t.me/database_proofs/49'
     },
     {
@@ -93,7 +93,7 @@ window.DATABASE_JSON = {
       'nickname': 'aN1m3^',
       'steamID': 'STEAM_0:0:146690203',
       'hacks': 'SCROLL HELPER, STRAFE HELPER, HPP',
-      'description': 'Сын щлюхи',
+      'description': 'Сын шлюхи',
       'country residence': '🇷🇺'
     },
     {
@@ -115,7 +115,7 @@ window.DATABASE_JSON = {
       'nickname': 'Arknights',
       'steamID': 'STEAM_0:0:157820168',
       'hacks': 'HPP, SCROLL HELPER',
-      'description': 'Сын щлюхи',
+      'description': 'Сын шлюхи',
       'proofs': 'https://t.me/database_proofs/8',
       'country residence': '🇷🇺'
     },
@@ -130,7 +130,7 @@ window.DATABASE_JSON = {
       'nickname': 'arrogance',
       'steamID': 'STEAM_0:1:2183031',
       'hacks': 'HPP, BLUE MONDAY',
-      'description': 'aka desu, токсичный сын щлюхи и лицемер',
+      'description': 'aka desu, токсичный сын шлюхи и лицемер',
       'proofs': 'https://t.me/database_proofs/52',
       'country residence': '🇷🇺'
     },
@@ -192,7 +192,7 @@ window.DATABASE_JSON = {
       'nickname': 'baber',
       'steamID': 'STEAM_0:1:615192879',
       'hacks': 'FURION, BLUE MONDAY, HPP',
-      'description': '',
+      'description': 'Ютубер',
       'country residence': '🇧🇾'
     },
     {
@@ -207,7 +207,7 @@ window.DATABASE_JSON = {
       'nickname': 'Bikke',
       'steamID': 'STEAM_0:1:28769051',
       'hacks': '',
-      'description': 'Норм игрок, 15 лет играет'
+      'description': 'Украл ник старого игрока'
     },
     {
       'nickname': 'Billy Nogami',
@@ -312,6 +312,14 @@ window.DATABASE_JSON = {
       'country residence': '🇮🇱'
     },
     {
+      'nickname': 'd0ffm',
+      'steamID': 'STEAM_1:1:834870501',
+      'hacks': 'HPP',
+      'description': '\'Создатель\' хнс сервака (паста других), нет денег на раскрутку даже, местный фрик и бездарь',
+      'country residence': '🇺🇿',
+      'proofs': 'https://t.me/database_proofs/64'
+    },
+    {
       'nickname': 'demodex',
       'steamID': 'STEAM_0:0:113279391',
       'hacks': 'BLUE MONDAY',
@@ -322,13 +330,13 @@ window.DATABASE_JSON = {
       'nickname': 'desomorphis',
       'steamID': '',
       'hacks': 'BLUE MONDAY',
-      'description': 'Сын щлюхи'
+      'description': 'Сын шлюхи'
     },
     {
       'nickname': 'distrofik',
       'steamID': 'STEAM_0:0:31689774',
       'hacks': 'SCROLL HELPER, STRAFE HELPER, HPP',
-      'description': 'Сын щлюхи',
+      'description': 'Сын шлюхи',
       'proofs': 'https://t.me/database_proofs/35',
       'country residence': '🇺🇦'
     },
@@ -379,7 +387,7 @@ window.DATABASE_JSON = {
       'nickname': 'FnL',
       'steamID': 'STEAM_0:1:525936001',
       'hacks': 'HPP, SCROLL HELPER',
-      'description': 'Сын щлюхи',
+      'description': 'Сын шлюхи',
       'country residence': '🇷🇺'
     },
     {
@@ -448,7 +456,7 @@ window.DATABASE_JSON = {
       'nickname': 'hedqi',
       'steamID': 'STEAM_0:1:467208095',
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
-      'description': 'Sale BLUE MONDAY, сын щлюхи',
+      'description': 'Sale BLUE MONDAY, сын шлюхи',
       'proofs': 'https://t.me/database_proofs/6',
       'country residence': '🇷🇺'
     },
@@ -787,6 +795,20 @@ window.DATABASE_JSON = {
       'country residence': '🇹🇷'
     },
     {
+      'nickname': 'muppi',
+      'steamID': 'STEAM_0:0:8126414',
+      'hacks': '',
+      'description': 'Монтажер, дизайнер',
+      'country residence': '🇷🇺'
+    },
+    {
+      'nickname': 'muppi',
+      'steamID': 'STEAM_0:0:720608078',
+      'hacks': '',
+      'description': 'Twink 1',
+      'country residence': '🇷🇺'
+    },
+    {
       'nickname': 'matd3n',
       'steamID': 'STEAM_0:1:622552337',
       'hacks': 'BLUE MONDAY, NSTE RECORDER',
@@ -827,7 +849,7 @@ window.DATABASE_JSON = {
       'nickname': 'moonrock',
       'steamID': 'STEAM_0:0:614403768',
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
-      'description': 'aka slowmodoto, сын щлюхи',
+      'description': 'aka slowmodoto, сын шлюхи',
       'country residence': '🇷🇺'
     },
     {
@@ -1005,7 +1027,7 @@ window.DATABASE_JSON = {
       'nickname': 'oWnEd',
       'steamID': 'STEAM_0:0:619833432',
       'hacks': 'HPP, KNIFEBOT',
-      'description': 'aka c0du, Сын щлюхи',
+      'description': 'aka c0du, Сын шлюхи',
       'proofs': 'https://t.me/database_proofs/22',
       'country residence': '🇷🇺'
     },
@@ -1013,7 +1035,7 @@ window.DATABASE_JSON = {
       'nickname': 'player05',
       'steamID': 'STEAM_0:0:575946455',
       'hacks': 'BLUE MONDAY',
-      'description': 'Сын щлюхи',
+      'description': 'Сын шлюхи',
       'country residence': '🇷🇺'
     },
     {
@@ -1141,6 +1163,30 @@ window.DATABASE_JSON = {
       'description': '',
       'proofs': 'https://t.me/database_proofs/42',
       'country residence': '🇹🇷'
+    },
+    {
+      'nickname': 'Sloyan',
+      'steamID': 'STEAM_0:0:396252871',
+      'hacks': 'BROKOLY, HPP, SCROLL HELPER, BLUE MONDAY',
+      'description': 'Twink 1',
+    },
+    {
+      'nickname': 'Sloyan',
+      'steamID': 'STEAM_0:1:937001742',
+      'hacks': 'BROKOLY, HPP, SCROLL HELPER, BLUE MONDAY',
+      'description': 'Twink 2',
+    },
+    {
+      'nickname': 'Sloyan',
+      'steamID': 'STEAM_0:0:455457212',
+      'hacks': 'BROKOLY, HPP, SCROLL HELPER, BLUE MONDAY',
+      'description': 'Twink 3'
+    },
+    {
+      'nickname': 'Sloyan',
+      'steamID': 'STEAM_0:0:598479451',
+      'hacks': 'BROKOLY, HPP, SCROLL HELPER, BLUE MONDAY',
+      'description': 'Twink 4'
     },
     {
       'nickname': 'StrafEr',
@@ -1313,7 +1359,7 @@ window.DATABASE_JSON = {
       'nickname': 'z1zza',
       'steamID': 'STEAM_0:0:31346261',
       'hacks': '',
-      'description': '30 летний скуф, только начал играть',
+      'description': 'Мужик, только начал играть',
       'country residence': '🇷🇺'
     },
     {
@@ -1346,7 +1392,7 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:8219593',
       'hacks': 'HPP, BLUE MONDAY',
-      'description': 'Сын щлюхи, играл с ником кабан'
+      'description': 'Сын шлюхи, играл с ником кабан'
     },
     {
       'nickname': '',
@@ -1357,8 +1403,20 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:14743354',
-      'hacks': 'HPP',
-      'description': ''
+      'hacks': 'HPP, NSTE RECORDER, ENHANDED',
+      'description': 'aka confu ( bot )'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:924408888',
+      'hacks': 'HPP, NSTE RECORDER, ENHANDED',
+      'description': 'aka confu, Twink 1 for STEAM_0:1:14743354'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:488558769',
+      'hacks': 'HPP, NSTE RECORDER, ENHANDED',
+      'description': 'aka confu, Twink 2 for STEAM_0:1:14743354'
     },
     {
       'nickname': '',
@@ -1564,7 +1622,13 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:128959477',
       'hacks': 'BLUE MONDAY',
-      'description': ''
+      'description': 'aka finese(dodik s bomji hns)'
+    },
+        {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:628489275',
+      'hacks': 'BLUE MONDAY',
+      'description': 'aka finese'
     },
     {
       'nickname': '',
@@ -1582,7 +1646,7 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:150658452',
       'hacks': 'HPP',
-      'description': 'Сын щлюхи'
+      'description': 'Сын шлюхи'
     },
     {
       'nickname': '',
@@ -1613,6 +1677,24 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:0:180884837',
       'hacks': 'NSTE RECORDER',
       'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:23439768',
+      'hacks': 'NSTE RECORDER',
+      'description': 'Twink for STEAM_0:0:180884837'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:915520',
+      'hacks': 'NSTE RECORDER',
+      'description': 'Twink for STEAM_0:0:180884837'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:456154599',
+      'hacks': 'NSTE RECORDER',
+      'description': 'Twink for STEAM_0:0:180884837'
     },
     {
       'nickname': '',
@@ -1682,18 +1764,6 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:1:410815711',
-      'hacks': 'BLUE MONDAY',
-      'description': ''
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:415126385',
-      'hacks': 'ENHANDED',
-      'description': ''
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:0:418649797',
       'hacks': 'BLUE MONDAY, BROKOLY',
       'description': ''
@@ -1705,10 +1775,16 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
-      'nickname': '',
+      'nickname': 'dejair',
       'steamID': 'STEAM_0:0:433851248',
-      'hacks': 'HPP',
-      'description': ''
+      'hacks': 'HPP, BLUE MONDAY',
+      'description': 'moder rayish'
+    },
+        {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:164926042',
+      'hacks': 'HPP, BLUE MONDAY',
+      'description': 'Twink for STEAM_0:0:433851248'
     },
     {
       'nickname': '',
@@ -1742,12 +1818,6 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:0:455457212',
-      'hacks': 'BLUE MONDAY, FURION, HPP',
-      'description': ''
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:1:456467627',
       'hacks': 'HPP',
       'description': ''
@@ -1768,12 +1838,6 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:465467816',
       'hacks': 'BLUE MONDAY, ENHANDED, NSTE RECORDER, HPP',
-      'description': ''
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:509918441',
-      'hacks': 'HPP',
       'description': ''
     },
     {
@@ -1819,7 +1883,6 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
-      'nickname': '',
       'nickname': 'kayden＃',
       'steamID': 'STEAM_0:0:550798737',
       'hacks': 'HPP',
@@ -2029,7 +2092,7 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:683705116',
       'hacks': 'HPP',
-      'description': 'Сын щлюхи'
+      'description': 'Сын шлюхи'
     },
     {
       'nickname': '',
@@ -2052,13 +2115,13 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:711945548',
-      'hacks': 'SCROLL HELPER, KILABEEZ PREFIX, ENHANDED',
+      'hacks': 'SCROLL HELPER, KILABEEZ PREFIX, ENHANDED, BLUE MONDAY',
       'description': 'Twink for STEAM_0:1:860745746'
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:714263410',
-      'hacks': 'SCROLL HELPER, KILABEEZ PREFIX, ENHANDED',
+      'hacks': 'SCROLL HELPER, KILABEEZ PREFIX, ENHANDED, BLUE MONDAY',
       'description': 'Twink for STEAM_0:1:860745746'
     },
     {
@@ -2073,6 +2136,24 @@ window.DATABASE_JSON = {
       'hacks': 'HPP, RAGE STRAFE',
       'description': ''
     },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:4164860',
+      'hacks': 'FURION',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:738043018',
+      'hacks': 'HPP, FURION',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:738043018',
+      'hacks': 'HPP, FURION',
+      'description': ''
+    }, 
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:743076180',
@@ -2105,12 +2186,6 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:1:768952459',
-      'hacks': 'BLUE MONDAY',
-      'description': ''
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:1:770227705',
       'hacks': 'HPP, FURION',
       'description': ''
@@ -2120,6 +2195,12 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:772389605',
       'hacks': 'BLUE MONDAY',
       'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:74774891',
+      'hacks': 'HPP',
+      'description': 'Лсное чудище 3-0, чей-то твинк'
     },
     {
       'nickname': '',
@@ -2159,15 +2240,9 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:0:801299315',
-      'hacks': 'HPP 6, ENHANDED, SCROLL HELPER',
-      'description': ''
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:0:802126008',
       'hacks': 'HPP, ANTI FLASH',
-      'description': ''
+      'description': 'Лсное чудище'
     },
     {
       'nickname': '',
@@ -2192,6 +2267,12 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:0:827211081',
       'hacks': 'ENHANDED',
       'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': '	STEAM_0:1:789104406',
+      'hacks': 'ENHANDED',
+      'description': 'Twink for STEAM_0:0:827211081'
     },
     {
       'nickname': '',
@@ -2255,6 +2336,12 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
+      'steamID': 'STEAM_0:0:720567567',
+      'hacks': 'BLUE MONDAY, NSTE RECORDER, HPP',
+      'description': 'Twink for STEAM_0:1:854034058'
+    },
+    {
+      'nickname': '',
       'steamID': 'STEAM_0:0:859465689',
       'hacks': 'HPP, BLUE MONDAY, RAGE STRAFE',
       'description': ''
@@ -2268,7 +2355,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:860745746',
-      'hacks': 'SCROLL HELPER, KILABEEZ PREFIX, ENHANDED',
+      'hacks': 'SCROLL HELPER, KILABEEZ PREFIX, ENHANDED, BLUE MONDAY',
       'description': ''
     },
     {
@@ -2330,6 +2417,18 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:0:916223884',
       'hacks': 'HPP, RAGE STRAFE, BACKTRACK',
       'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:932980934',
+      'hacks': 'HPP, RAGE STRAFE, BACKTRACK',
+      'description': 'Twink for STEAM_0:0:916223884'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:801299315',
+      'hacks': 'HPP 6, ENHANDED, SCROLL HELPER',
+      'description': 'Twink for STEAM_0:0:916223884'
     },
     {
       'nickname': '',
@@ -2430,8 +2529,20 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:948298033',
-      'hacks': 'NSTE RECORDER',
+      'hacks': 'NSTE RECORDER, BLUE MONDAY, ENHANDED',
       'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:415126385',
+      'hacks': 'NSTE RECORDER, BLUE MONDAY, ENHANDED',
+      'description': 'Twink for STEAM_0:1:948298033'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:410815711',
+      'hacks': 'NSTE RECORDER, BLUE MONDAY, ENHANDED',
+      'description': 'Twink for STEAM_0:1:948298033'
     },
     {
       'nickname': '',
@@ -2443,12 +2554,6 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:864628536',
       'hacks': 'BLUE MONDAY',
-      'description': ''
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:932980934',
-      'hacks': 'ENHANDED',
       'description': ''
     },
     {
@@ -2483,8 +2588,20 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
+      'steamID': 'STEAM_0:1:404312603',
+      'hacks': 'HPP, FURION',
+      'description': ''
+    },
+    {
+      'nickname': '',
       'steamID': 'STEAM_0:1:764774461',
       'hacks': 'BLUE MONDAY',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:942266706',
+      'hacks': 'HPP',
       'description': ''
     }
   ]
