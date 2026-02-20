@@ -652,6 +652,18 @@ window.DATABASE_JSON = {
       'description': 'Twink 12 (burindi)'
     },
     {
+      'nickname': 'kirito',
+      'steamID': 'STEAM_0:0:840396124',
+      'hacks': 'HPP, SCROLL HELPER, ENHANDED',
+      'description': 'Twink 13 (burindi)'
+    },
+    {
+      'nickname': 'kirito',
+      'steamID': 'STEAM_0:1:592306332',
+      'hacks': 'HPP, SCROLL HELPER, ENHANDED',
+      'description': 'Twink 14 (burindi)'
+    },
+    {
       'nickname': 'kitkat',
       'steamID': 'STEAM_0:1:229896918',
       'hacks': '',
@@ -1059,17 +1071,29 @@ window.DATABASE_JSON = {
       'country residence': '🇷🇺'
     },
     {
+      'nickname': 'Proffi',
+      'steamID': 'STEAM_0:1:20945448',
+      'hacks': '',
+      'description': 'Twink 1',
+    },
+    {
+      'nickname': 'Брат Proffi (grafimberg)',
+      'steamID': 'STEAM_0:1:161116957',
+      'hacks': '',
+      'description': 'Читак',
+    },
+    {
       'nickname': 'Rainy Day',
       'steamID': 'STEAM_0:1:210783677',
       'hacks': 'HPP',
-      'description': '40000 бомже триксов на брике!',
+      'description': '40000 бомже триксов на брике',
       'country residence': '🇺🇦'
     },
     {
       'nickname': 'rise of the dead',
       'steamID': 'STEAM_0:1:665041534',
       'hacks': 'HPP, BLUE MONDAY, ENHANDED, SCROLL HELPER',
-      'description': '',
+      'description': 'К его аккаунту имеет доступ игрок kirito',
       'country residence': '🇷🇺'
     },
     {
@@ -1082,7 +1106,7 @@ window.DATABASE_JSON = {
       'nickname': 'rockstar',
       'steamID': 'STEAM_0:0:459730030',
       'hacks': 'ENHANDED, NSTE RECORDER, HPP, BLUE MONDAY',
-      'description': 'Отлетает от са и покупает разбаны',
+      'description': 'Отлетает от ca и покупает разбаны',
       'proofs': 'https://t.me/database_proofs/43',
       'country residence': '🇷🇺'
     },
@@ -1375,6 +1399,21 @@ window.DATABASE_JSON = {
       'hacks': '',
       'description': 'Бомж, был обоссан другом neverfixa',
       'country residence': '🇷🇺'
+    },
+    {
+      'nickname': 'Белый',
+      'steamID': 'STEAM_0:0:736060299',
+      'hacks': '',
+      'description': 'aka forward, aka alexandrovna(косил под бабу и наебывал на деньги). Создатель adrenaline hns',
+      'country residence': '🇷🇺'
+    },
+    {
+      'nickname': 'Pesso.3a',
+      'steamID': 'STEAM_0:0:589064081',
+      'hacks': 'KNIFEBOT',
+      'description': 'Лицемерная чурка',
+      'country residence': '🇷🇴',
+      'proofs': 'https://t.me/database_proofs/65'
     },
     {
       'nickname': '',
@@ -1671,6 +1710,12 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:180240316',
       'hacks': 'HPP',
       'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:159689901',
+      'hacks': 'BLUE MONDAY',
+      'description': 'Писал мне в лс: "бро у меня блюмондей V1 я хочу читы купить почему не продаешь?!"'
     },
     {
       'nickname': '',
@@ -2000,6 +2045,12 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
+      'steamID': 'STEAM_0:1:193524650',
+      'hacks': 'Тупейший сын шлюхи с новорега',
+      'description': ''
+    },
+    {
+      'nickname': '',
       'steamID': 'STEAM_0:1:618405579',
       'hacks': 'HPP',
       'description': ''
@@ -2200,7 +2251,7 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:74774891',
       'hacks': 'HPP',
-      'description': 'Лсное чудище 3-0, чей-то твинк'
+      'description': 'Лсное чудище 3-0 проебал, чей-то твинк скорее всего.'
     },
     {
       'nickname': '',
@@ -2284,12 +2335,6 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:837537886',
       'hacks': 'BLUE MONDAY',
-      'description': ''
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:840396124',
-      'hacks': 'KILABEEZ PREFIX, ENHANDED, BROKOLY, BLUE MONDAY',
       'description': ''
     },
     {
