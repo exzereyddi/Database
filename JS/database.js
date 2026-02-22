@@ -687,6 +687,12 @@ window.DATABASE_JSON = {
       'country residence': '🇰🇿'
     },
     {
+      'nickname': '[SvaRoG] Kexa',
+      'steamID': 'STEAM_0:0:82944202',
+      'hacks': '',
+      'description': 'Бездарный скуф, друг [SvaRoG] Naruto, получил за фри админку'
+    },
+    {
       'nickname': 'Laura',
       'steamID': 'STEAM_0:0:646666',
       'hacks': 'BLUE MONDAY, NSTE RECORDER',
@@ -1416,6 +1422,35 @@ window.DATABASE_JSON = {
       'proofs': 'https://t.me/database_proofs/65'
     },
     {
+      'nickname': 'nab',
+      'steamID': 'STEAM_0:1:942266706',
+      'hacks': 'DDRUN',
+      'description': 'Чурка друг Pesso с одной страны играют с хаками и лицемерят, обходит ecd (потому что он хуйня, ну вы знаете это)',
+      'country residence': '🇷🇴',
+      'proofs': 'https://t.me/database_proofs/66'
+    },
+    {
+      'nickname': 'icrzsry',
+      'steamID': 'STEAM_0:1:426745892',
+      'hacks': 'HPP',
+      'description': 'Лицемер',
+      'country residence': '🇷🇺',
+      'proofs': 'https://t.me/database_proofs/67'
+    },
+    {
+      'nickname': 'EVG',
+      'steamID': 'STEAM_0:0:441070588',
+      'hacks': '',
+      'description': 'Слабый ноющий скуф'
+    },
+    {
+      'nickname': 'Levi Ackerman',
+      'steamID': 'STEAM_2:0:581935421',
+      'hacks': '',
+      'description': 'Слабая чурка',
+      'country residence': '🇺🇿'
+    },
+    {
       'nickname': '',
       'steamID': 'STEAM_0:0:1293576',
       'hacks': 'RAGE STRAFE',
@@ -1782,6 +1817,12 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:0:205954164',
       'hacks': 'HPP',
       'description': ''
+    }, 
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:633964320',
+      'hacks': 'FURION, RAGE STRAFE',
+      'description': 'С места набрал 500 за 1 дак'
     },
     {
       'nickname': '',
@@ -1885,6 +1926,7 @@ window.DATABASE_JSON = {
       'hacks': 'BLUE MONDAY, ENHANDED, NSTE RECORDER, HPP',
       'description': ''
     },
+
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:512367620',
