@@ -296,21 +296,26 @@ class PlayersDatabase {
     const statsBody = document.getElementById('statsModalBody');
     if (!statsBody) return;
 
+    // Функция определения твинка
+    const isTwink = (p) => {
+      const desc = (p.description || '').toLowerCase();
+      return desc.includes('twink');
+    };
 
-    const totalPlayers = this.players.length;
+    // Основная база без твинков для статистики
+    const mainPlayers = this.players.filter(p => !isTwink(p));
+    const twinkCount = this.players.filter(p => isTwink(p)).length;
 
+    const totalPlayers = mainPlayers.length;
 
     const isNoCheat = (p) =>
         !p.hacks || p.hacks.trim() === '' || p.hacks === '—';
 
-
-    const cheaters = this.players.filter(p => !isNoCheat(p));
-    const nonCheaters = this.players.filter(isNoCheat);
-
+    const cheaters = mainPlayers.filter(p => !isNoCheat(p));
+    const nonCheaters = mainPlayers.filter(isNoCheat);
 
     const cheatersCount = cheaters.length;
     const nonCheatersCount = nonCheaters.length;
-
 
     const cheatersPercent = totalPlayers > 0 ?
         ((cheatersCount / totalPlayers) * 100).toFixed(1) :
@@ -320,11 +325,10 @@ class PlayersDatabase {
         '0.0';
 
 
-
     const countryStats = {};
     let noCountryCount = 0;
 
-    this.players.forEach(player => {
+    mainPlayers.forEach(player => {
       const country = (player['country residence'] || '').toString().trim();
       if (country && country !== '—') {
         if (!countryStats[country]) {
@@ -371,7 +375,6 @@ class PlayersDatabase {
             }
             hackStats[hack].total++;
 
-
             const country =
                 (player['country residence'] || '').toString().trim();
             if (country && country !== '—') {
@@ -387,7 +390,6 @@ class PlayersDatabase {
       }
     });
 
-
     const sortedHacks =
         Object.entries(hackStats).sort((a, b) => b[1].total - a[1].total);
 
@@ -397,7 +399,6 @@ class PlayersDatabase {
         <h3><i class="fas fa-user-secret"></i> Статистика читеров по странам</h3>
         <div class="stats-list">
     `;
-
 
     sortedCheaterCountries.forEach(([country, count]) => {
       const percent = cheatersCount > 0 ?
@@ -419,8 +420,7 @@ class PlayersDatabase {
       html += `
         <div class="stat-item">
           <span class="stat-label">❓ Без страны</span>
-          <span class="stat-value">${cheaterNoCountryCount} (${
-          percent}%)</span>
+          <span class="stat-value">${cheaterNoCountryCount} (${percent}%)</span>
         </div>
       `;
     }
@@ -434,7 +434,6 @@ class PlayersDatabase {
         <h3><i class="fas fa-flag"></i> Статистика всех игроков по странам</h3>
         <div class="stats-list">
     `;
-
 
     sortedCountries.forEach(([country, count]) => {
       const percent =
@@ -460,7 +459,6 @@ class PlayersDatabase {
       `;
     }
 
-
     html += `
         </div>
       </section>
@@ -471,26 +469,21 @@ class PlayersDatabase {
         <div class="stats-list">
     `;
 
-
     sortedHacks.forEach(([hack, data]) => {
       const percent = totalPlayers > 0 ?
           ((data.total / totalPlayers) * 100).toFixed(1) :
           '0.0';
 
-
       html += `
         <div class="stat-item-hack">
           <div class="hack-header">
             <span class="stat-label-hack">${this.escapeHtml(hack)}</span>
-            <span class="stat-value-hack">${data.total} (${
-          percent}% от всех игроков)</span>
+            <span class="stat-value-hack">${data.total} (${percent}% от всех игроков)</span>
           </div>
       `;
 
-
       const sortedHackCountries =
           Object.entries(data.countries).sort((a, b) => b[1] - a[1]);
-
 
       if (sortedHackCountries.length > 0 || data.noCountry > 0) {
         html += `<div class="hack-countries">`;
@@ -502,8 +495,7 @@ class PlayersDatabase {
           html += `
             <div class="hack-country-item">
               <span class="hack-country-label">${country} ${countryName}</span>
-              <span class="hack-country-value">${count} (${
-              countryPercent}% от чита)</span>
+              <span class="hack-country-value">${count} (${countryPercent}% от чита)</span>
             </div>
           `;
         });
@@ -515,8 +507,7 @@ class PlayersDatabase {
           html += `
             <div class="hack-country-item">
               <span class="hack-country-label">❓ Без страны</span>
-              <span class="hack-country-value">${data.noCountry} (${
-              countryPercent}% от чита)</span>
+              <span class="hack-country-value">${data.noCountry} (${countryPercent}% от чита)</span>
             </div>
           `;
         }
@@ -524,10 +515,8 @@ class PlayersDatabase {
         html += `</div>`;
       }
 
-
       html += `</div>`;
     });
-
 
     html += `
         </div>
@@ -539,18 +528,19 @@ class PlayersDatabase {
         <div class="stats-list">
           <div class="stat-item stat-item-highlight">
             <span class="stat-label"><i class="fas fa-user-secret"></i> Читеры</span>
-            <span class="stat-value stat-value-danger">${cheatersCount} (${
-        cheatersPercent}%)</span>
+            <span class="stat-value stat-value-danger">${cheatersCount} (${cheatersPercent}%)</span>
           </div>
           <div class="stat-item stat-item-highlight">
             <span class="stat-label"><i class="fas fa-user-check"></i> Не читеры</span>
-            <span class="stat-value stat-value-success">${nonCheatersCount} (${
-        nonCheatersPercent}%)</span>
+            <span class="stat-value stat-value-success">${nonCheatersCount} (${nonCheatersPercent}%)</span>
           </div>
           <div class="stat-item stat-item-highlight">
             <span class="stat-label"><i class="fas fa-users"></i> Всего игроков</span>
-            <span class="stat-value stat-value-primary">${
-        totalPlayers} (100%)</span>
+            <span class="stat-value stat-value-primary">${totalPlayers} (100%)</span>
+          </div>
+          <div class="stat-item stat-item-highlight">
+            <span class="stat-label"><i class="fas fa-clone"></i> Твинки (не учтены)</span>
+            <span class="stat-value" style="color: var(--text-secondary);">${twinkCount}</span>
           </div>
         </div>
       </section>
