@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS 1.6 HNS-Players Database</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-
 <body class="dark-theme">
+    <!-- Animated background -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
     <div class="container">
         <div class="header">
-            <h1 class="title">
-                <i class="fas fa-users"></i>
-                CS 1.6 HNS-Players Database
-            </h1>
+            <div class="header-left">
+                <div class="logo-mark">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <div class="header-text">
+                    <h1 class="title">HNS-Players</h1>
+                    <p class="subtitle">Counter-Strike 1.6 · База данных игроков</p>
+                </div>
+            </div>
             <div class="header-buttons">
-                <button class="stats-toggle" id="statsToggle" title="Статистика">
+                <button class="header-btn stats-toggle" id="statsToggle" title="">
                     <i class="fas fa-chart-pie"></i>
+                    <span class="btn-tooltip">Статистика</span>
                 </button>
-                <button class="faq-toggle" id="faqToggle" title="FAQ">
-                    <i class="fas fa-question-circle"></i>
+                <button class="header-btn faq-toggle" id="faqToggle" title="">
+                    <i class="fas fa-book-open"></i>
+                    <span class="btn-tooltip">FAQ</span>
                 </button>
-                <button class="theme-toggle" id="themeToggle" title="Переключить тему">
+                <button class="header-btn theme-toggle" id="themeToggle" title="">
                     <i class="fas fa-moon"></i>
+                    <span class="btn-tooltip">Тема</span>
                 </button>
             </div>
         </div>
-
 
         <div class="search-container">
             <div class="search-wrapper">
@@ -42,94 +55,89 @@
                     maxlength="50" />
                 <div id="searchCounter" class="search-counter">0/50</div>
             </div>
-            <button id="sortToggle" class="sort-btn" type="button" title="Сортировка таблицы">
-                <i class="fas fa-sort"></i>
-            </button>
-            <button id="resetSortTable" class="reset-sort-table-btn" type="button" title="Сбросить сортировку таблицы">
-                <i class="fas fa-undo"></i>
-            </button>
-            <button id="clearSearch" class="clear-btn" type="button" aria-label="Очистить поиск">
-                <i class="fas fa-backspace"></i>
-            </button>
+            <div class="search-actions">
+                <button id="sortToggle" class="action-btn" type="button" title="Сортировка">
+                    <i class="fas fa-sliders"></i>
+                </button>
+                <button id="resetSortTable" class="action-btn" type="button" title="Сбросить сортировку">
+                    <i class="fas fa-arrow-rotate-left"></i>
+                </button>
+                <button id="clearSearch" class="action-btn action-btn-danger" type="button" aria-label="Очистить поиск">
+                    <i class="fas fa-xmark"></i>
+                </button>
+            </div>
         </div>
 
-
         <div class="table-container">
+            <div class="table-glow"></div>
             <table id="playersTable">
                 <thead>
                     <tr>
-                        <th><i class="fas fa-user"></i> Никнейм</th>
-                        <th><i class="fab fa-steam"></i> Steam ID</th>
-                        <th><i class="fas fa-bug"></i> Читы</th>
-                        <th><i class="fas fa-info-circle"></i> Описание</th>
-                        <th><i class="fas fa-globe-europe"></i> Страна проживания</th>
+                        <th><i class="fas fa-user"></i> <span>Никнейм</span></th>
+                        <th><i class="fab fa-steam"></i> <span>Steam ID</span></th>
+                        <th><i class="fas fa-bug"></i> <span>Читы</span></th>
+                        <th><i class="fas fa-align-left"></i> <span>Описание</span></th>
+                        <th><i class="fas fa-earth-europe"></i> <span>Страна</span></th>
                     </tr>
                 </thead>
                 <tbody id="playersTableBody">
                     <tr>
                         <td colspan="5" class="loading">
                             <div class="loading-spinner"></div>
-                            Загрузка данных...
+                            <span>Загрузка данных...</span>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-
-        <div id="stats" class="stats">
-            <i class="fas fa-chart-bar"></i>
-            Найдено игроков: <span id="playersCount">0</span>
+        <div id="stats" class="stats-bar">
+            <div class="stats-bar-inner">
+                <i class="fas fa-database"></i>
+                <span>Найдено игроков:</span>
+                <span id="playersCount" class="stats-count">0</span>
+            </div>
         </div>
     </div>
 
-
+    <!-- Stats Modal -->
     <div class="modal-overlay" id="statsModal">
         <div class="modal-content modal-stats">
             <button class="modal-close" id="closeStatsModal" aria-label="Закрыть">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-xmark"></i>
             </button>
-
-
             <h2 class="modal-title">
                 <i class="fas fa-chart-pie"></i>
                 Статистика базы данных
             </h2>
-
-
             <div class="modal-body" id="statsModalBody">
                 <div class="loading">
                     <div class="loading-spinner"></div>
-                    Загрузка статистики...
+                    <span>Загрузка статистики...</span>
                 </div>
             </div>
         </div>
     </div>
 
-
+    <!-- FAQ Modal -->
     <div class="modal-overlay" id="faqModal">
         <div class="modal-content">
             <button class="modal-close" id="closeModal" aria-label="Закрыть">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-xmark"></i>
             </button>
-
-
             <h2 class="modal-title">
-                <i class="fas fa-info-circle"></i>
+                <i class="fas fa-book-open"></i>
                 О базе данных
             </h2>
-
-
             <div class="modal-body">
                 <section class="faq-section">
-                    <h3>Что это за сайт?</h3>
+                    <h3><i class="fas fa-circle-info"></i> Что это за сайт?</h3>
                     <p>Это база данных игроков Counter-Strike 1.6 играющих на HNS (Hide and Seek) режиме. Она помогает
                         новым игрокам заранее понимать, с кем они сталкиваются на серверах этого режима.</p>
                 </section>
 
-
                 <section class="faq-section">
-                    <h3>Виды читов</h3>
+                    <h3><i class="fas fa-list"></i> Виды читов</h3>
                     <ul class="cheats-list">
                         <li><strong>FURION</strong> — мультичит.</li>
                         <li><strong>HPP</strong> — мультичит.</li>
@@ -148,28 +156,24 @@
                             попадания флеш‑гранаты.</li>
                         <li><strong>KNIFEBOT</strong> — читерская функция, автоматически бьющая ножом с идеальной
                             дистанцией и реакцией.</li>
-                        <li><strong>STEAMID CHANGER</strong> — читерская функция, для смены steamid (используется для
-                            скрытия профиля/обхода банов).</li>
+                        <li><strong>STEAMID CHANGER</strong> — читерская функция, для смены steamid.</li>
                         <li><strong>BHOP</strong> — читерская функция, автоматически идеально прыгающая за игрока
                             (+jump).</li>
                         <li><strong>SCROLL HELPER</strong> — читерская функция, помогающая лучше бхопить или же
                             ддранить/сгсить.</li>
-                        <li><strong>STRAFE HELPER</strong> — читерская функция, улучшающая стрейфы, тем самым помогающая
-                            лучше двигаться и набирать скорость.</li>
+                        <li><strong>STRAFE HELPER</strong> — читерская функция, улучшающая стрейфы.</li>
                         <li><strong>RAGE STRAFE</strong> — читерская функция для набора скорости без использования
                             стрейфов.</li>
-                        <li><strong>AUTO STRAFE</strong> — то же самое, что и «RAGE STRAFE», только уже с использованием
+                        <li><strong>AUTO STRAFE</strong> — то же самое, что и «RAGE STRAFE», только с использованием
                             стрейфов.</li>
                         <li><strong>BACKTRACK</strong> — читерская функция, позволяющая стрелять по старым позициям
                             игроков.</li>
-                        <li><strong>FAKE LAG</strong> — читерская функция, создающая искусственные задержки для
-                            усложнения попадания по игроку.</li>
+                        <li><strong>FAKE LAG</strong> — читерская функция, создающая искусственные задержки.</li>
                     </ul>
                 </section>
 
-
                 <section class="faq-section">
-                    <h3>Как добавить игрока в базу?</h3>
+                    <h3><i class="fas fa-plus-circle"></i> Как добавить игрока в базу?</h3>
                     <p>Свяжитесь с администраторами через Telegram-канал, предоставив никнейм, Steam ID и доказательства
                         использования читов (демо, скриншоты).</p>
                 </section>
@@ -177,23 +181,19 @@
         </div>
     </div>
 
-
+    <!-- Sort Modal -->
     <div class="modal-overlay" id="sortModal">
         <div class="modal-content modal-sort">
             <button class="modal-close" id="closeSortModal" aria-label="Закрыть">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-xmark"></i>
             </button>
-
-
             <h2 class="modal-title">
-                <i class="fas fa-sort"></i>
-                Сортировка таблицы
+                <i class="fas fa-sliders"></i>
+                Сортировка и фильтры
             </h2>
-
-
             <div class="modal-body">
                 <div class="sort-group">
-                    <label for="hackFilter">Чит или его функция:</label>
+                    <label for="hackFilter"><i class="fas fa-bug"></i> Чит или его функция:</label>
                     <select id="hackFilter" class="sort-select">
                         <option value="">Не важно</option>
                         <option value="none-first">Сначала не читеры</option>
@@ -221,7 +221,6 @@
                         <option value="BHOP">BHOP</option>
                         <option value="SCROLL HELPER">SCROLL HELPER</option>
                         <option value="STRAFE HELPER">STRAFE HELPER</option>
-                        <option value="STRAFE HELPERP">STRAFE HELPERP</option>
                         <option value="RAGE STRAFE">RAGE STRAFE</option>
                         <option value="AUTO STRAFE">AUTO STRAFE</option>
                         <option value="BACKTRACK">BACKTRACK</option>
@@ -229,9 +228,8 @@
                     </select>
                 </div>
 
-
                 <div class="sort-group">
-                    <label for="descFilter">Описание:</label>
+                    <label for="descFilter"><i class="fas fa-align-left"></i> Описание:</label>
                     <select id="descFilter" class="sort-select">
                         <option value="">Не важно</option>
                         <option value="none-first">Сначала отсутствует</option>
@@ -241,9 +239,8 @@
                     </select>
                 </div>
 
-
                 <div class="sort-group">
-                    <label for="alphaSort">Алфавит по нику:</label>
+                    <label for="alphaSort"><i class="fas fa-arrow-down-a-z"></i> Алфавит по нику:</label>
                     <select id="alphaSort" class="sort-select">
                         <option value="">Не важно</option>
                         <option value="asc">от А до Я (по)</option>
@@ -251,9 +248,8 @@
                     </select>
                 </div>
 
-
                 <div class="sort-group">
-                    <label for="countryFilter">Страна проживания:</label>
+                    <label for="countryFilter"><i class="fas fa-earth-europe"></i> Страна проживания:</label>
                     <select id="countryFilter" class="sort-select">
                         <option value="">Не важно</option>
                         <option value="🇷🇺">🇷🇺 Россия</option>
@@ -276,7 +272,6 @@
                     </select>
                 </div>
 
-
                 <div class="sort-group checkbox-group">
                     <label class="checkbox-label">
                         <input type="checkbox" id="exactSteamId" checked>
@@ -285,14 +280,13 @@
                     </label>
                 </div>
 
-
                 <div class="sort-actions">
                     <button id="applySortBtn" class="apply-sort-btn">
                         <i class="fas fa-check"></i>
                         Применить
                     </button>
                     <button id="resetSortBtn" class="reset-sort-btn">
-                        <i class="fas fa-undo"></i>
+                        <i class="fas fa-arrow-rotate-left"></i>
                         Сбросить
                     </button>
                 </div>
@@ -300,16 +294,13 @@
         </div>
     </div>
 
-
     <a href="https://t.me/originalHNS" target="_blank" rel="noopener noreferrer" class="source-button" title="Источник">
         <i class="fab fa-telegram-plane"></i>
         <span class="source-label">Источник</span>
     </a>
 
-
     <script src="JS/database.js"></script>
     <script src="JS/scripts.js"></script>
 </body>
-
 
 </html>
