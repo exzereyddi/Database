@@ -11,7 +11,8 @@ window.DATABASE_JSON = {
       'nickname': '505',
       'steamID': '',
       'hacks': '',
-      'description': 'Создатель проекта MakeFrag/1FRAG'
+      'description': 'Создатель проекта MakeFrag/1FRAG',
+      'country residence': '🇺🇦'
     },
     {
       'nickname': '666PRADA',
@@ -172,6 +173,13 @@ window.DATABASE_JSON = {
       'hacks': 'HPP',
       'description': '',
       'country residence': '🇺🇸'
+    },
+    {
+      'nickname': 'AvIsPoN!!!',
+      'steamID': 'STEAM_0:0:151201382',
+      'hacks': 'KNIFEBOT',
+      'description': '',
+      'country residence': '🇪🇸'
     },
     {
       'nickname': 'awero',
@@ -1588,7 +1596,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:47242981',
-      'hacks': 'STRAFE HELPERP',
+      'hacks': 'STRAFE HELPER',
       'description': ''
     },
     {
@@ -1601,6 +1609,12 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:48875089',
       'hacks': 'AUTO STRAFE',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:768114641',
+      'hacks': 'HPP, FURION',
       'description': ''
     },
     {
@@ -1756,8 +1770,20 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
+      'steamID': 'STEAM_0:1:528265882',
+      'hacks': 'BLUE MONDAY, BROKOLY',
+      'description': 'агрессивный бомж'
+    },
+    {
+      'nickname': '',
       'steamID': 'STEAM_0:0:156817884',
       'hacks': 'HPP, FURION',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:923957258',
+      'hacks': 'HPP',
       'description': ''
     },
     {
@@ -1834,6 +1860,13 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
+      'steamID': 'STEAM_0:1:646899981',
+      'hacks': 'HPP',
+      'description': ''
+    },
+    
+    {
+      'nickname': '',
       'steamID': 'STEAM_0:1:197154027',
       'hacks': 'SCROLL HELPER, KILABEEZ PREFIX',
       'description': ''
@@ -1889,13 +1922,19 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:823203182',
-      'hacks': 'HPP, FURION',
+      'hacks': 'HPP, FURION, NSTE RECORDER',
       'description': ''
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:418649797',
       'hacks': 'BLUE MONDAY, BROKOLY',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:803942669 ',
+      'hacks': 'BLUE MONDAY, NSTE RECORDER',
       'description': ''
     },
     {
@@ -1992,6 +2031,12 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:523022508',
       'hacks': 'HPP, RAGE STRAFE',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:230341818',
+      'hacks': 'HPP, BLUE MONDAY, NSTE RECORDER',
       'description': ''
     },
     {
@@ -2540,6 +2585,12 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:862816747',
       'hacks': 'KNIFEBOT',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:708270992',
+      'hacks': 'BLUE MONDAY',
       'description': ''
     },
     {
