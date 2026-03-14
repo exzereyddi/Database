@@ -1267,6 +1267,14 @@ td {
     opacity: 0.8;
 }
 
+.stats-twinks {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-left: 0.25rem;
+    font-family: var(--font-mono);
+}
+
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar {
     width: 8px;
