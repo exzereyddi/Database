@@ -2218,8 +2218,8 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:193524650',
-      'hacks': 'Тупейший сын шлюхи с новорега',
-      'description': ''
+      'hacks': '',
+      'description': 'Тупейший сын шлюхи с новорега'
     },
     {
       'nickname': '',
