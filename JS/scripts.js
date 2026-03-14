@@ -776,8 +776,28 @@ class PlayersDatabase {
   }
 
   updateStats() {
-    document.getElementById('playersCount').textContent =
-        this.filteredPlayers.length;
+    const isTwink = (p) => {
+      const desc = (p.description || '').toLowerCase();
+      return desc.includes('twink');
+    };
+
+    const totalFiltered = this.filteredPlayers.length;
+    const twinksInFiltered =
+        this.filteredPlayers.filter(p => isTwink(p)).length;
+    const mainCount = totalFiltered - twinksInFiltered;
+
+    document.getElementById('playersCount').textContent = mainCount;
+
+    const twinksEl = document.getElementById('twinksCount');
+    if (twinksEl) {
+      if (twinksInFiltered > 0) {
+        twinksEl.textContent = `(${twinksInFiltered} твинков)`;
+        twinksEl.style.display = '';
+      } else {
+        twinksEl.textContent = '';
+        twinksEl.style.display = 'none';
+      }
+    }
   }
 
   escapeHtml(text) {
