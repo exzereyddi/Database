@@ -31,7 +31,7 @@ window.DATABASE_JSON = {
       'nickname': '9z',
       'steamID': 'STEAM_0:1:806412064',
       'hacks': 'HPP, RAGE STRAFE',
-      'description': 'Чурка',
+      'description': '0 iq',
       'proofs': 'https://t.me/database_proofs/5',
       'country residence': '🇦🇱'
     },
@@ -62,7 +62,7 @@ window.DATABASE_JSON = {
       'nickname': '[SvaRoG] + ANTIMAT +',
       'steamID': '',
       'hacks': 'BLUE MONDAY, STEAMID CHANGER',
-      'description': 'Тупой чурка и лицемер'
+      'description': 'Тупица и лицемер'
     },
     {
       'nickname': '[Svarog] Naruto',
@@ -109,7 +109,7 @@ window.DATABASE_JSON = {
       'nickname': 'Anti G2a KenT',
       'steamID': 'STEAM_0:0:85613058',
       'hacks': 'BHOP',
-      'description': 'Тупой хохол',
+      'description': 'Слабая тупица',
       'country residence': '🇺🇦'
     },
     {
@@ -745,7 +745,7 @@ window.DATABASE_JSON = {
       'nickname': 'Lovely',
       'steamID': 'STEAM_0:0:515011080',
       'hacks': 'HPP',
-      'description': 'Тупой чурка сидел в тюрьме за мошенничество',
+      'description': 'Тупица, сидел в тюрьме за мошенничество',
       'proofs': 'https://t.me/database_proofs/27',
       'country residence': '🇰🇿'
     },
@@ -1270,7 +1270,7 @@ window.DATABASE_JSON = {
       'nickname': 'SuperLative',
       'steamID': 'STEAM_0:0:42581208',
       'hacks': 'RAGE STRAFE, HPP, FURION',
-      'description': 'Тупой хохол и \'создатель\' utopia-hns',
+      'description': 'Тупица и \'создатель\' utopia-hns',
       'country residence': '🇺🇦'
     },
     {
@@ -1445,7 +1445,7 @@ window.DATABASE_JSON = {
       'nickname': 'Pesso.3a',
       'steamID': 'STEAM_0:0:589064081',
       'hacks': 'KNIFEBOT',
-      'description': 'Лицемерная чурка',
+      'description': 'Лицемер',
       'country residence': '🇷🇴',
       'proofs': 'https://t.me/database_proofs/65'
     },
@@ -1453,7 +1453,7 @@ window.DATABASE_JSON = {
       'nickname': 'nab',
       'steamID': 'STEAM_0:1:942266706',
       'hacks': 'DDRUN',
-      'description': 'Чурка друг Pesso с одной страны играют с хаками и лицемерят, обходит ecd (потому что он хуйня, ну вы знаете это)',
+      'description': 'Друг Pesso с одной страны играют с хаками и лицемерят, обходит ecd (потому что он хуйня, ну вы знаете это)',
       'country residence': '🇷🇴',
       'proofs': 'https://t.me/database_proofs/66'
     },
@@ -1475,7 +1475,7 @@ window.DATABASE_JSON = {
       'nickname': 'Levi Ackerman',
       'steamID': 'STEAM_2:0:581935421',
       'hacks': '',
-      'description': 'Слабая чурка',
+      'description': 'Слабость',
       'country residence': '🇺🇿'
     },
     {
