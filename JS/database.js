@@ -185,7 +185,7 @@ window.DATABASE_JSON = {
       'nickname': 'awero',
       'steamID': 'STEAM_0:1:683705116',
       'hacks': 'FURION',
-      'description': '',
+      'description': 'Сын шлюхи',
       'proofs': 'https://t.me/database_proofs/53',
       'country residence': '🇷🇺'
     },
@@ -2313,12 +2313,6 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:1:683705116',
-      'hacks': 'HPP',
-      'description': 'Сын шлюхи'
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:0:691641958',
       'hacks': 'HPP',
       'description': ''
@@ -2363,12 +2357,6 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:4164860',
       'hacks': 'FURION',
-      'description': ''
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:738043018',
-      'hacks': 'HPP, FURION',
       'description': ''
     },
     {
@@ -2501,12 +2489,6 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:830904798',
       'hacks': 'HPP',
-      'description': ''
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:837537886',
-      'hacks': 'BLUE MONDAY',
       'description': ''
     },
     {
@@ -2821,11 +2803,5 @@ window.DATABASE_JSON = {
       'hacks': 'BLUE MONDAY',
       'description': ''
     },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:942266706',
-      'hacks': 'HPP',
-      'description': ''
-    }
   ]
 };
