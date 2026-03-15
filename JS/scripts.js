@@ -205,6 +205,7 @@ class PlayersDatabase {
     this.exactSteamIdMatch = true;
     this.currentQuery = '';
     this.openGroupId = null;
+    this.avatarCache = new Map();
 
     this.waitForDatabase()
         .then(() => {
@@ -241,6 +242,7 @@ class PlayersDatabase {
     this.initSortControls();
     this.initResetSortTable();
     this.initStatsModal();
+    this.initChangelogModal();
     this.initCollapseHandlers();
     this.initCountriesList();
     this.initHacksList();
@@ -250,53 +252,79 @@ class PlayersDatabase {
   initCountriesList() {
     const countrySelect = document.getElementById('countryFilter');
     if (!countrySelect) return;
-
     const uniqueCountries = new Set();
     this.players.forEach(p => {
       const c = (p['country residence'] || '').toString().trim();
-      if (c && c !== '—') {
-        uniqueCountries.add(c);
-      }
+      if (c && c !== '—') uniqueCountries.add(c);
     });
-
-    const sortedCountries = Array.from(uniqueCountries).sort((a, b) => {
-      const nameA = COUNTRY_TOOLTIPS[a] || a;
-      const nameB = COUNTRY_TOOLTIPS[b] || b;
-      return nameA.localeCompare(nameB, 'ru');
+    const sorted = Array.from(uniqueCountries).sort((a, b) => {
+      return (COUNTRY_TOOLTIPS[a] || a)
+          .localeCompare(COUNTRY_TOOLTIPS[b] || b, 'ru');
     });
-
-    sortedCountries.forEach(c => {
-      const option = document.createElement('option');
-      option.value = c;
-      option.textContent =
-          `${c} ${COUNTRY_TOOLTIPS[c] || 'Неизвестная страна'}`;
-      countrySelect.appendChild(option);
+    sorted.forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c;
+      opt.textContent = `${c} ${COUNTRY_TOOLTIPS[c] || 'Неизвестная страна'}`;
+      countrySelect.appendChild(opt);
     });
   }
 
   initHacksList() {
     const hackSelect = document.getElementById('hackFilter');
     if (!hackSelect) return;
-
     const uniqueHacks = new Set();
     this.players.forEach(p => {
-      const hacksText = (p.hacks || '').toString().trim();
-      if (hacksText && hacksText !== '—') {
-        const hacksArr =
-            hacksText.split(',').map(h => h.trim()).filter(Boolean);
-        hacksArr.forEach(hack => uniqueHacks.add(hack));
+      const h = (p.hacks || '').toString().trim();
+      if (h && h !== '—') {
+        h.split(',')
+            .map(x => x.trim())
+            .filter(Boolean)
+            .forEach(x => uniqueHacks.add(x));
       }
     });
+    Array.from(uniqueHacks)
+        .sort((a, b) => a.localeCompare(b, 'ru'))
+        .forEach(hack => {
+          const opt = document.createElement('option');
+          opt.value = hack;
+          opt.textContent = hack;
+          hackSelect.appendChild(opt);
+        });
+  }
 
-    const sortedHacks =
-        Array.from(uniqueHacks).sort((a, b) => a.localeCompare(b, 'ru'));
+  /* ===== STEAM AVATARS ===== */
 
-    sortedHacks.forEach(hack => {
-      const option = document.createElement('option');
-      option.value = hack;
-      option.textContent = hack;
-      hackSelect.appendChild(option);
-    });
+  loadAvatar(steamId64, imgElement) {
+    if (!steamId64) return;
+
+    if (this.avatarCache.has(steamId64)) {
+      const cached = this.avatarCache.get(steamId64);
+      if (cached) imgElement.src = cached;
+      return;
+    }
+
+    const url = `https://steamcommunity.com/profiles/${steamId64}/?xml=1`;
+
+    fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`)
+        .then(r => {
+          if (!r.ok) throw new Error('fetch failed');
+          return r.text();
+        })
+        .then(xml => {
+          const match =
+              xml.match(/<avatarMedium><!\[CDATA\[(.*?)\]\]><\/avatarMedium>/);
+          if (match && match[1]) {
+            const avatarUrl = match[1];
+            this.avatarCache.set(steamId64, avatarUrl);
+            imgElement.src = avatarUrl;
+            imgElement.classList.add('avatar-loaded');
+          } else {
+            this.avatarCache.set(steamId64, null);
+          }
+        })
+        .catch(() => {
+          this.avatarCache.set(steamId64, null);
+        });
   }
 
   /* ===== TWINK GROUPING ===== */
@@ -307,58 +335,32 @@ class PlayersDatabase {
 
   buildGroups(players) {
     const groupsMap = new Map();
-
     players.forEach(p => {
       const nick = (p.nickname || '').trim().toLowerCase();
-      const isTwink = this.isTwink(p);
-      const desc = p.description || '';
-      let key = null;
-
-      if (isTwink) {
-        const mainBySid = players.find(main => {
-          if (this.isTwink(main)) return false;
-          const sid = (main.steamID || '').trim();
-          return sid && sid !== '—' && desc.includes(sid);
-        });
-
-        if (mainBySid) {
-          const mainNick = (mainBySid.nickname || '').trim().toLowerCase();
-          key =
-              mainNick ? `nick_${mainNick}` : `sid_${mainBySid.steamID.trim()}`;
-        }
+      let key;
+      if (nick) {
+        key = `nick_${nick}`;
+      } else if (
+          p.steamID && p.steamID.trim() !== '—' && p.steamID.trim() !== '') {
+        key = `sid_${p.steamID.trim()}`;
+      } else {
+        key = `__empty_${Math.random()}`;
       }
-
-      if (!key) {
-        if (nick) {
-          key = `nick_${nick}`;
-        } else if (!isTwink && p.steamID && p.steamID.trim() !== '—') {
-          key = `sid_${p.steamID.trim()}`;
-        } else {
-          key = `__empty_${Math.random()}`;
-        }
-      }
-
-      if (!groupsMap.has(key)) {
-        groupsMap.set(key, []);
-      }
+      if (!groupsMap.has(key)) groupsMap.set(key, []);
       groupsMap.get(key).push(p);
     });
 
     const result = [];
     let groupId = 0;
-
     groupsMap.forEach((group) => {
       if (group.length === 1) {
         result.push({player: group[0], type: 'main', twinks: [], groupId: -1});
         return;
       }
-
       let mainIndex = group.findIndex(p => !this.isTwink(p));
       if (mainIndex === -1) mainIndex = 0;
-
       const main = group[mainIndex];
       const twinks = group.filter((_, i) => i !== mainIndex);
-
       result.push({
         player: main,
         type: 'main',
@@ -366,11 +368,10 @@ class PlayersDatabase {
         groupId: twinks.length > 0 ? groupId++ : -1
       });
     });
-
     return result;
   }
 
-  /* ===== COLLAPSE HANDLERS ===== */
+  /* ===== COLLAPSE ===== */
 
   initCollapseHandlers() {
     document.addEventListener('click', (e) => {
@@ -381,33 +382,22 @@ class PlayersDatabase {
 
   collapseAllGroups() {
     if (this.openGroupId === null) return;
-
-    document.querySelectorAll('.twink-row').forEach(r => {
-      r.classList.remove('twink-row-visible');
-    });
-    document.querySelectorAll('.twink-toggle').forEach(t => {
-      t.classList.remove('twink-toggle-open');
-    });
-
+    document.querySelectorAll('.twink-row')
+        .forEach(r => r.classList.remove('twink-row-visible'));
+    document.querySelectorAll('.twink-toggle')
+        .forEach(t => t.classList.remove('twink-toggle-open'));
     this.openGroupId = null;
   }
 
   toggleGroup(groupId) {
     const wasOpen = this.openGroupId === groupId;
-
     this.collapseAllGroups();
-
     if (wasOpen) return;
-
     document.querySelectorAll(`.twink-row[data-group="${groupId}"]`)
-        .forEach(r => {
-          r.classList.add('twink-row-visible');
-        });
-
+        .forEach(r => r.classList.add('twink-row-visible'));
     const toggle =
         document.querySelector(`.twink-toggle[data-group="${groupId}"]`);
     if (toggle) toggle.classList.add('twink-toggle-open');
-
     this.openGroupId = groupId;
   }
 
@@ -416,7 +406,6 @@ class PlayersDatabase {
   initThemeToggle() {
     const toggle = document.getElementById('themeToggle');
     const icon = toggle.querySelector('i');
-
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-theme');
       document.body.classList.toggle('light-theme');
@@ -424,9 +413,8 @@ class PlayersDatabase {
       icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light') {
       document.body.classList.remove('dark-theme');
       document.body.classList.add('light-theme');
       icon.className = 'fas fa-sun';
@@ -436,39 +424,34 @@ class PlayersDatabase {
   /* ===== SEARCH ===== */
 
   initSearch() {
-    const searchInput = document.getElementById('searchInput');
+    const input = document.getElementById('searchInput');
     const clearBtn = document.getElementById('clearSearch');
     const counter = document.getElementById('searchCounter');
     const maxLen = 50;
-
-    const updateClearState = () => {
-      const hasText = searchInput.value.trim().length > 0;
-      clearBtn.style.opacity = hasText ? '1' : '0.3';
-      clearBtn.style.pointerEvents = hasText ? 'auto' : 'none';
+    const updateClear = () => {
+      const has = input.value.trim().length > 0;
+      clearBtn.style.opacity = has ? '1' : '0.3';
+      clearBtn.style.pointerEvents = has ? 'auto' : 'none';
     };
-
-    searchInput.addEventListener('input', (e) => {
-      if (e.target.value.length > maxLen) {
+    input.addEventListener('input', (e) => {
+      if (e.target.value.length > maxLen)
         e.target.value = e.target.value.slice(0, maxLen);
-      }
       if (counter) counter.textContent = `${e.target.value.length}/${maxLen}`;
       this.search(e.target.value);
-      updateClearState();
+      updateClear();
     });
-
     clearBtn.addEventListener('click', () => {
-      if (searchInput.value.trim().length === 0) return;
-      searchInput.value = '';
+      if (input.value.trim().length === 0) return;
+      input.value = '';
       if (counter) counter.textContent = `0/${maxLen}`;
       this.search('');
-      searchInput.blur();
-      updateClearState();
+      input.blur();
+      updateClear();
     });
-
-    updateClearState();
+    updateClear();
   }
 
-  /* ===== SORT CONTROLS ===== */
+  /* ===== SORT ===== */
 
   initSortControls() {
     const sortToggle = document.getElementById('sortToggle');
@@ -477,32 +460,34 @@ class PlayersDatabase {
     const applySortBtn = document.getElementById('applySortBtn');
     const resetSortBtn = document.getElementById('resetSortBtn');
 
-    const openModal = () => {
+    const open = () => {
       if (!sortModal) return;
       sortModal.classList.add('active');
       document.body.style.overflow = 'hidden';
-      const h = document.getElementById('hackFilter');
-      const d = document.getElementById('descFilter');
-      const a = document.getElementById('alphaSort');
-      const e = document.getElementById('exactSteamId');
-      const c = document.getElementById('countryFilter');
-      if (h) h.value = this.sortFilters.hack || '';
-      if (d) d.value = this.sortFilters.description || '';
-      if (a) a.value = this.sortFilters.alpha || '';
-      if (e) e.checked = this.exactSteamIdMatch;
-      if (c) c.value = this.sortFilters.country || '';
+      const ids = {
+        hackFilter: 'hack',
+        descFilter: 'description',
+        alphaSort: 'alpha',
+        countryFilter: 'country'
+      };
+      Object.entries(ids).forEach(([id, key]) => {
+        const el = document.getElementById(id);
+        if (el) el.value = this.sortFilters[key] || '';
+      });
+      const ex = document.getElementById('exactSteamId');
+      if (ex) ex.checked = this.exactSteamIdMatch;
+    };
+    const close = () => {
+      if (sortModal) {
+        sortModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
     };
 
-    const closeModalFn = () => {
-      if (!sortModal) return;
-      sortModal.classList.remove('active');
-      document.body.style.overflow = '';
-    };
-
-    sortToggle && sortToggle.addEventListener('click', openModal);
-    closeSortModal && closeSortModal.addEventListener('click', closeModalFn);
+    sortToggle && sortToggle.addEventListener('click', open);
+    closeSortModal && closeSortModal.addEventListener('click', close);
     sortModal && sortModal.addEventListener('click', (e) => {
-      if (e.target === sortModal) closeModalFn();
+      if (e.target === sortModal) close();
     });
 
     applySortBtn && applySortBtn.addEventListener('click', () => {
@@ -517,7 +502,7 @@ class PlayersDatabase {
       this.exactSteamIdMatch =
           (document.getElementById('exactSteamId') || {}).checked || false;
       this.applySorting();
-      closeModalFn();
+      close();
     });
 
     resetSortBtn && resetSortBtn.addEventListener('click', () => {
@@ -534,40 +519,146 @@ class PlayersDatabase {
   }
 
   initResetSortTable() {
-    const resetBtn = document.getElementById('resetSortTable');
-    if (!resetBtn) return;
-    resetBtn.addEventListener('click', () => {
+    const btn = document.getElementById('resetSortTable');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
       this.sortFilters = {hack: '', description: '', alpha: '', country: ''};
       this.exactSteamIdMatch = false;
       this.applySorting();
-      resetBtn.blur();
+      btn.blur();
     });
   }
 
   /* ===== STATS MODAL ===== */
 
   initStatsModal() {
-    const statsToggle = document.getElementById('statsToggle');
-    const statsModal = document.getElementById('statsModal');
-    const closeStatsModal = document.getElementById('closeStatsModal');
-
+    const toggle = document.getElementById('statsToggle');
+    const modal = document.getElementById('statsModal');
+    const closeBtn = document.getElementById('closeStatsModal');
     const open = () => {
-      if (!statsModal) return;
-      statsModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      this.generateStatistics();
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        this.generateStatistics();
+      }
     };
     const close = () => {
-      if (!statsModal) return;
-      statsModal.classList.remove('active');
-      document.body.style.overflow = '';
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    };
+    toggle && toggle.addEventListener('click', open);
+    closeBtn && closeBtn.addEventListener('click', close);
+    modal && modal.addEventListener('click', (e) => {
+      if (e.target === modal) close();
+    });
+  }
+
+  /* ===== CHANGELOG MODAL ===== */
+
+  initChangelogModal() {
+    const toggle = document.getElementById('changelogToggle');
+    const modal = document.getElementById('changelogModal');
+    const closeBtn = document.getElementById('closeChangelogModal');
+    this.changelogLoaded = false;
+
+    const open = () => {
+      if (!modal) return;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      if (!this.changelogLoaded) this.loadChangelog();
+    };
+    const close = () => {
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
     };
 
-    statsToggle && statsToggle.addEventListener('click', open);
-    closeStatsModal && closeStatsModal.addEventListener('click', close);
-    statsModal && statsModal.addEventListener('click', (e) => {
-      if (e.target === statsModal) close();
+    toggle && toggle.addEventListener('click', open);
+    closeBtn && closeBtn.addEventListener('click', close);
+    modal && modal.addEventListener('click', (e) => {
+      if (e.target === modal) close();
     });
+  }
+
+  loadChangelog() {
+    const body = document.getElementById('changelogModalBody');
+    if (!body) return;
+
+    fetch('README.md')
+        .then(r => {
+          if (!r.ok) throw new Error('local failed');
+          return r.text();
+        })
+        .then(text => {
+          body.innerHTML = this.parseChangelog(text);
+          this.changelogLoaded = true;
+        })
+        .catch(() => {
+          const rawUrl =
+              `https://raw.githubusercontent.com/exzereyddi/Database/refs/heads/main/README.md`;
+          fetch(rawUrl)
+              .then(r => {
+                if (!r.ok) throw new Error('github failed');
+                return r.text();
+              })
+              .then(text => {
+                body.innerHTML = this.parseChangelog(text);
+                this.changelogLoaded = true;
+              })
+              .catch(err => {
+                body.innerHTML = `<div class="changelog-error">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  <p>Не удалось загрузить обновления</p>
+                  <small>${this.escapeHtml(err.message)}</small>
+                </div>`;
+              });
+        });
+  }
+
+  parseChangelog(markdown) {
+    const updatesMatch = markdown.match(
+        /## 📝 Обновления\s*\n([\s\S]*?)(?=\n---|\n## [^#]|$)/);
+    if (!updatesMatch) return '<p>Обновления не найдены.</p>';
+
+    const updatesText = updatesMatch[1];
+    const entries = [];
+    const entryRegex = /### (.+)\n([\s\S]*?)(?=\n### |\s*$)/g;
+    let match;
+
+    while ((match = entryRegex.exec(updatesText)) !== null) {
+      const date = match[1].trim();
+      const content = match[2].trim();
+      const items = content.split('\n')
+                        .map(line => line.replace(/^- /, '').trim())
+                        .filter(line => line.length > 0);
+      entries.push({date, items});
+    }
+
+    if (entries.length === 0) return '<p>Обновления не найдены.</p>';
+
+    let html = '';
+    entries.forEach((entry, index) => {
+      const isLatest = index === 0;
+      html += `
+        <div class="changelog-entry ${isLatest ? 'changelog-latest' : ''}">
+          <div class="changelog-date">
+            <i class="fas fa-calendar-day"></i>
+            <span>${this.escapeHtml(entry.date)}</span>
+            ${isLatest ? '<span class="changelog-badge">Последнее</span>' : ''}
+          </div>
+          <ul class="changelog-list">
+            ${
+          entry.items.map(item => `<li>${this.escapeHtml(item)}</li>`)
+              .join('')}
+          </ul>
+        </div>
+      `;
+    });
+
+    return html;
   }
 
   generateStatistics() {
@@ -577,108 +668,96 @@ class PlayersDatabase {
     const mainPlayers = this.players.filter(p => !this.isTwink(p));
     const twinkCount = this.players.filter(p => this.isTwink(p)).length;
     const totalPlayers = mainPlayers.length;
-
     const isNoCheat = (p) =>
         !p.hacks || p.hacks.trim() === '' || p.hacks === '—';
     const cheaters = mainPlayers.filter(p => !isNoCheat(p));
     const nonCheaters = mainPlayers.filter(isNoCheat);
     const cheatersCount = cheaters.length;
     const nonCheatersCount = nonCheaters.length;
-    const cheatersPercent = totalPlayers > 0 ?
+    const cp = totalPlayers > 0 ?
         ((cheatersCount / totalPlayers) * 100).toFixed(1) :
         '0.0';
-    const nonCheatersPercent = totalPlayers > 0 ?
+    const ncp = totalPlayers > 0 ?
         ((nonCheatersCount / totalPlayers) * 100).toFixed(1) :
         '0.0';
 
     const countryStats = {};
-    let noCountryCount = 0;
+    let noCC = 0;
     mainPlayers.forEach(p => {
       const c = (p['country residence'] || '').toString().trim();
-      if (c && c !== '—') {
+      if (c && c !== '—')
         countryStats[c] = (countryStats[c] || 0) + 1;
-      } else {
-        noCountryCount++;
-      }
+      else
+        noCC++;
     });
-    const sortedCountries =
-        Object.entries(countryStats).sort((a, b) => b[1] - a[1]);
+    const sc = Object.entries(countryStats).sort((a, b) => b[1] - a[1]);
 
-    const cheaterCountryStats = {};
-    let cheaterNoCountryCount = 0;
+    const ccs = {};
+    let cnccc = 0;
     cheaters.forEach(p => {
       const c = (p['country residence'] || '').toString().trim();
-      if (c && c !== '—') {
-        cheaterCountryStats[c] = (cheaterCountryStats[c] || 0) + 1;
-      } else {
-        cheaterNoCountryCount++;
-      }
+      if (c && c !== '—')
+        ccs[c] = (ccs[c] || 0) + 1;
+      else
+        cnccc++;
     });
-    const sortedCheaterCountries =
-        Object.entries(cheaterCountryStats).sort((a, b) => b[1] - a[1]);
+    const scc = Object.entries(ccs).sort((a, b) => b[1] - a[1]);
 
-    const hackStats = {};
+    const hs = {};
     cheaters.forEach(p => {
-      const hacks = (p.hacks || '').trim();
-      if (hacks && hacks !== '—') {
-        hacks.split(',').map(h => h.trim()).filter(Boolean).forEach(hack => {
-          if (!hackStats[hack])
-            hackStats[hack] = {total: 0, countries: {}, noCountry: 0};
-          hackStats[hack].total++;
+      const h = (p.hacks || '').trim();
+      if (h && h !== '—')
+        h.split(',').map(x => x.trim()).filter(Boolean).forEach(hack => {
+          if (!hs[hack]) hs[hack] = {total: 0, countries: {}, noCountry: 0};
+          hs[hack].total++;
           const c = (p['country residence'] || '').toString().trim();
-          if (c && c !== '—') {
-            hackStats[hack].countries[c] =
-                (hackStats[hack].countries[c] || 0) + 1;
-          } else {
-            hackStats[hack].noCountry++;
-          }
+          if (c && c !== '—')
+            hs[hack].countries[c] = (hs[hack].countries[c] || 0) + 1;
+          else
+            hs[hack].noCountry++;
         });
-      }
     });
-    const sortedHacks =
-        Object.entries(hackStats).sort((a, b) => b[1].total - a[1].total);
+    const sh = Object.entries(hs).sort((a, b) => b[1].total - a[1].total);
 
     let html =
         `<section class="stats-section"><h3><i class="fas fa-user-secret"></i> Читеры по странам</h3><div class="stats-list">`;
-    sortedCheaterCountries.forEach(([c, n]) => {
+    scc.forEach(([c, n]) => {
       html += `<div class="stat-item"><span class="stat-label">${c} ${
           COUNTRY_TOOLTIPS[c] || '?'}</span><span class="stat-value">${n} (${
           (n / cheatersCount * 100).toFixed(1)}%)</span></div>`;
     });
-    if (cheaterNoCountryCount > 0)
+    if (cnccc > 0)
       html +=
           `<div class="stat-item"><span class="stat-label">❓ Без страны</span><span class="stat-value">${
-              cheaterNoCountryCount} (${
-              (cheaterNoCountryCount / cheatersCount * 100)
-                  .toFixed(1)}%)</span></div>`;
+              cnccc} (${
+              (cnccc / cheatersCount * 100).toFixed(1)}%)</span></div>`;
     html += `</div></section>`;
 
     html +=
         `<section class="stats-section"><h3><i class="fas fa-flag"></i> Все игроки по странам</h3><div class="stats-list">`;
-    sortedCountries.forEach(([c, n]) => {
+    sc.forEach(([c, n]) => {
       html += `<div class="stat-item"><span class="stat-label">${c} ${
           COUNTRY_TOOLTIPS[c] || '?'}</span><span class="stat-value">${n} (${
           (n / totalPlayers * 100).toFixed(1)}%)</span></div>`;
     });
-    if (noCountryCount > 0)
+    if (noCC > 0)
       html +=
           `<div class="stat-item"><span class="stat-label">❓ Без страны</span><span class="stat-value">${
-              noCountryCount} (${
-              (noCountryCount / totalPlayers * 100).toFixed(1)}%)</span></div>`;
+              noCC} (${(noCC / totalPlayers * 100).toFixed(1)}%)</span></div>`;
     html += `</div></section>`;
 
     html +=
         `<section class="stats-section"><h3><i class="fas fa-bug"></i> По читам и функциям</h3><div class="stats-list">`;
-    sortedHacks.forEach(([hack, data]) => {
+    sh.forEach(([hack, data]) => {
       html +=
           `<div class="stat-item-hack"><div class="hack-header"><span class="stat-label-hack">${
               this.escapeHtml(
                   hack)}</span><span class="stat-value-hack">${data.total} (${
               (data.total / totalPlayers * 100).toFixed(1)}%)</span></div>`;
-      const sc = Object.entries(data.countries).sort((a, b) => b[1] - a[1]);
-      if (sc.length > 0 || data.noCountry > 0) {
+      const hc = Object.entries(data.countries).sort((a, b) => b[1] - a[1]);
+      if (hc.length > 0 || data.noCountry > 0) {
         html += `<div class="hack-countries">`;
-        sc.forEach(([c, n]) => {
+        hc.forEach(([c, n]) => {
           html +=
               `<div class="hack-country-item"><span class="hack-country-label">${
                   c} ${
@@ -701,9 +780,9 @@ class PlayersDatabase {
     html +=
         `<section class="stats-section"><h3><i class="fas fa-chart-pie"></i> Читеры vs Не читеры</h3><div class="stats-list">
       <div class="stat-item stat-item-highlight"><span class="stat-label"><i class="fas fa-user-secret"></i> Читеры</span><span class="stat-value stat-value-danger">${
-            cheatersCount} (${cheatersPercent}%)</span></div>
+            cheatersCount} (${cp}%)</span></div>
       <div class="stat-item stat-item-highlight"><span class="stat-label"><i class="fas fa-user-check"></i> Не читеры</span><span class="stat-value stat-value-success">${
-            nonCheatersCount} (${nonCheatersPercent}%)</span></div>
+            nonCheatersCount} (${ncp}%)</span></div>
       <div class="stat-item stat-item-highlight"><span class="stat-label"><i class="fas fa-users"></i> Всего игроков</span><span class="stat-value stat-value-primary">${
             totalPlayers} (100%)</span></div>
       <div class="stat-item stat-item-highlight"><span class="stat-label"><i class="fas fa-clone"></i> Твинки (не учтены)</span><span class="stat-value">${
@@ -713,7 +792,7 @@ class PlayersDatabase {
     statsBody.innerHTML = html;
   }
 
-  /* ===== STEAM ID CONVERSION ===== */
+  /* ===== STEAM ID ===== */
 
   steamId64ToSteamId(steamId64) {
     if (!steamId64) return '';
@@ -742,31 +821,26 @@ class PlayersDatabase {
 
   search(query) {
     let q = query.trim();
-    const profileMatch =
-        q.toLowerCase().match(/steamcommunity\.com\/profiles\/(\d{17})/);
-    if (profileMatch) q = profileMatch[1];
+    const pm = q.toLowerCase().match(/steamcommunity\.com\/profiles\/(\d{17})/);
+    if (pm) q = pm[1];
     if (/^\d{17}$/.test(q)) {
-      const sid = this.steamId64ToSteamId(q);
-      if (sid) q = sid.toLowerCase();
-    } else {
+      const s = this.steamId64ToSteamId(q);
+      if (s) q = s.toLowerCase();
+    } else
       q = q.toLowerCase();
-    }
     this.currentQuery = (query || '').trim();
-
-    if (!q) {
+    if (!q)
       this.filteredPlayers = [...this.players];
-    } else {
+    else {
       this.filteredPlayers = this.players.filter(p => {
-        const nick = (p.nickname ?? '').toLowerCase();
-        const sid = (p.steamID ?? '').toLowerCase();
-        const hacks = (p.hacks ?? '').toLowerCase();
-        const desc = (p.description ?? '').toLowerCase();
-        const sidMatch = this.exactSteamIdMatch ? sid === q : sid.includes(q);
-        return nick.includes(q) || hacks.includes(q) || desc.includes(q) ||
-            sidMatch;
+        const n = (p.nickname ?? '').toLowerCase(),
+              s = (p.steamID ?? '').toLowerCase();
+        const h = (p.hacks ?? '').toLowerCase(),
+              d = (p.description ?? '').toLowerCase();
+        const sm = this.exactSteamIdMatch ? s === q : s.includes(q);
+        return n.includes(q) || h.includes(q) || d.includes(q) || sm;
       });
     }
-
     this.applySorting();
   }
 
@@ -777,41 +851,32 @@ class PlayersDatabase {
           q.toLowerCase().match(/steamcommunity\.com\/profiles\/(\d{17})/);
       if (pm) q = pm[1];
       if (/^\d{17}$/.test(q)) {
-        const sid = this.steamId64ToSteamId(q);
-        if (sid) q = sid.toLowerCase();
-      } else {
+        const s = this.steamId64ToSteamId(q);
+        if (s) q = s.toLowerCase();
+      } else
         q = q.toLowerCase();
-      }
     }
 
-    let result;
-    if (!q) {
-      result = [...this.players];
-    } else {
-      result = this.players.filter(p => {
-        const nick = (p.nickname ?? '').toLowerCase();
-        const sid = (p.steamID ?? '').toLowerCase();
-        const hacks = (p.hacks ?? '').toLowerCase();
-        const desc = (p.description ?? '').toLowerCase();
-        const sidMatch = this.exactSteamIdMatch ? sid === q : sid.includes(q);
-        return nick.includes(q) || hacks.includes(q) || desc.includes(q) ||
-            sidMatch;
-      });
-    }
+    let result = !q ? [...this.players] : this.players.filter(p => {
+      const n = (p.nickname ?? '').toLowerCase(),
+            s = (p.steamID ?? '').toLowerCase();
+      const h = (p.hacks ?? '').toLowerCase(),
+            d = (p.description ?? '').toLowerCase();
+      const sm = this.exactSteamIdMatch ? s === q : s.includes(q);
+      return n.includes(q) || h.includes(q) || d.includes(q) || sm;
+    });
 
     const isNoCheat = (p) =>
         !p.hacks || p.hacks.trim() === '' || p.hacks === '—';
-
-    if (this.sortFilters.hack === 'none-only') {
+    if (this.sortFilters.hack === 'none-only')
       result = result.filter(isNoCheat);
-    } else if (this.sortFilters.hack === 'none-first') {
+    else if (this.sortFilters.hack === 'none-first')
       result =
           [...result.filter(isNoCheat), ...result.filter(p => !isNoCheat(p))];
-    } else if (
+    else if (
         this.sortFilters.hack && !this.sortFilters.hack.startsWith('none')) {
-      const target = this.sortFilters.hack.toUpperCase();
-      result =
-          result.filter(p => (p.hacks || '').toUpperCase().includes(target));
+      const t = this.sortFilters.hack.toUpperCase();
+      result = result.filter(p => (p.hacks || '').toUpperCase().includes(t));
     }
 
     const hasDesc = (p) =>
@@ -825,27 +890,25 @@ class PlayersDatabase {
     else if (this.sortFilters.description === 'present-first')
       result = [...result.filter(hasDesc), ...result.filter(p => !hasDesc(p))];
 
-    if (this.sortFilters.country) {
+    if (this.sortFilters.country)
       result = result.filter(
           p => (p['country residence'] || '').toString().trim() ===
               this.sortFilters.country);
-    }
 
-    if (this.sortFilters.alpha === 'asc') {
+    if (this.sortFilters.alpha === 'asc')
       result.sort(
           (a, b) => (a.nickname || '')
                         .toLowerCase()
                         .localeCompare((b.nickname || '').toLowerCase(), 'ru'));
-    } else if (this.sortFilters.alpha === 'desc') {
+    else if (this.sortFilters.alpha === 'desc')
       result.sort(
           (a, b) => (b.nickname || '')
                         .toLowerCase()
                         .localeCompare((a.nickname || '').toLowerCase(), 'ru'));
-    }
 
     result.sort((a, b) => {
-      const ea = (a.nickname || '').trim() === '';
-      const eb = (b.nickname || '').trim() === '';
+      const ea = (a.nickname || '').trim() === '',
+            eb = (b.nickname || '').trim() === '';
       if (ea && !eb) return 1;
       if (!ea && eb) return -1;
       return 0;
@@ -862,22 +925,19 @@ class PlayersDatabase {
   renderTable() {
     const tbody = document.getElementById('playersTableBody');
     tbody.innerHTML = '';
-
     if (this.filteredPlayers.length === 0) {
       tbody.innerHTML =
           '<tr><td colspan="5" class="no-results">Ничего не найдено 😔</td></tr>';
       return;
     }
-
     const groups = this.buildGroups(this.filteredPlayers);
     const fragment = document.createDocumentFragment();
 
     groups.forEach(entry => {
       const mainRow = this.createPlayerRow(entry.player, false);
-
       if (entry.twinks.length > 0) {
-        const nickTd = mainRow.querySelector('td.nickname');
-        if (nickTd) {
+        const nickWrapper = mainRow.querySelector('.nickname-wrapper');
+        if (nickWrapper) {
           const btn = document.createElement('button');
           btn.className = 'twink-toggle';
           btn.setAttribute('data-group', entry.groupId);
@@ -890,12 +950,10 @@ class PlayersDatabase {
             e.stopPropagation();
             this.toggleGroup(entry.groupId);
           });
-          nickTd.insertBefore(btn, nickTd.firstChild);
+          nickWrapper.insertBefore(btn, nickWrapper.firstChild);
         }
       }
-
       fragment.appendChild(mainRow);
-
       entry.twinks.forEach(twink => {
         const twinkRow = this.createPlayerRow(twink, true);
         twinkRow.classList.add('twink-row');
@@ -903,22 +961,20 @@ class PlayersDatabase {
         fragment.appendChild(twinkRow);
       });
     });
-
     tbody.appendChild(fragment);
   }
 
   twinkSuffix(n) {
-    const l2 = n % 100;
-    const l1 = n % 10;
+    const l2 = n % 100, l1 = n % 10;
     if (l2 >= 11 && l2 <= 19) return 'ов';
     if (l1 === 1) return '';
     if (l1 >= 2 && l1 <= 4) return 'а';
     return 'ов';
   }
 
-  getOrDash(value) {
-    const v = (value ?? '').toString().trim();
-    return v.length > 0 ? v : '—';
+  getOrDash(v) {
+    const s = (v ?? '').toString().trim();
+    return s.length > 0 ? s : '—';
   }
 
   createPlayerRow(player, isTwinkStyled) {
@@ -938,21 +994,25 @@ class PlayersDatabase {
     const profileUrl =
         sid64 ? `http://steamcommunity.com/profiles/${sid64}` : '';
 
+    const avatarId = sid64 ? `avatar-${sid64}` : '';
+    const avatarHtml = sid64 ?
+        `<img id="${
+            avatarId}" class="player-avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect fill='%23222' width='40' height='40' rx='8'/%3E%3Ctext x='20' y='25' text-anchor='middle' fill='%23555' font-size='16'%3E?%3C/text%3E%3C/svg%3E" alt="" />` :
+        ``;
+
     const sidHtml = hasSid ?
-        `
-      <td class="steamid steamid-filled">
-        <span class="steamid-text">${this.escapeHtml(rawSid)}</span>
-        ${
+        `<td class="steamid steamid-filled">
+          <span class="steamid-text">${this.escapeHtml(rawSid)}</span>
+          ${
             profileUrl ?
                 `<div class="steam-profile-btn-container"><a href="${
                     profileUrl}" target="_blank" rel="noopener noreferrer" class="steam-profile-btn" title="Открыть профиль Steam"><i class="fab fa-steam"></i><span>Профиль</span></a></div>` :
                 ''}
-      </td>` :
+        </td>` :
         `<td class="steamid steamid-empty"><span class="steamid-value">—</span></td>`;
 
     const hasProofs = player.proofs && player.proofs.trim() !== '';
-    const hacksHtml = `
-      <td class="hacks-text"><div class="hacks-content">
+    const hacksHtml = `<td class="hacks-text"><div class="hacks-content">
         <span class="hacks-value">${
         this.escapeHtml(this.getOrDash(hacksText))}</span>
         ${
@@ -968,8 +1028,9 @@ class PlayersDatabase {
     const countryTitle = COUNTRY_TOOLTIPS[countryRaw] || '';
 
     row.innerHTML = `
-      <td class="nickname">${
-        this.escapeHtml(this.getOrDash(player.nickname))}</td>
+      <td class="nickname"><div class="nickname-wrapper">${
+        avatarHtml}<span class="nickname-text">${
+        this.escapeHtml(this.getOrDash(player.nickname))}</span></div></td>
       ${sidHtml}
       ${hacksHtml}
       <td class="description">${
@@ -979,6 +1040,13 @@ class PlayersDatabase {
                        ''}>${this.escapeHtml(this.getOrDash(countryRaw))}</td>
     `;
 
+    if (sid64 && avatarId) {
+      requestAnimationFrame(() => {
+        const img = document.getElementById(avatarId);
+        if (img) this.loadAvatar(sid64, img);
+      });
+    }
+
     return row;
   }
 
@@ -986,9 +1054,7 @@ class PlayersDatabase {
     const total = this.filteredPlayers.length;
     const twinks = this.filteredPlayers.filter(p => this.isTwink(p)).length;
     const main = total - twinks;
-
     document.getElementById('playersCount').textContent = main;
-
     const twinksEl = document.getElementById('twinksCount');
     if (twinksEl) {
       if (twinks > 0) {
@@ -1039,7 +1105,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const faqToggle = document.getElementById('faqToggle');
 const faqModal = document.getElementById('faqModal');
 const closeModal = document.getElementById('closeModal');
-
 faqToggle && faqToggle.addEventListener('click', () => {
   faqModal.classList.add('active');
   document.body.style.overflow = 'hidden';
@@ -1058,7 +1123,8 @@ faqModal && faqModal.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     [faqModal, document.getElementById('statsModal'),
-     document.getElementById('sortModal')]
+     document.getElementById('sortModal'),
+     document.getElementById('changelogModal')]
         .forEach(m => {
           if (m && m.classList.contains('active')) {
             m.classList.remove('active');
