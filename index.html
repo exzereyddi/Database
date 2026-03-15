@@ -40,6 +40,10 @@
                     <i class="fas fa-book-open"></i>
                     <span class="btn-tooltip">FAQ</span>
                 </button>
+                <button class="header-btn changelog-toggle" id="changelogToggle" title="">
+                    <i class="fas fa-clock-rotate-left"></i>
+                    <span class="btn-tooltip">Обновления</span>
+                </button>
                 <button class="header-btn theme-toggle" id="themeToggle" title="">
                     <i class="fas fa-moon"></i>
                     <span class="btn-tooltip">Тема</span>
@@ -98,169 +102,181 @@
                 <span id="twinksCount" class="stats-twinks"></span>
             </div>
         </div>
+    </div>
 
-        <div class="modal-overlay" id="statsModal">
-            <div class="modal-content modal-stats">
-                <button class="modal-close" id="closeStatsModal" aria-label="Закрыть">
-                    <i class="fas fa-xmark"></i>
-                </button>
-                <h2 class="modal-title">
-                    <i class="fas fa-chart-pie"></i>
-                    Статистика базы данных
-                </h2>
-                <div class="modal-body" id="statsModalBody">
-                    <div class="loading">
-                        <div class="loading-spinner"></div>
-                        <span>Загрузка статистики...</span>
-                    </div>
+    <!-- Stats Modal -->
+    <div class="modal-overlay" id="statsModal">
+        <div class="modal-content modal-stats">
+            <button class="modal-close" id="closeStatsModal" aria-label="Закрыть">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <h2 class="modal-title">
+                <i class="fas fa-chart-pie"></i>
+                Статистика базы данных
+            </h2>
+            <div class="modal-body" id="statsModalBody">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <span>Загрузка статистики...</span>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="modal-overlay" id="faqModal">
-            <div class="modal-content">
-                <button class="modal-close" id="closeModal" aria-label="Закрыть">
-                    <i class="fas fa-xmark"></i>
-                </button>
-                <h2 class="modal-title">
-                    <i class="fas fa-book-open"></i>
-                    О базе данных
-                </h2>
-                <div class="modal-body">
-                    <section class="faq-section">
-                        <h3><i class="fas fa-circle-info"></i> Что это за сайт?</h3>
-                        <p>Это база данных игроков Counter-Strike 1.6 играющих на HNS (Hide and Seek) режиме. Она
-                            помогает
-                            новым игрокам заранее понимать, с кем они сталкиваются на серверах этого режима.</p>
-                    </section>
+    <!-- FAQ Modal -->
+    <div class="modal-overlay" id="faqModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" aria-label="Закрыть">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <h2 class="modal-title">
+                <i class="fas fa-book-open"></i>
+                О базе данных
+            </h2>
+            <div class="modal-body">
+                <section class="faq-section">
+                    <h3><i class="fas fa-circle-info"></i> Что это за сайт?</h3>
+                    <p>Это база данных игроков Counter-Strike 1.6 играющих на HNS (Hide and Seek) режиме. Она
+                        помогает новым игрокам заранее понимать, с кем они сталкиваются на серверах этого режима.</p>
+                </section>
+                <section class="faq-section">
+                    <h3><i class="fas fa-list"></i> Виды читов</h3>
+                    <ul class="cheats-list">
+                        <li><strong>FURION</strong> — мультичит.</li>
+                        <li><strong>HPP</strong> — мультичит.</li>
+                        <li><strong>NORADRENALINE/DOPAMINE</strong> — читы до HPP, но по сути их можно отнести к нему
+                            же.</li>
+                        <li><strong>BLUE MONDAY</strong> — hns-чит.</li>
+                        <li><strong>KILABEEZ PREFIX</strong> — hns-чит.</li>
+                        <li><strong>ENHANDED</strong> — hns-чит.</li>
+                        <li><strong>RW</strong> — hns-чит.</li>
+                        <li><strong>BROKOLY</strong> — hns-чит.</li>
+                        <li><strong>NSTE RECORDER/NSTE HACK</strong> — hns-читы.</li>
+                        <li><strong>GAREY RECORDER/GAREY CRASHER</strong> — hns-читы.</li>
+                        <li><strong>SHREK</strong> — BLUE MONDAY.</li>
+                        <li><strong>RECORDER</strong> — читерская функция для записи движений.</li>
+                        <li><strong>ANTI FLASH</strong> — читерская функция, позволяющая не слепнуть от прямого
+                            попадания флеш‑гранаты.</li>
+                        <li><strong>KNIFEBOT</strong> — читерская функция, автоматически бьющая ножом с идеальной
+                            дистанцией и реакцией.</li>
+                        <li><strong>STEAMID CHANGER</strong> — читерская функция, для смены steamid.</li>
+                        <li><strong>BHOP</strong> — читерская функция, автоматически идеально прыгающая за игрока
+                            (+jump).</li>
+                        <li><strong>SCROLL HELPER</strong> — читерская функция, помогающая лучше бхопить или же
+                            ддранить/сгсить.</li>
+                        <li><strong>STRAFE HELPER</strong> — читерская функция, улучшающая стрейфы.</li>
+                        <li><strong>RAGE STRAFE</strong> — читерская функция для набора скорости без использования
+                            стрейфов.</li>
+                        <li><strong>AUTO STRAFE</strong> — то же самое, что и «RAGE STRAFE», только с использованием
+                            стрейфов.</li>
+                        <li><strong>BACKTRACK</strong> — читерская функция, позволяющая стрелять по старым позициям
+                            игроков.</li>
+                        <li><strong>FAKE LAG</strong> — читерская функция, создающая искусственные задержки.</li>
+                    </ul>
+                </section>
+                <section class="faq-section">
+                    <h3><i class="fas fa-plus-circle"></i> Как добавить игрока в базу?</h3>
+                    <p>Свяжитесь с администраторами через Telegram-канал, предоставив никнейм, Steam ID и
+                        доказательства использования читов (демо, скриншоты).</p>
+                </section>
+            </div>
+        </div>
+    </div>
 
-                    <section class="faq-section">
-                        <h3><i class="fas fa-list"></i> Виды читов</h3>
-                        <ul class="cheats-list">
-                            <li><strong>FURION</strong> — мультичит.</li>
-                            <li><strong>HPP</strong> — мультичит.</li>
-                            <li><strong>NORADRENALINE/DOPAMINE</strong> — читы до HPP, но по сути их можно отнести к
-                                нему
-                                же.</li>
-                            <li><strong>BLUE MONDAY</strong> — hns-чит.</li>
-                            <li><strong>KILABEEZ PREFIX</strong> — hns-чит.</li>
-                            <li><strong>ENHANDED</strong> — hns-чит.</li>
-                            <li><strong>RW</strong> — hns-чит.</li>
-                            <li><strong>BROKOLY</strong> — hns-чит.</li>
-                            <li><strong>NSTE RECORDER/NSTE HACK</strong> — hns-читы.</li>
-                            <li><strong>GAREY RECORDER/GAREY CRASHER</strong> — hns-читы.</li>
-                            <li><strong>SHREK</strong> — BLUE MONDAY.</li>
-                            <li><strong>RECORDER</strong> — читерская функция для записи движений.</li>
-                            <li><strong>ANTI FLASH</strong> — читерская функция, позволяющая не слепнуть от прямого
-                                попадания флеш‑гранаты.</li>
-                            <li><strong>KNIFEBOT</strong> — читерская функция, автоматически бьющая ножом с идеальной
-                                дистанцией и реакцией.</li>
-                            <li><strong>STEAMID CHANGER</strong> — читерская функция, для смены steamid.</li>
-                            <li><strong>BHOP</strong> — читерская функция, автоматически идеально прыгающая за игрока
-                                (+jump).</li>
-                            <li><strong>SCROLL HELPER</strong> — читерская функция, помогающая лучше бхопить или же
-                                ддранить/сгсить.</li>
-                            <li><strong>STRAFE HELPER</strong> — читерская функция, улучшающая стрейфы.</li>
-                            <li><strong>RAGE STRAFE</strong> — читерская функция для набора скорости без использования
-                                стрейфов.</li>
-                            <li><strong>AUTO STRAFE</strong> — то же самое, что и «RAGE STRAFE», только с использованием
-                                стрейфов.</li>
-                            <li><strong>BACKTRACK</strong> — читерская функция, позволяющая стрелять по старым позициям
-                                игроков.</li>
-                            <li><strong>FAKE LAG</strong> — читерская функция, создающая искусственные задержки.</li>
-                        </ul>
-                    </section>
-
-                    <section class="faq-section">
-                        <h3><i class="fas fa-plus-circle"></i> Как добавить игрока в базу?</h3>
-                        <p>Свяжитесь с администраторами через Telegram-канал, предоставив никнейм, Steam ID и
-                            доказательства
-                            использования читов (демо, скриншоты).</p>
-                    </section>
+    <!-- Changelog Modal -->
+    <div class="modal-overlay" id="changelogModal">
+        <div class="modal-content modal-changelog">
+            <button class="modal-close" id="closeChangelogModal" aria-label="Закрыть">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <h2 class="modal-title">
+                <i class="fas fa-clock-rotate-left"></i>
+                Обновления
+            </h2>
+            <div class="modal-body" id="changelogModalBody">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <span>Загрузка обновлений...</span>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="modal-overlay" id="sortModal">
-            <div class="modal-content modal-sort">
-                <button class="modal-close" id="closeSortModal" aria-label="Закрыть">
-                    <i class="fas fa-xmark"></i>
-                </button>
-                <h2 class="modal-title">
-                    <i class="fas fa-sliders"></i>
-                    Сортировка и фильтры
-                </h2>
-                <div class="modal-body">
-                    <div class="sort-group">
-                        <label for="hackFilter"><i class="fas fa-bug"></i> Чит или его функция:</label>
-                        <select id="hackFilter" class="sort-select">
-                            <option value="">Не важно</option>
-                            <option value="none-first">Сначала не читеры</option>
-                            <option value="none-only">Только не читеры</option>
-                        </select>
-                    </div>
-
-                    <div class="sort-group">
-                        <label for="descFilter"><i class="fas fa-align-left"></i> Описание:</label>
-                        <select id="descFilter" class="sort-select">
-                            <option value="">Не важно</option>
-                            <option value="none-first">Сначала отсутствует</option>
-                            <option value="none-only">Только отсутствует</option>
-                            <option value="present-first">Сначала присутствует</option>
-                            <option value="present-only">Только присутствует</option>
-                        </select>
-                    </div>
-
-                    <div class="sort-group">
-                        <label for="alphaSort"><i class="fas fa-arrow-down-a-z"></i> Алфавит по нику:</label>
-                        <select id="alphaSort" class="sort-select">
-                            <option value="">Не важно</option>
-                            <option value="asc">от А до Я (по)</option>
-                            <option value="desc">от Я до А (против)</option>
-                        </select>
-                    </div>
-
-                    <div class="sort-group">
-                        <label for="countryFilter"><i class="fas fa-earth-europe"></i> Страна проживания:</label>
-                        <select id="countryFilter" class="sort-select">
-                            <option value="">Не важно</option>
-                        </select>
-                    </div>
-
-                    <div class="sort-group checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="exactSteamId" checked>
-                            <span class="checkbox-custom"></span>
-                            <span class="checkbox-text">Точное совпадение SteamID при поиске</span>
-                        </label>
-                    </div>
-
-                    <div class="sort-actions">
-                        <button id="applySortBtn" class="apply-sort-btn">
-                            <i class="fas fa-check"></i>
-                            Применить
-                        </button>
-                        <button id="resetSortBtn" class="reset-sort-btn">
-                            <i class="fas fa-arrow-rotate-left"></i>
-                            Сбросить
-                        </button>
-                    </div>
+    <!-- Sort Modal -->
+    <div class="modal-overlay" id="sortModal">
+        <div class="modal-content modal-sort">
+            <button class="modal-close" id="closeSortModal" aria-label="Закрыть">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <h2 class="modal-title">
+                <i class="fas fa-sliders"></i>
+                Сортировка и фильтры
+            </h2>
+            <div class="modal-body">
+                <div class="sort-group">
+                    <label for="hackFilter"><i class="fas fa-bug"></i> Чит или его функция:</label>
+                    <select id="hackFilter" class="sort-select">
+                        <option value="">Не важно</option>
+                        <option value="none-first">Сначала не читеры</option>
+                        <option value="none-only">Только не читеры</option>
+                    </select>
+                </div>
+                <div class="sort-group">
+                    <label for="descFilter"><i class="fas fa-align-left"></i> Описание:</label>
+                    <select id="descFilter" class="sort-select">
+                        <option value="">Не важно</option>
+                        <option value="none-first">Сначала отсутствует</option>
+                        <option value="none-only">Только отсутствует</option>
+                        <option value="present-first">Сначала присутствует</option>
+                        <option value="present-only">Только присутствует</option>
+                    </select>
+                </div>
+                <div class="sort-group">
+                    <label for="alphaSort"><i class="fas fa-arrow-down-a-z"></i> Алфавит по нику:</label>
+                    <select id="alphaSort" class="sort-select">
+                        <option value="">Не важно</option>
+                        <option value="asc">от А до Я (по)</option>
+                        <option value="desc">от Я до А (против)</option>
+                    </select>
+                </div>
+                <div class="sort-group">
+                    <label for="countryFilter"><i class="fas fa-earth-europe"></i> Страна проживания:</label>
+                    <select id="countryFilter" class="sort-select">
+                        <option value="">Не важно</option>
+                    </select>
+                </div>
+                <div class="sort-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="exactSteamId" checked>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Точное совпадение SteamID при поиске</span>
+                    </label>
+                </div>
+                <div class="sort-actions">
+                    <button id="applySortBtn" class="apply-sort-btn">
+                        <i class="fas fa-check"></i>
+                        Применить
+                    </button>
+                    <button id="resetSortBtn" class="reset-sort-btn">
+                        <i class="fas fa-arrow-rotate-left"></i>
+                        Сбросить
+                    </button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <a href="https://t.me/originalHNS" target="_blank" rel="noopener noreferrer" class="source-button"
-            title="Источник">
-            <i class="fab fa-telegram-plane"></i>
-            <span class="source-label">Источник</span>
-        </a>
+    <a href="https://t.me/originalHNS" target="_blank" rel="noopener noreferrer" class="source-button" title="Источник">
+        <i class="fab fa-telegram-plane"></i>
+        <span class="source-label">Источник</span>
+    </a>
 
-        <button class="scroll-top-btn" id="scrollTopBtn" title="" aria-label="Наверх">
-            <i class="fas fa-arrow-up"></i>
-        </button>
+    <button class="scroll-top-btn" id="scrollTopBtn" title="" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-        <script src="JS/database.js"></script>
-        <script src="JS/scripts.js"></script>
+    <script src="JS/database.js"></script>
+    <script src="JS/scripts.js"></script>
 </body>
 
 </html>
