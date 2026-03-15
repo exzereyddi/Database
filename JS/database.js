@@ -47,7 +47,7 @@ window.DATABASE_JSON = {
       'nickname': 'КОТЭ',
       'steamID': 'STEAM_0:0:178230123',
       'hacks': 'HPP, STRAFE HELPER',
-      'description': 'Тупой казах, использует free-ip-stresser и ложит игроков с хнса',
+      'description': 'Тупица, использует free-ip-stresser и ложит игроков с хнса',
       'proofs': 'https://t.me/database_proofs/4',
       'country residence': '🇰🇿'
     },
@@ -145,7 +145,7 @@ window.DATABASE_JSON = {
       'nickname': 'asdset',
       'steamID': 'STEAM_0:1:782310954',
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
-      'description': 'Украинец, школьник, занимается ютубом',
+      'description': 'Школьник, занимается ютубом',
       'country residence': '🇺🇦'
     },
     {
@@ -1018,7 +1018,7 @@ window.DATABASE_JSON = {
       'nickname': 'Nste',
       'steamID': 'STEAM_0:0:698247080',
       'hacks': 'BLUE MONDAY, NSTE RECORDER',
-      'description': 'Украинец, +-программист',
+      'description': '+-программист',
       'country residence': '🇺🇦'
     },
     {
@@ -1175,7 +1175,7 @@ window.DATABASE_JSON = {
       'nickname': 'samur',
       'steamID': 'STEAM_0:1:582927515',
       'hacks': '',
-      'description': 'Украинец, бездарность',
+      'description': 'Бездарность',
       'country residence': '🇺🇦'
     },
     {
@@ -1277,7 +1277,7 @@ window.DATABASE_JSON = {
       'nickname': 'tahoma',
       'steamID': 'STEAM_0:0:607296763',
       'hacks': 'BROKOLY',
-      'description': 'Бездарный хохлятский долбоеб',
+      'description': 'Бездарный долбоеб',
       'proofs': 'https://t.me/database_proofs/48',
       'country residence': '🇺🇦'
     },
