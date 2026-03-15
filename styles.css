@@ -1320,6 +1320,114 @@ td {
     transform: translateY(0);
 }
 
+/* ===== TWINK TOGGLE & ROWS ===== */
+.twink-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px 3px 7px;
+    margin-right: 10px;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-medium);
+    border-radius: 999px;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.72rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    transition: all var(--transition-normal);
+    outline: none;
+    vertical-align: middle;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.twink-toggle i {
+    font-size: 0.55rem;
+    transition: transform var(--transition-normal);
+    flex-shrink: 0;
+}
+
+.twink-toggle-open i {
+    transform: rotate(90deg);
+}
+
+.twink-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(99, 102, 241, 0.08);
+}
+
+.twink-toggle-open {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.twink-count {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.twink-row {
+    display: none;
+}
+
+.twink-row.twink-row-visible {
+    display: table-row;
+    animation: twinkSlideIn 0.2s ease-out;
+}
+
+@keyframes twinkSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.twink-row td {
+    background: rgba(99, 102, 241, 0.03);
+    position: relative;
+}
+
+.twink-row td.nickname {
+    padding-left: 2.8rem;
+}
+
+.twink-row td.nickname::before {
+    content: '↳';
+    position: absolute;
+    left: 1.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent);
+    opacity: 0.5;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.twink-styled {
+    opacity: 0.7;
+}
+
+.twink-styled:hover {
+    opacity: 1;
+}
+
+.twink-row.twink-row-visible:hover td {
+    background: rgba(99, 102, 241, 0.07);
+}
+
+.twink-row.twink-row-visible:last-of-type td {
+    border-bottom: 2px solid var(--border-medium);
+}
+
 @media (max-width: 768px) {
     .scroll-top-btn {
         left: 14px;
@@ -1327,6 +1435,30 @@ td {
         width: 46px;
         height: 46px;
         font-size: 1rem;
+    }
+
+    .twink-toggle {
+        padding: 2px 7px 2px 5px;
+        margin-right: 6px;
+        font-size: 0.65rem;
+        gap: 3px;
+    }
+
+    .twink-toggle i {
+        font-size: 0.5rem;
+    }
+
+    .twink-count {
+        font-size: 0.65rem;
+    }
+
+    .twink-row td.nickname {
+        padding-left: 2rem;
+    }
+
+    .twink-row td.nickname::before {
+        left: 0.8rem;
+        font-size: 0.75rem;
     }
 }
 
