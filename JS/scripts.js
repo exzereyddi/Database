@@ -243,6 +243,7 @@ class PlayersDatabase {
     this.initStatsModal();
     this.initCollapseHandlers();
     this.initCountriesList();
+    this.initHacksList();
     this.applySorting();
   }
 
@@ -270,6 +271,31 @@ class PlayersDatabase {
       option.textContent =
           `${c} ${COUNTRY_TOOLTIPS[c] || 'Неизвестная страна'}`;
       countrySelect.appendChild(option);
+    });
+  }
+
+  initHacksList() {
+    const hackSelect = document.getElementById('hackFilter');
+    if (!hackSelect) return;
+
+    const uniqueHacks = new Set();
+    this.players.forEach(p => {
+      const hacksText = (p.hacks || '').toString().trim();
+      if (hacksText && hacksText !== '—') {
+        const hacksArr =
+            hacksText.split(',').map(h => h.trim()).filter(Boolean);
+        hacksArr.forEach(hack => uniqueHacks.add(hack));
+      }
+    });
+
+    const sortedHacks =
+        Array.from(uniqueHacks).sort((a, b) => a.localeCompare(b, 'ru'));
+
+    sortedHacks.forEach(hack => {
+      const option = document.createElement('option');
+      option.value = hack;
+      option.textContent = hack;
+      hackSelect.appendChild(option);
     });
   }
 
