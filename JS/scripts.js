@@ -330,58 +330,79 @@ class PlayersDatabase {
   /* ===== TWINK GROUPING ===== */
 
   isTwink(player) {
-    return /^twink\s+for\s+STEAM_\d+:\d+:\d+/i.test(
-        (player.description || '').trim());
+    const desc = (player.description || '').trim().toLowerCase();
+    return desc.includes('twink') ||
+        /^twink\s+for\s+STEAM_\d+:\d+:\d+/i.test(
+            (player.description || '').trim());
   }
 
   buildGroups(players) {
-    const mainMap = new Map();
-    const twinkMap = new Map();
-    const standalone = [];
+    const twinkForMap = new Map();
+    const nonTwinkFor = [];
 
     players.forEach(p => {
       const desc = (p.description || '').trim();
       const twinkMatch = desc.match(/^twink\s+for\s+(STEAM_\d+:\d+:\d+)/i);
       if (twinkMatch) {
         const ownerSid = twinkMatch[1].toUpperCase();
-        if (!twinkMap.has(ownerSid)) twinkMap.set(ownerSid, []);
-        twinkMap.get(ownerSid).push(p);
+        if (!twinkForMap.has(ownerSid)) twinkForMap.set(ownerSid, []);
+        twinkForMap.get(ownerSid).push(p);
       } else {
-        const sid = (p.steamID || '').trim().toUpperCase();
-        if (sid && sid !== '—' && sid !== '') {
-          if (!mainMap.has(sid)) mainMap.set(sid, []);
-          mainMap.get(sid).push(p);
-        } else {
-          standalone.push(p);
-        }
+        nonTwinkFor.push(p);
       }
+    });
+
+    const groupsMap = new Map();
+    nonTwinkFor.forEach(p => {
+      const nick = (p.nickname || '').trim().toLowerCase();
+      let key;
+      if (nick) {
+        key = `nick_${nick}`;
+      } else if (
+          p.steamID && p.steamID.trim() !== '—' && p.steamID.trim() !== '') {
+        key = `sid_${p.steamID.trim()}`;
+      } else {
+        key = `__empty_${Math.random()}`;
+      }
+      if (!groupsMap.has(key)) groupsMap.set(key, []);
+      groupsMap.get(key).push(p);
     });
 
     const result = [];
     let groupId = 0;
-    const usedTwinkKeys = new Set();
+    const usedTwinkForKeys = new Set();
 
-    mainMap.forEach((mains, sid) => {
-      const twinks = twinkMap.get(sid) || [];
-      usedTwinkKeys.add(sid);
+    groupsMap.forEach((group) => {
+      let mainIndex = group.findIndex(p => !this.isTwink(p));
+      if (mainIndex === -1) mainIndex = 0;
+      const main = group[mainIndex];
+      const twinks = group.filter((_, i) => i !== mainIndex);
 
-      if (mains.length === 1 && twinks.length === 0) {
-        result.push({player: mains[0], type: 'main', twinks: [], groupId: -1});
-      } else {
-        const mainPlayer = mains[0];
-        const restMains = mains.slice(1);
-        const allTwinks = [...restMains, ...twinks];
-        result.push({
-          player: mainPlayer,
-          type: 'main',
-          twinks: allTwinks,
-          groupId: allTwinks.length > 0 ? groupId++ : -1
-        });
+      const mainSid = (main.steamID || '').trim().toUpperCase();
+      if (mainSid && twinkForMap.has(mainSid)) {
+        twinks.push(...twinkForMap.get(mainSid));
+        usedTwinkForKeys.add(mainSid);
       }
+
+      group.forEach((p, i) => {
+        if (i === mainIndex) return;
+        const pSid = (p.steamID || '').trim().toUpperCase();
+        if (pSid && twinkForMap.has(pSid) && !usedTwinkForKeys.has(pSid)) {
+          twinks.push(...twinkForMap.get(pSid));
+          usedTwinkForKeys.add(pSid);
+        }
+      });
+
+      result.push({
+        player: main,
+        type: 'main',
+        twinks: twinks,
+        groupId: twinks.length > 0 ? groupId++ : -1
+      });
     });
 
-    twinkMap.forEach((twinks, ownerSid) => {
-      if (usedTwinkKeys.has(ownerSid)) return;
+    twinkForMap.forEach((twinks, ownerSid) => {
+      if (usedTwinkForKeys.has(ownerSid)) return;
       if (twinks.length === 1) {
         result.push({player: twinks[0], type: 'main', twinks: [], groupId: -1});
       } else {
@@ -392,10 +413,6 @@ class PlayersDatabase {
           groupId: groupId++
         });
       }
-    });
-
-    standalone.forEach(p => {
-      result.push({player: p, type: 'main', twinks: [], groupId: -1});
     });
 
     return result;
