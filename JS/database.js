@@ -2836,6 +2836,13 @@ window.DATABASE_JSON = {
       'hacks': '',
       'description': 'Типа девка (слабая и тупая)',
       'country residence': '🇷🇺'
+    },
+    {
+      'nickname': 'Oproverg',
+      'steamID': '',
+      'hacks': '',
+      'description': 'Создатель дерьма на "КОНТИНЕНТ HNS/DM [100aa] 1000fps", пытался распиарить это говно но не получилось, бездарь',
+      'country residence': '🇷🇺'
     }
   ]
 };
