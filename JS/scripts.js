@@ -299,32 +299,52 @@ class PlayersDatabase {
 
     if (this.avatarCache.has(steamId64)) {
       const cached = this.avatarCache.get(steamId64);
-      if (cached) imgElement.src = cached;
+      if (cached) {
+        imgElement.src = cached;
+        imgElement.classList.add('avatar-loaded');
+      }
       return;
     }
 
-    const url = `https://steamcommunity.com/profiles/${steamId64}/?xml=1`;
+    const xmlUrl = `https://steamcommunity.com/profiles/${steamId64}/?xml=1`;
 
-    fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`)
-        .then(r => {
-          if (!r.ok) throw new Error('fetch failed');
-          return r.text();
-        })
-        .then(xml => {
-          const match =
-              xml.match(/<avatarMedium><!\[CDATA\[(.*?)\]\]><\/avatarMedium>/);
-          if (match && match[1]) {
-            const avatarUrl = match[1];
-            this.avatarCache.set(steamId64, avatarUrl);
-            imgElement.src = avatarUrl;
-            imgElement.classList.add('avatar-loaded');
-          } else {
-            this.avatarCache.set(steamId64, null);
-          }
-        })
-        .catch(() => {
-          this.avatarCache.set(steamId64, null);
-        });
+    const proxies = [
+      (url) =>
+          `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
+      (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+      (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+      (url) => `https://proxy.cors.sh/${url}`,
+    ];
+
+    const tryProxy = (index) => {
+      if (index >= proxies.length) {
+        this.avatarCache.set(steamId64, null);
+        return;
+      }
+
+      fetch(proxies[index](xmlUrl), {signal: AbortSignal.timeout(8000)})
+          .then(r => {
+            if (!r.ok) throw new Error('fetch failed');
+            return r.text();
+          })
+          .then(xml => {
+            const match = xml.match(
+                /<avatarMedium><!\[CDATA\[(.*?)\]\]><\/avatarMedium>/);
+            if (match && match[1]) {
+              const avatarUrl = match[1];
+              this.avatarCache.set(steamId64, avatarUrl);
+              imgElement.src = avatarUrl;
+              imgElement.classList.add('avatar-loaded');
+            } else {
+              throw new Error('no avatar in xml');
+            }
+          })
+          .catch(() => {
+            tryProxy(index + 1);
+          });
+    };
+
+    tryProxy(0);
   }
 
   /* ===== TWINK GROUPING ===== */
@@ -979,9 +999,10 @@ class PlayersDatabase {
     }
     const groups = this.buildGroups(this.filteredPlayers);
     const fragment = document.createDocumentFragment();
+    const avatarsToLoad = [];
 
     groups.forEach(entry => {
-      const mainRow = this.createPlayerRow(entry.player, false);
+      const mainRow = this.createPlayerRow(entry.player, false, avatarsToLoad);
       if (entry.twinks.length > 0) {
         const nickWrapper = mainRow.querySelector('.nickname-wrapper');
         if (nickWrapper) {
@@ -1002,13 +1023,22 @@ class PlayersDatabase {
       }
       fragment.appendChild(mainRow);
       entry.twinks.forEach(twink => {
-        const twinkRow = this.createPlayerRow(twink, true);
+        const twinkRow = this.createPlayerRow(twink, true, avatarsToLoad);
         twinkRow.classList.add('twink-row');
         twinkRow.setAttribute('data-group', entry.groupId);
         fragment.appendChild(twinkRow);
       });
     });
     tbody.appendChild(fragment);
+
+    let delay = 0;
+    avatarsToLoad.forEach(({sid64, avatarId}) => {
+      setTimeout(() => {
+        const img = document.getElementById(avatarId);
+        if (img) this.loadAvatar(sid64, img);
+      }, delay);
+      delay += 150;
+    });
   }
 
   twinkSuffix(n) {
@@ -1024,7 +1054,7 @@ class PlayersDatabase {
     return s.length > 0 ? s : '—';
   }
 
-  createPlayerRow(player, isTwinkStyled) {
+  createPlayerRow(player, isTwinkStyled, avatarsToLoad) {
     const row = document.createElement('tr');
     if (isTwinkStyled) row.classList.add('twink-styled');
 
@@ -1041,7 +1071,9 @@ class PlayersDatabase {
     const profileUrl =
         sid64 ? `http://steamcommunity.com/profiles/${sid64}` : '';
 
-    const avatarId = sid64 ? `avatar-${sid64}` : '';
+    const avatarId = sid64 ?
+        `avatar-${sid64}-${Math.random().toString(36).slice(2, 8)}` :
+        '';
     const avatarHtml = sid64 ?
         `<img id="${
             avatarId}" class="player-avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect fill='%23222' width='40' height='40' rx='8'/%3E%3Ctext x='20' y='25' text-anchor='middle' fill='%23555' font-size='16'%3E?%3C/text%3E%3C/svg%3E" alt="" />` :
@@ -1049,49 +1081,46 @@ class PlayersDatabase {
 
     const sidHtml = hasSid ?
         `<td class="steamid steamid-filled">
-          <span class="steamid-text">${this.escapeHtml(rawSid)}</span>
-          ${
+        <span class="steamid-text">${this.escapeHtml(rawSid)}</span>
+        ${
             profileUrl ?
                 `<div class="steam-profile-btn-container"><a href="${
                     profileUrl}" target="_blank" rel="noopener noreferrer" class="steam-profile-btn" title="Открыть профиль Steam"><i class="fab fa-steam"></i><span>Профиль</span></a></div>` :
                 ''}
-        </td>` :
+      </td>` :
         `<td class="steamid steamid-empty"><span class="steamid-value">—</span></td>`;
 
     const hasProofs = player.proofs && player.proofs.trim() !== '';
     const hacksHtml = `<td class="hacks-text"><div class="hacks-content">
-        <span class="hacks-value">${
+      <span class="hacks-value">${
         this.escapeHtml(this.getOrDash(hacksText))}</span>
-        ${
+      ${
         hasProofs ?
             `<div class="proof-btn-container"><a href="${
                 this.escapeHtml(
                     player
                         .proofs)}" target="_blank" rel="noopener noreferrer" class="proof-btn" title="Доказательство"><i class="fas fa-file-alt"></i><span>Доказательство</span></a></div>` :
             ''}
-      </div></td>`;
+    </div></td>`;
 
     const countryRaw = (player['country residence'] ?? '').toString().trim();
     const countryTitle = COUNTRY_TOOLTIPS[countryRaw] || '';
 
     row.innerHTML = `
-      <td class="nickname"><div class="nickname-wrapper">${
+    <td class="nickname"><div class="nickname-wrapper">${
         avatarHtml}<span class="nickname-text">${
         this.escapeHtml(this.getOrDash(player.nickname))}</span></div></td>
-      ${sidHtml}
-      ${hacksHtml}
-      <td class="description">${
+    ${sidHtml}
+    ${hacksHtml}
+    <td class="description">${
         this.escapeHtml(this.getOrDash(player.description))}</td>
-      <td class="country" ${
+    <td class="country" ${
         countryTitle ? `title="${this.escapeHtml(countryTitle)}"` :
                        ''}>${this.escapeHtml(this.getOrDash(countryRaw))}</td>
-    `;
+  `;
 
-    if (sid64 && avatarId) {
-      requestAnimationFrame(() => {
-        const img = document.getElementById(avatarId);
-        if (img) this.loadAvatar(sid64, img);
-      });
+    if (sid64 && avatarId && avatarsToLoad) {
+      avatarsToLoad.push({sid64, avatarId});
     }
 
     return row;
