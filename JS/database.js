@@ -2842,7 +2842,22 @@ window.DATABASE_JSON = {
       'steamID': '',
       'hacks': '',
       'description': 'Создатель дерьма на "КОНТИНЕНТ HNS/DM [100aa] 1000fps", пытался распиарить это говно но не получилось, бездарь',
-      'country residence': '🇷🇺'
+      'country residence': ''
+    },
+    {
+      'nickname': 'zubro',
+      'steamID': '',
+      'hacks': 'HPP',
+      'description': '',
+      'proofs': 'https://www.youtube.com/watch?v=2MJ45wt8nQs',
+      'country residence': ''
+    },
+    {
+      'nickname': 'ceowadz',
+      'steamID': 'STEAM_0:1:523531900',
+      'hacks': '',
+      'description': 'Ноющая слабость',
+      'country residence': '🇺🇦'
     }
   ]
 };
