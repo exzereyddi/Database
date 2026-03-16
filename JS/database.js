@@ -2822,6 +2822,13 @@ window.DATABASE_JSON = {
       'hacks': '',
       'description': 'Слабый молчаливый npc',
       'country residence': '🇺🇾'
+    },
+    {
+      'nickname': 'Rapha Saec',
+      'steamID': 'STEAM_0:0:155495234',
+      'hacks': '',
+      'description': 'Слабость, больше нечего о npc этом рассказать',
+      'country residence': '🇷🇴'
     }
   ]
 };
