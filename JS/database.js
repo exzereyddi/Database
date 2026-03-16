@@ -47,7 +47,7 @@ window.DATABASE_JSON = {
       'nickname': 'КОТЭ',
       'steamID': 'STEAM_0:0:178230123',
       'hacks': 'HPP, STRAFE HELPER',
-      'description': 'Тупой казах, использует free-ip-stresser и ложит игроков с хнса',
+      'description': 'Тупица, использует free-ip-stresser и ложит игроков с хнса',
       'proofs': 'https://t.me/database_proofs/4',
       'country residence': '🇰🇿'
     },
