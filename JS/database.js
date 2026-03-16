@@ -998,7 +998,7 @@ window.DATABASE_JSON = {
       'nickname': 'noduck',
       'steamID': 'STEAM_0:1:615769855',
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
-      'description': 'Казах',
+      'description': '🇰🇿',
       'country residence': '🇷🇺'
     },
     {
