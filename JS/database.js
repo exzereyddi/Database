@@ -2808,6 +2808,12 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:764774461',
       'hacks': 'BLUE MONDAY',
       'description': ''
+    },
+    {
+      'nickname': '[M]r]aisson]',
+      'steamID': 'STEAM_0:0:926189876',
+      'hacks': '',
+      'description': 'Всосал мне 3-0, разбил ему голову что он аж начал килляться по кд, смешной свин с 200 пинг'
     }
   ]
 };
