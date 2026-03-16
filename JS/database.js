@@ -2815,6 +2815,13 @@ window.DATABASE_JSON = {
       'hacks': '',
       'description': 'Всосал мне 3-0, разбил ему голову что он аж начал килляться по кд, смешной свин с 200 пинг',
       'country residence': '🇻🇪'
+    },
+    {
+      'nickname': 'b9n',
+      'steamID': 'STEAM_0:0:548263948',
+      'hacks': '',
+      'description': 'Слабый молчаливый npc',
+      'country residence': '🇺🇾'
     }
   ]
 };
