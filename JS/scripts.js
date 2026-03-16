@@ -330,44 +330,74 @@ class PlayersDatabase {
   /* ===== TWINK GROUPING ===== */
 
   isTwink(player) {
-    return (player.description || '').toLowerCase().includes('twink');
+    return /^twink\s+for\s+STEAM_\d+:\d+:\d+/i.test(
+        (player.description || '').trim());
   }
 
   buildGroups(players) {
-    const groupsMap = new Map();
+    const mainMap = new Map();
+    const twinkMap = new Map();
+    const standalone = [];
+
     players.forEach(p => {
-      const nick = (p.nickname || '').trim().toLowerCase();
-      let key;
-      if (nick) {
-        key = `nick_${nick}`;
-      } else if (
-          p.steamID && p.steamID.trim() !== '—' && p.steamID.trim() !== '') {
-        key = `sid_${p.steamID.trim()}`;
+      const desc = (p.description || '').trim();
+      const twinkMatch = desc.match(/^twink\s+for\s+(STEAM_\d+:\d+:\d+)/i);
+      if (twinkMatch) {
+        const ownerSid = twinkMatch[1].toUpperCase();
+        if (!twinkMap.has(ownerSid)) twinkMap.set(ownerSid, []);
+        twinkMap.get(ownerSid).push(p);
       } else {
-        key = `__empty_${Math.random()}`;
+        const sid = (p.steamID || '').trim().toUpperCase();
+        if (sid && sid !== '—' && sid !== '') {
+          if (!mainMap.has(sid)) mainMap.set(sid, []);
+          mainMap.get(sid).push(p);
+        } else {
+          standalone.push(p);
+        }
       }
-      if (!groupsMap.has(key)) groupsMap.set(key, []);
-      groupsMap.get(key).push(p);
     });
 
     const result = [];
     let groupId = 0;
-    groupsMap.forEach((group) => {
-      if (group.length === 1) {
-        result.push({player: group[0], type: 'main', twinks: [], groupId: -1});
-        return;
+    const usedTwinkKeys = new Set();
+
+    mainMap.forEach((mains, sid) => {
+      const twinks = twinkMap.get(sid) || [];
+      usedTwinkKeys.add(sid);
+
+      if (mains.length === 1 && twinks.length === 0) {
+        result.push({player: mains[0], type: 'main', twinks: [], groupId: -1});
+      } else {
+        const mainPlayer = mains[0];
+        const restMains = mains.slice(1);
+        const allTwinks = [...restMains, ...twinks];
+        result.push({
+          player: mainPlayer,
+          type: 'main',
+          twinks: allTwinks,
+          groupId: allTwinks.length > 0 ? groupId++ : -1
+        });
       }
-      let mainIndex = group.findIndex(p => !this.isTwink(p));
-      if (mainIndex === -1) mainIndex = 0;
-      const main = group[mainIndex];
-      const twinks = group.filter((_, i) => i !== mainIndex);
-      result.push({
-        player: main,
-        type: 'main',
-        twinks: twinks,
-        groupId: twinks.length > 0 ? groupId++ : -1
-      });
     });
+
+    twinkMap.forEach((twinks, ownerSid) => {
+      if (usedTwinkKeys.has(ownerSid)) return;
+      if (twinks.length === 1) {
+        result.push({player: twinks[0], type: 'main', twinks: [], groupId: -1});
+      } else {
+        result.push({
+          player: twinks[0],
+          type: 'main',
+          twinks: twinks.slice(1),
+          groupId: groupId++
+        });
+      }
+    });
+
+    standalone.forEach(p => {
+      result.push({player: p, type: 'main', twinks: [], groupId: -1});
+    });
+
     return result;
   }
 
