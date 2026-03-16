@@ -417,7 +417,7 @@ window.DATABASE_JSON = {
       'nickname': 'fugu',
       'steamID': 'STEAM_0:0:512628688',
       'hacks': 'SCROLL HELPER, RW, STRAFE HELPER',
-      'description': '',
+      'description': 'Бегал на спидхаке по всей карте',
       'country residence': '🇷🇺'
     },
     {
@@ -1527,6 +1527,14 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
+      'nickname': 'evonie',
+      'steamID': 'STEAM_0:1:529961311',
+      'hacks': '',
+      'description': 'Ноющая слабость + предлагает всем качать Furion Hack',
+      'proofs': '',
+      'country residence': '🇷🇺'
+    },
+    {
       'nickname': '',
       'steamID': 'STEAM_0:0:20791436',
       'hacks': 'HPP, ENHANDED',
@@ -1614,7 +1622,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:768114641',
-      'hacks': 'HPP, FURION',
+      'hacks': 'HPP, FURION, BLUE MONDAY',
       'description': ''
     },
     {
@@ -1637,6 +1645,12 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
+      'steamID': 'STEAM_0:1:93027363',
+      'hacks': 'SCROLL HELPER',
+      'description': ''
+    },
+    {
+      'nickname': '',
       'steamID': 'STEAM_0:0:58270494',
       'hacks': 'HPP',
       'description': ''
@@ -1646,6 +1660,18 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:0:63255261',
       'hacks': 'HPP',
       'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:903665410',
+      'hacks': 'ENHANDED',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:1248042',
+      'hacks': 'ENHANDED',
+      'description': 'Twink for STEAM_0:0:903665410'
     },
     {
       'nickname': '',
@@ -1730,13 +1756,19 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:628489275',
       'hacks': 'BLUE MONDAY',
-      'description': 'aka finesi(dodik s bomji hns 3-0)'
+      'description': 'aka finesi ( выебанный 3-0 )'
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:139904496',
       'hacks': 'HPP',
       'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:798619901',
+      'hacks': 'FURION',
+      'description': 'Всосал 3-0, затем подрубил и снова всосал 3-0, пишет ЛЮТУЮ дичь в чат',
     },
     {
       'nickname': '',
@@ -1867,10 +1899,9 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:646899981',
-      'hacks': 'HPP',
+      'hacks': 'HPP, FURION',
       'description': ''
     },
-    
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:197154027',
@@ -2553,12 +2584,6 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:1:859642946',
-      'hacks': 'FURION',
-      'description': 'Twink for STEAM_0:1:921829961'
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:1:860745746',
       'hacks': 'SCROLL HELPER, KILABEEZ PREFIX, ENHANDED, BLUE MONDAY',
       'description': ''
@@ -2658,6 +2683,12 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:921829961',
       'hacks': 'FURION',
       'description': 'strafe'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:859642946',
+      'hacks': 'FURION',
+      'description': 'Twink for STEAM_0:1:921829961'
     },
     {
       'nickname': '',
@@ -2810,14 +2841,14 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
-      'nickname': '[M]r]aisson]',
+      'nickname': '',
       'steamID': 'STEAM_0:0:926189876',
       'hacks': '',
       'description': 'Всосал мне 3-0, разбил ему голову что он аж начал килляться по кд, смешной свин с 200 пинг',
       'country residence': '🇻🇪'
     },
     {
-      'nickname': 'b9n',
+      'nickname': '',
       'steamID': 'STEAM_0:0:548263948',
       'hacks': '',
       'description': 'Слабый молчаливый npc',
@@ -2831,7 +2862,7 @@ window.DATABASE_JSON = {
       'country residence': '🇷🇴'
     },
     {
-      'nickname': 'anya_dolgova',
+      'nickname': '',
       'steamID': 'STEAM_0:1:563431891',
       'hacks': '',
       'description': 'Типа девка (слабая и тупая)',
@@ -2839,18 +2870,22 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': 'Oproverg',
-      'steamID': '',
+      'steamID': 'STEAM_0:0:807309438',
       'hacks': '',
       'description': 'Создатель дерьма на "КОНТИНЕНТ HNS/DM [100aa] 1000fps", пытался распиарить это говно но не получилось, бездарь',
-      'country residence': ''
     },
     {
       'nickname': 'zubro',
-      'steamID': '',
+      'steamID': 'STEAM_0:0:3980228',
       'hacks': 'HPP',
       'description': '',
       'proofs': 'https://www.youtube.com/watch?v=2MJ45wt8nQs',
-      'country residence': ''
+    },
+    {
+      'nickname': 'zubro',
+      'steamID': 'STEAM_0:0:219875502',
+      'hacks': 'HPP',
+      'description': 'Twink 1',
     },
     {
       'nickname': 'ceowadz',
