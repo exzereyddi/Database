@@ -1043,7 +1043,7 @@ class PlayersDatabase {
             e.stopPropagation();
             this.toggleGroup(entry.groupId);
           });
-          nickWrapper.insertBefore(btn, nickWrapper.firstChild);
+          nickWrapper.appendChild(btn);
         }
       }
       fragment.appendChild(mainRow);
