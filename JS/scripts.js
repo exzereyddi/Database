@@ -246,6 +246,7 @@ class PlayersDatabase {
     this.initCollapseHandlers();
     this.initCountriesList();
     this.initHacksList();
+    this.fetchDatabaseLastModified();
     this.applySorting();
   }
 
@@ -289,6 +290,30 @@ class PlayersDatabase {
           opt.value = hack;
           opt.textContent = hack;
           hackSelect.appendChild(opt);
+        });
+  }
+
+  fetchDatabaseLastModified() {
+    const el = document.getElementById('dbLastUpdated');
+    if (!el) return;
+
+    fetch('JS/database.js', {method: 'HEAD', cache: 'no-cache'})
+        .then(response => {
+          const lastModified = response.headers.get('Last-Modified');
+          if (lastModified) {
+            const date = new Date(lastModified);
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            el.textContent = `${day}.${month}.${year} ${hours}:${minutes}`;
+          } else {
+            el.textContent = 'нет данных';
+          }
+        })
+        .catch(() => {
+          el.textContent = 'нет данных';
         });
   }
 
@@ -1054,7 +1079,7 @@ class PlayersDatabase {
     return s.length > 0 ? s : '—';
   }
 
-  createPlayerRow(player, isTwinkStyled, avatarsToLoad) {
+  createPlayerRow(player, isTwinkStyled) {
     const row = document.createElement('tr');
     if (isTwinkStyled) row.classList.add('twink-styled');
 
@@ -1071,9 +1096,7 @@ class PlayersDatabase {
     const profileUrl =
         sid64 ? `http://steamcommunity.com/profiles/${sid64}` : '';
 
-    const avatarId = sid64 ?
-        `avatar-${sid64}-${Math.random().toString(36).slice(2, 8)}` :
-        '';
+    const avatarId = sid64 ? `avatar-${sid64}` : '';
     const avatarHtml = sid64 ?
         `<img id="${
             avatarId}" class="player-avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect fill='%23222' width='40' height='40' rx='8'/%3E%3Ctext x='20' y='25' text-anchor='middle' fill='%23555' font-size='16'%3E?%3C/text%3E%3C/svg%3E" alt="" />` :
@@ -1081,46 +1104,49 @@ class PlayersDatabase {
 
     const sidHtml = hasSid ?
         `<td class="steamid steamid-filled">
-        <span class="steamid-text">${this.escapeHtml(rawSid)}</span>
-        ${
+          <span class="steamid-text">${this.escapeHtml(rawSid)}</span>
+          ${
             profileUrl ?
                 `<div class="steam-profile-btn-container"><a href="${
                     profileUrl}" target="_blank" rel="noopener noreferrer" class="steam-profile-btn" title="Открыть профиль Steam"><i class="fab fa-steam"></i><span>Профиль</span></a></div>` :
                 ''}
-      </td>` :
+        </td>` :
         `<td class="steamid steamid-empty"><span class="steamid-value">—</span></td>`;
 
     const hasProofs = player.proofs && player.proofs.trim() !== '';
     const hacksHtml = `<td class="hacks-text"><div class="hacks-content">
-      <span class="hacks-value">${
+        <span class="hacks-value">${
         this.escapeHtml(this.getOrDash(hacksText))}</span>
-      ${
+        ${
         hasProofs ?
             `<div class="proof-btn-container"><a href="${
                 this.escapeHtml(
                     player
                         .proofs)}" target="_blank" rel="noopener noreferrer" class="proof-btn" title="Доказательство"><i class="fas fa-file-alt"></i><span>Доказательство</span></a></div>` :
             ''}
-    </div></td>`;
+      </div></td>`;
 
     const countryRaw = (player['country residence'] ?? '').toString().trim();
     const countryTitle = COUNTRY_TOOLTIPS[countryRaw] || '';
 
     row.innerHTML = `
-    <td class="nickname"><div class="nickname-wrapper">${
+      <td class="nickname"><div class="nickname-wrapper">${
         avatarHtml}<span class="nickname-text">${
         this.escapeHtml(this.getOrDash(player.nickname))}</span></div></td>
-    ${sidHtml}
-    ${hacksHtml}
-    <td class="description">${
+      ${sidHtml}
+      ${hacksHtml}
+      <td class="description">${
         this.escapeHtml(this.getOrDash(player.description))}</td>
-    <td class="country" ${
+      <td class="country" ${
         countryTitle ? `title="${this.escapeHtml(countryTitle)}"` :
                        ''}>${this.escapeHtml(this.getOrDash(countryRaw))}</td>
-  `;
+    `;
 
-    if (sid64 && avatarId && avatarsToLoad) {
-      avatarsToLoad.push({sid64, avatarId});
+    if (sid64 && avatarId) {
+      requestAnimationFrame(() => {
+        const img = document.getElementById(avatarId);
+        if (img) this.loadAvatar(sid64, img);
+      });
     }
 
     return row;

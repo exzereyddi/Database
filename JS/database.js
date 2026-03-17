@@ -4,7 +4,8 @@ window.DATABASE_JSON = {
       'nickname': '123',
       'steamID': 'STEAM_0:0:21942084',
       'hacks': 'HPP, SCROLL HELPER',
-      'description': 'aka K1REEE !CH. Владелец сервера NetherWorld, плагины делала бездарность на hedqi',
+      'description':
+          'aka K1REEE !CH. Владелец сервера NetherWorld, плагины делала бездарность на hedqi',
       'country residence': '🇷🇺'
     },
     {
@@ -47,7 +48,8 @@ window.DATABASE_JSON = {
       'nickname': 'КОТЭ',
       'steamID': 'STEAM_0:0:178230123',
       'hacks': 'HPP, STRAFE HELPER',
-      'description': 'Тупица, использует free-ip-stresser и ложит игроков с хнса',
+      'description':
+          'Тупица, использует free-ip-stresser и ложит игроков с хнса',
       'proofs': 'https://t.me/database_proofs/4',
       'country residence': '🇰🇿'
     },
@@ -68,7 +70,8 @@ window.DATABASE_JSON = {
       'nickname': '[Svarog] Naruto',
       'steamID': 'STEAM_0:0:14313003',
       'hacks': '',
-      'description':'\'Создатель\' самого худшего хнс сервера в истории хнс режима — Краснодар |05| HNS [100aa]',
+      'description':
+          '\'Создатель\' самого худшего хнс сервера в истории хнс режима — Краснодар |05| HNS [100aa]',
       'country residence': '🇷🇺'
     },
     {
@@ -201,13 +204,15 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:615192879',
       'hacks': 'FURION, BLUE MONDAY, HPP',
       'description': 'Ютубер',
+      'proofs': 'https://fungun.net/ecd/report/63743/',
       'country residence': '🇧🇾'
     },
     {
       'nickname': 'baby flopcha',
       'steamID': 'STEAM_0:1:157280968',
       'hacks': 'HPP, ENHANDED',
-      'description': 'Зачем-то ее друг хотел меня задоксить хоть я и мирняк, не смогли(',
+      'description':
+          'Зачем-то ее друг хотел меня задоксить хоть я и мирняк, не смогли(',
       'proofs': 'https://t.me/database_proofs/32',
       'country residence': '🇷🇺'
     },
@@ -317,13 +322,15 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:0:801203093',
       'hacks': 'ENHANDED',
       'description': '',
+      'proofs': 'https://fungun.net/ecd/report/16516/',
       'country residence': '🇮🇱'
     },
     {
       'nickname': 'd0ffm',
       'steamID': 'STEAM_1:1:834870501',
       'hacks': 'HPP',
-      'description': '\'Создатель\' хнс сервака (паста других), нет денег на раскрутку даже, местный фрик и бездарь',
+      'description':
+          '\'Создатель\' хнс сервака (паста других), нет денег на раскрутку даже, местный фрик и бездарь',
       'country residence': '🇺🇿',
       'proofs': 'https://t.me/database_proofs/64'
     },
@@ -418,6 +425,7 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:0:512628688',
       'hacks': 'SCROLL HELPER, RW, STRAFE HELPER',
       'description': 'Бегал на спидхаке по всей карте',
+      'proofs': 'https://fungun.net/ecd/report/40935/',
       'country residence': '🇷🇺'
     },
     {
@@ -542,6 +550,8 @@ window.DATABASE_JSON = {
       'nickname': 'kentuha',
       'steamID': 'STEAM_0:0:764672859',
       'hacks': 'HPP, FURION',
+      'description': '',
+      'proofs': 'https://fungun.net/ecd/report/17660/',
       'description': 'Twink 1'
     },
     {
@@ -573,6 +583,7 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:661664085',
       'hacks': 'HPP, KILABEEZ PREFIX',
       'description': 'LEGENDA',
+      'proofs': 'https://fungun.net/ecd/report/126239/',
       'country residence': '🇷🇺'
     },
     {
@@ -591,7 +602,8 @@ window.DATABASE_JSON = {
       'nickname': 'kilabeez',
       'steamID': 'STEAM_0:1:228538537',
       'hacks': 'HPP, KILABEEZ PREFIX',
-      'description': 'Twink 3 ( maybe ), jumpbug hack, msl detected on ppc-zone(December 25, 2023 year)'
+      'description':
+          'Twink 3 ( maybe ), jumpbug hack, msl detected on ppc-zone(December 25, 2023 year)'
     },
     {
       'nickname': 'kirito',
@@ -705,7 +717,8 @@ window.DATABASE_JSON = {
       'nickname': '[SvaRoG] Kexa',
       'steamID': 'STEAM_0:0:82944202',
       'hacks': '',
-      'description': 'Бездарный скуф, друг [SvaRoG] Naruto, получил за фри админку'
+      'description':
+          'Бездарный скуф, друг [SvaRoG] Naruto, получил за фри админку'
     },
     {
       'nickname': 'Laura',
@@ -791,7 +804,8 @@ window.DATABASE_JSON = {
       'nickname': 'm1rc',
       'steamID': 'STEAM_0:1:72395838',
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
-      'description': 'Был админом на тимтахоме, спалили что с бмом, отняли админку',
+      'description':
+          'Был админом на тимтахоме, спалили что с бмом, отняли админку',
       'country residence': '🇷🇺'
     },
     {
@@ -825,7 +839,8 @@ window.DATABASE_JSON = {
       'nickname': 'Mafanya',
       'steamID': 'STEAM_0:0:24040955',
       'hacks': 'SCROLL HELPER, BLUE MONDAY, STRAFE HELPER',
-      'description': 'Twink 3'
+      'description': 'Twink 3',
+      'proofs': 'https://fungun.net/ecd/report/79540/'
     },
     {
       'nickname': 'makenz',
@@ -860,7 +875,8 @@ window.DATABASE_JSON = {
       'nickname': 'meachester',
       'steamID': '',
       'hacks': 'HPP',
-      'description': 'Бывший другалёк hpp forever\'a, играл только на проекте MakeFrag',
+      'description':
+          'Бывший другалёк hpp forever\'a, играл только на проекте MakeFrag',
       'country residence': '🇺🇦'
     },
     {
@@ -874,7 +890,8 @@ window.DATABASE_JSON = {
       'nickname': 'MsK._ _',
       'steamID': 'STEAM_0:0:67551134',
       'hacks': '',
-      'description': 'Про игрок и слайдер, первый в хнс взял стекло на hns_etheral',
+      'description':
+          'Про игрок и слайдер, первый в хнс взял стекло на hns_etheral',
       'country residence': '🇷🇺'
     },
     {
@@ -902,7 +919,8 @@ window.DATABASE_JSON = {
       'nickname': 'moonrock',
       'steamID': 'STEAM_0:1:484332689',
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
-      'description': 'Twink 2'
+      'description': 'Twink 2',
+      'proofs': 'https://fungun.net/ecd/report/19028/'
     },
     {
       'nickname': 'Morph',
@@ -982,7 +1000,8 @@ window.DATABASE_JSON = {
       'nickname': 'night knight',
       'steamID': 'STEAM_0:1:500898415',
       'hacks': 'FURION',
-      'description': 'aka динозаврик aka ybiica, ноет по кд на читеров, но сам является читером — лицемерная тварь',
+      'description':
+          'aka динозаврик aka ybiica, ноет по кд на читеров, но сам является читером — лицемерная тварь',
       'proofs': 'https://t.me/database_proofs/40',
       'country residence': '🇷🇺'
     },
@@ -1128,6 +1147,7 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:665041534',
       'hacks': 'HPP, BLUE MONDAY, ENHANDED, SCROLL HELPER',
       'description': 'К его аккаунту имеет доступ игрок kirito',
+      'proofs': 'https://fungun.net/ecd/report/11692/',
       'country residence': '🇷🇺'
     },
     {
@@ -1165,10 +1185,11 @@ window.DATABASE_JSON = {
       'country residence': '🇺🇿'
     },
     {
-      'nickname': 'rusnyatheslayer',
+      'nickname': 'rusyatheslayer',
       'steamID': 'STEAM_0:0:137111868',
       'hacks': 'SCROLL HELPER',
       'description': '',
+      'proofs': 'https://fungun.net/ecd/report/14241/',
       'country residence': '🇷🇺'
     },
     {
@@ -1198,6 +1219,7 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:97777170',
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': '',
+      'proofs': 'https://fungun.net/ecd/report/118478/',
       'country residence': '🇬🇪'
     },
     {
@@ -1340,7 +1362,8 @@ window.DATABASE_JSON = {
       'nickname': 'translusent ',
       'steamID': 'STEAM_0:1:3998810',
       'hacks': '',
-      'description': 'aka vladdEftw, неплохо играет, но читер (если верить на слово бездарному скуфу — Proffi)',
+      'description':
+          'aka vladdEftw, неплохо играет, но читер (если верить на слово бездарному скуфу — Proffi)',
       'country residence': '🇷🇺'
     },
     {
@@ -1389,6 +1412,7 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:712341768',
       'hacks': 'NSTE RECORDER, BLUE MONDAY',
       'description': '',
+      'proofs': 'https://fungun.net/ecd/report/55819/',
       'country residence': '🇪🇸'
     },
     {
@@ -1438,7 +1462,8 @@ window.DATABASE_JSON = {
       'nickname': 'Белый',
       'steamID': 'STEAM_0:0:736060299',
       'hacks': '',
-      'description': 'aka forward, aka alexandrovna(косил под бабу и наебывал на деньги). Создатель adrenaline hns',
+      'description':
+          'aka forward, aka alexandrovna(косил под бабу и наебывал на деньги). Создатель adrenaline hns',
       'country residence': '🇷🇺'
     },
     {
@@ -1453,7 +1478,8 @@ window.DATABASE_JSON = {
       'nickname': 'nab',
       'steamID': 'STEAM_0:1:942266706',
       'hacks': 'DDRUN',
-      'description': 'Друг Pesso с одной страны играют с хаками и лицемерят, обходит ecd (потому что он хуйня, ну вы знаете это)',
+      'description':
+          'Друг Pesso с одной страны играют с хаками и лицемерят, обходит ecd (потому что он хуйня, ну вы знаете это)',
       'country residence': '🇷🇴',
       'proofs': 'https://t.me/database_proofs/66'
     },
@@ -1494,7 +1520,9 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:8219593',
       'hacks': 'HPP, BLUE MONDAY',
-      'description': 'Сын шлюхи, играл с ником кабан'
+      'description': 'Сын шлюхи, играл с ником кабан',
+      'proofs': 'https://fungun.net/ecd/report/1796/',
+      'country residence': '🇧🇾'
     },
     {
       'nickname': '',
@@ -1503,22 +1531,24 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
-      'nickname': '',
+      'nickname': 'confu',
       'steamID': 'STEAM_0:1:14743354',
       'hacks': 'HPP, NSTE RECORDER, ENHANDED',
-      'description': 'aka confu ( bot )'
+      'description': 'bot',
+      'proofs': 'https://fungun.net/ecd/report/158232/',
+      'country residence': '🇪🇪'
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:924408888',
       'hacks': 'HPP, NSTE RECORDER, ENHANDED',
-      'description': 'aka confu, Twink 1 for STEAM_0:1:14743354'
+      'description': 'Twink for STEAM_0:1:14743354'
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:488558769',
       'hacks': 'HPP, NSTE RECORDER, ENHANDED',
-      'description': 'aka confu, Twink 2 for STEAM_0:1:14743354'
+      'description': 'Twink for STEAM_0:1:14743354'
     },
     {
       'nickname': '',
@@ -1753,10 +1783,12 @@ window.DATABASE_JSON = {
       'description': 'Twink for STEAM_0:0:628489275'
     },
     {
-      'nickname': '',
+      'nickname': 'finesi',
       'steamID': 'STEAM_0:0:628489275',
       'hacks': 'BLUE MONDAY',
-      'description': 'aka finesi ( выебанный 3-0 )'
+      'description': 'выебанный 3-0',
+      'proofs': 'https://fungun.net/ecd/report/203227/',
+      'country residence': '🇧🇾'
     },
     {
       'nickname': '',
@@ -1768,7 +1800,8 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:798619901',
       'hacks': 'FURION',
-      'description': 'Всосал 3-0, затем подрубил и снова всосал 3-0, пишет ЛЮТУЮ дичь в чат',
+      'description':
+          'Всосал 3-0, затем подрубил и снова всосал 3-0, пишет ЛЮТУЮ дичь в чат',
     },
     {
       'nickname': '',
@@ -1780,8 +1813,10 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:861323692',
       'hacks': 'FURION',
-      'description': 'Админ краснодара (сЗаводаПодПивом)'
-    }, 
+      'description': 'Админ краснодара (сЗаводаПодПивом)',
+      'proofs': 'https://fungun.net/ecd/report/189410/',
+      'country residence': '🇷🇺'
+    },
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:955665822',
@@ -1792,7 +1827,9 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:150658452',
       'hacks': 'HPP',
-      'description': 'Сын шлюхи'
+      'description': 'Сын шлюхи',
+      'proofs': 'https://fungun.net/ecd/report/67508/',
+      'country residence': '🇷🇺'
     },
     {
       'nickname': '',
@@ -1801,10 +1838,12 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
-      'nickname': '',
+      'nickname': 'nevada',
       'steamID': 'STEAM_0:1:528265882',
       'hacks': 'BLUE MONDAY, BROKOLY',
-      'description': 'агрессивный бомж'
+      'description': 'агрессивный бомж',
+      'proofs': 'https://fungun.net/ecd/report/175090/',
+      'country residence': '🇷🇺'
     },
     {
       'nickname': '',
@@ -1834,7 +1873,8 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:159689901',
       'hacks': 'BLUE MONDAY',
-      'description': 'Писал мне в лс: "бро у меня блюмондей V1 я хочу читы купить почему не продаешь?!"'
+      'description':
+          'Писал мне в лс: "бро у меня блюмондей V1 я хочу читы купить почему не продаешь?!"'
     },
     {
       'nickname': '',
@@ -1909,23 +1949,25 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
-      'nickname': '',
+      'nickname': 'sora1',
       'steamID': 'STEAM_0:0:198111876',
       'hacks': 'BLUE MONDAY',
-      'description': 'aka sora1'
+      'description': '',
+      'proofs': 'https://fungun.net/ecd/report/102145/',
+      'country residence': '🇧🇾'
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:566005603',
       'hacks': 'BLUE MONDAY',
-      'description': 'Twink 1, aka sora1'
+      'description': 'Twink for STEAM_0:0:198111876'
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:205954164',
       'hacks': 'HPP',
       'description': ''
-    }, 
+    },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:633964320',
@@ -1986,11 +2028,13 @@ window.DATABASE_JSON = {
       'hacks': 'HPP, BLUE MONDAY',
       'description': 'moder rayish'
     },
-        {
+    {
       'nickname': '',
       'steamID': 'STEAM_0:0:164926042',
       'hacks': 'HPP, BLUE MONDAY',
-      'description': 'Twink for STEAM_0:0:433851248'
+      'description': 'Twink for STEAM_0:0:433851248',
+      'proofs': 'https://fungun.net/ecd/report/46610/',
+      'country residence': '🇵🇱'
     },
     {
       'nickname': '',
@@ -2086,20 +2130,22 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:920514747',
       'hacks': 'HPP, FURION, RAGE STRAFE',
-      'description': 'Плакался на чела что тот читер, а на деле сам играет с читом.'
-    }, 
+      'description':
+          'Плакался на чела что тот читер, а на деле сам играет с читом.'
+    },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:402957860',
       'hacks': 'HPP, FURION, RAGE STRAFE',
       'description': 'Twink for STEAM_0:0:920514747'
-    }, 
+    },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:579585747',
       'hacks': 'HPP, FURION, RAGE STRAFE',
-      'description': 'Twink for STEAM_0:0:920514747'
-    }, 
+      'description': 'Twink for STEAM_0:0:920514747',
+      'proofs': 'https://fungun.net/ecd/report/76637/'
+    },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:532776009',
@@ -2139,10 +2185,12 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
-      'nickname': '',
+      'nickname': 'CS',
       'steamID': 'STEAM_0:0:73734729',
       'hacks': 'FURION',
-      'description': 'chernaya semerka'
+      'description': 'aka chernaya semerka',
+      'proofs': 'https://fungun.net/ecd/report/179139/',
+      'country residence': '🇷🇺'
     },
     {
       'nickname': '',
@@ -2235,10 +2283,12 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
-      'nickname': '',
+      'nickname': 'satanic flows',
       'steamID': 'STEAM_0:0:612823789',
       'hacks': 'BLUE MONDAY',
-      'description': 'aka roy, ютубер на бомжах'
+      'description': 'aka roy, ютубер на бомжах',
+      'proofs': 'https://fungun.net/ecd/report/21101/',
+      'country residence': '🇰🇿'
     },
     {
       'nickname': '',
@@ -2340,7 +2390,9 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:657460540',
       'hacks': 'BLUE MONDAY, ENHANDED, FURION, NSTE RECORDER',
-      'description': 'Брат игрока strafer'
+      'description': 'Брат игрока strafer',
+      'proofs': 'https://fungun.net/ecd/report/28726/',
+      'country residence': '🇰🇿'
     },
     {
       'nickname': '',
@@ -2490,7 +2542,9 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:802126008',
       'hacks': 'HPP, ANTI FLASH',
-      'description': 'Лсное чудище'
+      'description': 'Лсное чудище',
+      'proofs': 'https://fungun.net/ecd/report/146925/',
+      'country residence': '🇰🇬'
     },
     {
       'nickname': '',
@@ -2679,10 +2733,11 @@ window.DATABASE_JSON = {
       'description': ''
     },
     {
-      'nickname': '',
+      'nickname': 'strafe',
       'steamID': 'STEAM_0:1:921829961',
       'hacks': 'FURION',
-      'description': 'strafe'
+      'description': '',
+      'proofs': 'https://fungun.net/ecd/report/14259/'
     },
     {
       'nickname': '',
@@ -2757,16 +2812,16 @@ window.DATABASE_JSON = {
       'description': 'longjump 270'
     },
     {
-      'nickname': '',
+      'nickname': 'xenon',
       'steamID': 'STEAM_0:0:960804608',
       'hacks': 'ENHANDED',
-      'description': 'aka xenon, брат дрища'
+      'description': 'брат дрища'
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:851536371',
       'hacks': 'ENHANDED',
-      'description': 'aka xenon, брат дрища'
+      'description': 'Twink for STEAM_0:0:960804608'
     },
     {
       'nickname': '',
@@ -2844,7 +2899,8 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:926189876',
       'hacks': '',
-      'description': 'Всосал мне 3-0, разбил ему голову что он аж начал килляться по кд, смешной свин с 200 пинг',
+      'description':
+          'Всосал мне 3-0, разбил ему голову что он аж начал килляться по кд, смешной свин с 200 пинг',
       'country residence': '🇻🇪'
     },
     {
@@ -2872,7 +2928,8 @@ window.DATABASE_JSON = {
       'nickname': 'Oproverg',
       'steamID': 'STEAM_0:0:807309438',
       'hacks': '',
-      'description': 'Создатель дерьма на "КОНТИНЕНТ HNS/DM [100aa] 1000fps", пытался распиарить это говно но не получилось, бездарь',
+      'description':
+          'Создатель дерьма на "КОНТИНЕНТ HNS/DM [100aa] 1000fps", пытался распиарить это говно но не получилось, бездарь',
     },
     {
       'nickname': 'zubro',
