@@ -1574,84 +1574,6 @@ td.nickname {
     font-weight: 600;
 }
 
-@media (max-width: 768px) {
-    .header-meta {
-        gap: 0.4rem;
-    }
-
-    .header-quote {
-        font-size: 0.7rem;
-    }
-
-    .quote-author {
-        font-size: 0.68rem;
-    }
-
-    .header-updated {
-        font-size: 0.68rem;
-    }
-
-    .header-separator {
-        font-size: 0.7rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .scroll-top-btn {
-        left: 14px;
-        bottom: 14px;
-        width: 46px;
-        height: 46px;
-        font-size: 1rem;
-    }
-
-    .twink-toggle {
-        padding: 2px 7px 2px 5px;
-        margin-right: 0;
-        font-size: 0.65rem;
-        gap: 3px;
-    }
-
-    .twink-toggle i {
-        font-size: 0.5rem;
-    }
-
-    .twink-count {
-        font-size: 0.65rem;
-    }
-
-    .twink-row td.nickname {
-        padding-left: 2rem;
-    }
-
-    .twink-row td.nickname::before {
-        left: 0.8rem;
-        font-size: 0.75rem;
-    }
-
-    .player-avatar {
-        width: 32px;
-        height: 32px;
-        min-width: 32px;
-        min-height: 32px;
-        max-width: 32px;
-        max-height: 32px;
-        border-radius: 6px;
-    }
-
-    .nickname-wrapper {
-        gap: 6px;
-    }
-
-    .nickname-text {
-        font-size: 0.82rem;
-    }
-
-    td.nickname {
-        max-width: 150px;
-    }
-}
-
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -1784,6 +1706,76 @@ td.nickname {
     .stat-label,
     .stat-value {
         font-size: 0.85rem;
+    }
+
+    .scroll-top-btn {
+        left: 14px;
+        bottom: 14px;
+        width: 46px;
+        height: 46px;
+        font-size: 1rem;
+    }
+
+    .twink-toggle {
+        padding: 2px 7px 2px 5px;
+        margin-right: 0;
+        font-size: 0.65rem;
+        gap: 3px;
+    }
+
+    .twink-toggle i {
+        font-size: 0.5rem;
+    }
+
+    .twink-count {
+        font-size: 0.65rem;
+    }
+
+    .twink-row td.nickname {
+        padding-left: 2rem;
+    }
+
+    .twink-row td.nickname::before {
+        left: 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .player-avatar {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        min-height: 32px;
+        max-width: 32px;
+        max-height: 32px;
+        border-radius: 6px;
+    }
+
+    .nickname-wrapper {
+        gap: 6px;
+    }
+
+    .nickname-text {
+        font-size: 0.82rem;
+    }
+
+    td.nickname {
+        max-width: 150px;
+    }
+
+    .header-meta {
+        gap: 0.4rem;
+    }
+
+    .header-quote {
+        font-size: 0.7rem;
+    }
+
+    .header-updated {
+        font-size: 0.68rem;
+    }
+
+    .header-separator {
+        font-size: 0.7rem;
     }
 }
 
