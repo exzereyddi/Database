@@ -2341,8 +2341,14 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:634860455',
-      'hacks': 'NSTE RECORDER',
+      'hacks': 'HPP, BLUE MONDAY, NSTE RECORDER',
       'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:39268297',
+      'hacks': 'HPP, BLUE MONDAY, NSTE RECORDER',
+      'description': 'Twink for STEAM_0:0:634860455'
     },
     {
       'nickname': '',
