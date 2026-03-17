@@ -520,7 +520,22 @@ td {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
+    width: 100%;
+}
+
+td.loading,
+td .loading {
+    text-align: center;
+}
+
+td[colspan] .loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .loading-spinner {
