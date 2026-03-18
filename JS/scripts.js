@@ -773,6 +773,11 @@ class PlayersDatabase {
         ((nonCheatersCount / totalPlayers) * 100).toFixed(1) :
         '0.0';
 
+    // VAC stats
+    const vacBannedCount =
+        this.players.filter(p => p.vac_banned === true).length;
+    const mainVacBanned = mainPlayers.filter(p => p.vac_banned === true).length;
+
     const countryStats = {};
     let noCC = 0;
     mainPlayers.forEach(p => {
@@ -879,6 +884,10 @@ class PlayersDatabase {
             totalPlayers} (100%)</span></div>
       <div class="stat-item stat-item-highlight"><span class="stat-label"><i class="fas fa-clone"></i> Твинки (не учтены)</span><span class="stat-value">${
             twinkCount}</span></div>
+      <div class="stat-item stat-item-highlight"><span class="stat-label"><i class="fas fa-ban"></i> VAC баны (всего аккаунтов)</span><span class="stat-value stat-value-danger">${
+            vacBannedCount}</span></div>
+      <div class="stat-item stat-item-highlight"><span class="stat-label"><i class="fas fa-ban"></i> VAC баны (основные)</span><span class="stat-value stat-value-danger">${
+            mainVacBanned}</span></div>
     </div></section>`;
 
     statsBody.innerHTML = html;
@@ -1102,9 +1111,16 @@ class PlayersDatabase {
             avatarId}" class="player-avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect fill='%23222' width='40' height='40' rx='8'/%3E%3Ctext x='20' y='25' text-anchor='middle' fill='%23555' font-size='16'%3E?%3C/text%3E%3C/svg%3E" alt="" />` :
         ``;
 
+    // VAC badge
+    const isVacBanned = player.vac_banned === true;
+    const vacBadgeHtml = isVacBanned ?
+        `<span class="vac-badge" title=""><i class="fas fa-ban"></i> VAC</span>` :
+        '';
+
     const sidHtml = hasSid ?
         `<td class="steamid steamid-filled">
           <span class="steamid-text">${this.escapeHtml(rawSid)}</span>
+          ${vacBadgeHtml}
           ${
             profileUrl ?
                 `<div class="steam-profile-btn-container"><a href="${
