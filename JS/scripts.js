@@ -198,6 +198,33 @@ const COUNTRY_TOOLTIPS = {
   '🇿🇼': 'Зимбабве'
 };
 
+const IS_FIREFOX = navigator.userAgent.toLowerCase().includes('firefox');
+
+function emojiFlagToCountryCode(emoji) {
+  if (!emoji || emoji.length < 2) return null;
+  const codePoints = [...emoji];
+  if (codePoints.length < 2) return null;
+  const first = codePoints[0].codePointAt(0);
+  const second = codePoints[1].codePointAt(0);
+  // Regional indicator symbols: 🇦 = 0x1F1E6 (A), 🇿 = 0x1F1FF (Z)
+  if (first < 0x1F1E6 || first > 0x1F1FF || second < 0x1F1E6 ||
+      second > 0x1F1FF) {
+    return null;
+  }
+  const letter1 = String.fromCharCode(first - 0x1F1E6 + 65);
+  const letter2 = String.fromCharCode(second - 0x1F1E6 + 65);
+  return (letter1 + letter2).toLowerCase();
+}
+
+function renderFlag(emoji) {
+  if (!emoji || emoji === '—') return '—';
+  if (IS_FIREFOX) return emoji;
+  const code = emojiFlagToCountryCode(emoji);
+  if (!code) return emoji;
+  const tooltip = COUNTRY_TOOLTIPS[emoji] || '';
+  return `<img src="https://fungun.net/ecd/img/country/${code}.png" alt="${
+      emoji}" title="${tooltip}" class="country-flag-img" />`;
+}
 
 class PlayersDatabase {
   constructor() {
@@ -265,7 +292,13 @@ class PlayersDatabase {
     sorted.forEach(c => {
       const opt = document.createElement('option');
       opt.value = c;
-      opt.textContent = `${c} ${COUNTRY_TOOLTIPS[c] || 'Неизвестная страна'}`;
+      const code = emojiFlagToCountryCode(c);
+      const name = COUNTRY_TOOLTIPS[c] || 'Неизвестная страна';
+      if (IS_FIREFOX || !code) {
+        opt.textContent = `${c} ${name}`;
+      } else {
+        opt.textContent = `[${code.toUpperCase()}] ${name}`;
+      }
       countrySelect.appendChild(opt);
     });
   }
@@ -773,7 +806,6 @@ class PlayersDatabase {
         ((nonCheatersCount / totalPlayers) * 100).toFixed(1) :
         '0.0';
 
-    // VAC stats
     const vacBannedCount =
         this.players.filter(p => p.vac_banned === true).length;
     const mainVacBanned = mainPlayers.filter(p => p.vac_banned === true).length;
@@ -816,12 +848,15 @@ class PlayersDatabase {
     });
     const sh = Object.entries(hs).sort((a, b) => b[1].total - a[1].total);
 
-    let html =
+    let html = '';
+
+    html +=
         `<section class="stats-section"><h3><i class="fas fa-user-secret"></i> Читеры по странам</h3><div class="stats-list">`;
     scc.forEach(([c, n]) => {
-      html += `<div class="stat-item"><span class="stat-label">${c} ${
-          COUNTRY_TOOLTIPS[c] || '?'}</span><span class="stat-value">${n} (${
-          (n / cheatersCount * 100).toFixed(1)}%)</span></div>`;
+      html +=
+          `<div class="stat-item"><span class="stat-label">${renderFlag(c)} ${
+              COUNTRY_TOOLTIPS[c] || '?'}</span><span class="stat-value">${
+              n} (${(n / cheatersCount * 100).toFixed(1)}%)</span></div>`;
     });
     if (cnccc > 0)
       html +=
@@ -833,9 +868,10 @@ class PlayersDatabase {
     html +=
         `<section class="stats-section"><h3><i class="fas fa-flag"></i> Все игроки по странам</h3><div class="stats-list">`;
     sc.forEach(([c, n]) => {
-      html += `<div class="stat-item"><span class="stat-label">${c} ${
-          COUNTRY_TOOLTIPS[c] || '?'}</span><span class="stat-value">${n} (${
-          (n / totalPlayers * 100).toFixed(1)}%)</span></div>`;
+      html +=
+          `<div class="stat-item"><span class="stat-label">${renderFlag(c)} ${
+              COUNTRY_TOOLTIPS[c] || '?'}</span><span class="stat-value">${
+              n} (${(n / totalPlayers * 100).toFixed(1)}%)</span></div>`;
     });
     if (noCC > 0)
       html +=
@@ -857,7 +893,7 @@ class PlayersDatabase {
         hc.forEach(([c, n]) => {
           html +=
               `<div class="hack-country-item"><span class="hack-country-label">${
-                  c} ${
+                  renderFlag(c)} ${
                   COUNTRY_TOOLTIPS[c] ||
                   '?'}</span><span class="hack-country-value">${n} (${
                   (n / data.total * 100).toFixed(1)}%)</span></div>`;
@@ -1144,6 +1180,8 @@ class PlayersDatabase {
 
     const countryRaw = (player['country residence'] ?? '').toString().trim();
     const countryTitle = COUNTRY_TOOLTIPS[countryRaw] || '';
+    const countryDisplay =
+        countryRaw && countryRaw !== '—' ? renderFlag(countryRaw) : '—';
 
     row.innerHTML = `
       <td class="nickname"><div class="nickname-wrapper">${
@@ -1155,7 +1193,7 @@ class PlayersDatabase {
         this.escapeHtml(this.getOrDash(player.description))}</td>
       <td class="country" ${
         countryTitle ? `title="${this.escapeHtml(countryTitle)}"` :
-                       ''}>${this.escapeHtml(this.getOrDash(countryRaw))}</td>
+                       ''}>${countryDisplay}</td>
     `;
 
     if (sid64 && avatarId) {
