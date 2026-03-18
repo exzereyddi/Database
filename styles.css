@@ -1554,19 +1554,20 @@ td.nickname {
 }
 
 .header-updated {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
+    display: inline;
     font-size: 0.75rem;
     color: var(--text-muted);
     font-weight: 500;
     font-family: var(--font-mono);
+    line-height: 1.4;
+    white-space: nowrap;
 }
 
 .header-updated i {
     font-size: 0.65rem;
     color: var(--success);
     opacity: 0.7;
+    margin-right: 0.3rem;
 }
 
 #dbLastUpdated {
@@ -1632,10 +1633,31 @@ td.nickname {
     }
 }
 
-/* VAC badge on twink rows */
 .twink-row .vac-badge {
     font-size: 0.65rem;
     padding: 2px 8px;
+}
+
+.country-flag-img {
+    width: 22px;
+    height: 16px;
+    object-fit: contain;
+    vertical-align: middle;
+    display: inline-block;
+    image-rendering: auto;
+    border-radius: 2px;
+}
+
+td.country .country-flag-img {
+    width: 26px;
+    height: 18px;
+}
+
+.stat-label .country-flag-img,
+.hack-country-label .country-flag-img {
+    width: 20px;
+    height: 14px;
+    margin-right: 2px;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1655,6 +1677,16 @@ td.nickname {
         gap: 1.25rem;
         padding: 1.25rem 1.5rem;
         border-radius: var(--radius-lg);
+    }
+
+    .country-flag-img {
+        width: 20px;
+        height: 14px;
+    }
+
+    td.country .country-flag-img {
+        width: 22px;
+        height: 16px;
     }
 
     .header-left {
@@ -1844,6 +1876,16 @@ td.nickname {
     .header {
         padding: 1rem;
         border-radius: var(--radius-md);
+    }
+
+    .country-flag-img {
+        width: 18px;
+        height: 13px;
+    }
+
+    td.country .country-flag-img {
+        width: 20px;
+        height: 14px;
     }
 
     .vac-badge {
