@@ -1592,6 +1592,52 @@ td.nickname {
     background: var(--border-strong);
 }
 
+/* ===== VAC BADGE ===== */
+.vac-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    background: var(--gradient-danger);
+    color: #ffffff;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 8px var(--danger-glow);
+    margin-left: 6px;
+    vertical-align: middle;
+    line-height: 1;
+    white-space: nowrap;
+    animation: vacPulse 3s ease-in-out infinite;
+    cursor: default;
+    user-select: none;
+}
+
+.vac-badge i {
+    font-size: 0.65rem;
+}
+
+@keyframes vacPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 2px 8px var(--danger-glow);
+    }
+
+    50% {
+        box-shadow: 0 2px 16px var(--danger-glow), 0 0 24px rgba(248, 113, 113, 0.2);
+    }
+}
+
+/* VAC badge on twink rows */
+.twink-row .vac-badge {
+    font-size: 0.65rem;
+    padding: 2px 8px;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .container {
@@ -1622,6 +1668,17 @@ td.nickname {
 
     .search-container {
         flex-direction: column;
+    }
+
+    .vac-badge {
+        font-size: 0.62rem;
+        padding: 2px 7px;
+        gap: 3px;
+        margin-left: 4px;
+    }
+
+    .vac-badge i {
+        font-size: 0.58rem;
     }
 
     .search-wrapper {
@@ -1787,6 +1844,11 @@ td.nickname {
     .header {
         padding: 1rem;
         border-radius: var(--radius-md);
+    }
+
+    .vac-badge {
+        font-size: 0.58rem;
+        padding: 2px 6px;
     }
 
     .logo-mark {
