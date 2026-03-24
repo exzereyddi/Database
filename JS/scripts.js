@@ -1148,22 +1148,23 @@ class PlayersDatabase {
         ``;
 
     // VAC badge
-    const isVacBanned = player.vac_banned === true;
-    const vacBadgeHtml = isVacBanned ?
-        `<span class="vac-badge" title=""><i class="fas fa-ban"></i> VAC</span>` :
-        '';
+const isVacBanned = player.vac_banned === true;
+const vacBadgeHtml = isVacBanned ?
+    `<span class="vac-badge" title=""><i class="fas fa-ban"></i> VAC</span>` :
+    '';
 
-    const sidHtml = hasSid ?
-        `<td class="steamid steamid-filled">
-          <span class="steamid-text">${this.escapeHtml(rawSid)}</span>
-          ${vacBadgeHtml}
-          ${
-            profileUrl ?
-                `<div class="steam-profile-btn-container"><a href="${
-                    profileUrl}" target="_blank" rel="noopener noreferrer" class="steam-profile-btn" title="Открыть профиль Steam"><i class="fab fa-steam"></i><span>Профиль</span></a></div>` :
-                ''}
-        </td>` :
-        `<td class="steamid steamid-empty"><span class="steamid-value">—</span></td>`;
+const sidHtml = hasSid ?
+    `<td class="steamid steamid-filled">
+      <div class="steamid-row">
+        <span class="steamid-text">${this.escapeHtml(rawSid)}</span>${vacBadgeHtml}
+      </div>
+      ${
+        profileUrl ?
+            `<div class="steam-profile-btn-container"><a href="${
+                profileUrl}" target="_blank" rel="noopener noreferrer" class="steam-profile-btn" title="Открыть профиль Steam"><i class="fab fa-steam"></i><span>Профиль</span></a></div>` :
+            ''}
+    </td>` :
+    `<td class="steamid steamid-empty"><span class="steamid-value">—</span></td>`;
 
     const hasProofs = player.proofs && player.proofs.trim() !== '';
     const hacksHtml = `<td class="hacks-text"><div class="hacks-content">
