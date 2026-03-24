@@ -655,17 +655,17 @@ td[colspan] .loading {
 }
 
 .steamid-filled .steamid-text {
-    display: inline-block;
-    margin-bottom: 8px;
+    display: inline;
     line-height: 1.4;
     color: var(--text-primary);
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .steamid-text {
-    display: inline-block;
-    margin-bottom: 8px;
+    display: inline;
     line-height: 1.4;
+    white-space: nowrap;
 }
 
 .steam-profile-btn-container {
@@ -1608,13 +1608,14 @@ td.nickname {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     box-shadow: 0 2px 8px var(--danger-glow);
-    margin-left: 6px;
+    margin-left: 8px;
     vertical-align: middle;
     line-height: 1;
     white-space: nowrap;
     animation: vacPulse 3s ease-in-out infinite;
     cursor: default;
     user-select: none;
+    flex-shrink: 0;
 }
 
 .vac-badge i {
@@ -1622,7 +1623,6 @@ td.nickname {
 }
 
 @keyframes vacPulse {
-
     0%,
     100% {
         box-shadow: 0 2px 8px var(--danger-glow);
@@ -1636,6 +1636,14 @@ td.nickname {
 .twink-row .vac-badge {
     font-size: 0.65rem;
     padding: 2px 8px;
+}
+
+.steamid-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin-bottom: 8px;
 }
 
 .country-flag-img {
