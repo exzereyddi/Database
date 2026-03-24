@@ -47,6 +47,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'КОТЭ',
       'steamID': 'STEAM_0:0:178230123',
+      'vac_banned': true,
       'hacks': 'HPP, STRAFE HELPER',
       'description':
           'Тупица, использует free-ip-stresser и ложит игроков с хнса',
@@ -154,6 +155,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'asdset',
       'steamID': 'STEAM_0:0:606692224',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': 'Twink 1'
     },
@@ -252,6 +254,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'bloody',
       'steamID': 'STEAM_0:0:3674836',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': '',
       'proofs': 'https://t.me/database_proofs/33',
@@ -291,6 +294,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'ceska',
       'steamID': 'STEAM_0:1:4161816',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': '',
       'proofs': 'https://t.me/database_proofs/51',
@@ -394,6 +398,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'f0bosS',
       'steamID': 'STEAM_0:1:188789945',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY',
       'description': 'Twink 1',
       'proofs': 'https://t.me/database_proofs/39'
@@ -444,6 +449,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Garey',
       'steamID': 'STEAM_0:1:35747581',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY, GAREY RECORDER/CRASHER AND MORE',
       'description': 'Twink 2'
     },
@@ -542,6 +548,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kentuha',
       'steamID': 'STEAM_0:1:580669724',
+      'vac_banned': true,
       'hacks': 'HPP, FURION',
       'description': '',
       'country residence': '🇷🇺'
@@ -549,6 +556,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kentuha',
       'steamID': 'STEAM_0:0:764672859',
+      'vac_banned': true,
       'hacks': 'HPP, FURION, BLUE MONDAY',
       'description': '',
       'proofs': 'https://fungun.net/ecd/report/17660/',
@@ -575,6 +583,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kentuha',
       'steamID': 'STEAM_0:1:14104618',
+      'vac_banned': true,
       'hacks': 'HPP, FURION, BLUE MONDAY',
       'description': 'Twink 5'
     },
@@ -589,6 +598,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kilabeez',
       'steamID': 'STEAM_0:0:631525361',
+      'vac_banned': true,
       'hacks': 'HPP, KILABEEZ PREFIX',
       'description': 'Twink 1'
     },
@@ -601,6 +611,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kilabeez',
       'steamID': 'STEAM_0:1:228538537',
+      'vac_banned': true,
       'hacks': 'HPP, KILABEEZ PREFIX',
       'description':
           'Twink 3 ( maybe ), jumpbug hack, msl detected on ppc-zone(December 25, 2023 year)'
@@ -633,6 +644,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kirito',
       'steamID': 'STEAM_0:1:603457822',
+      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY, KILABEEZ PREFIX, ENHANDED',
       'description': 'Twink 5 (weta)'
     },
@@ -663,6 +675,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kirito',
       'steamID': 'STEAM_0:0:582828258',
+      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY, KILABEEZ PREFIX, ENHANDED',
       'description': 'Twink 10'
     },
@@ -681,6 +694,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kirito',
       'steamID': 'STEAM_0:0:840396124',
+      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY, KILABEEZ PREFIX, ENHANDED',
       'description': 'Twink 13'
     },
@@ -693,6 +707,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kirito',
       'steamID': 'STEAM_0:1:775400681',
+      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY, KILABEEZ PREFIX, ENHANDED',
       'description': 'Twink 15'
     },
@@ -705,6 +720,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kirito',
       'steamID': 'STEAM_0:1:868530077',
+      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY, KILABEEZ PREFIX, NSTE RECORDER',
       'description': 'Twink 17'
     },
@@ -768,6 +784,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Loncu',
       'steamID': 'STEAM_1:1:582160759',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY, GAREY RECORDER',
       'description': 'Twink 1'
     },
@@ -795,6 +812,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Lovely',
       'steamID': 'STEAM_0:0:594210824',
+      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY',
       'description': 'Twink 2'
     },
@@ -842,6 +860,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'm_t',
       'steamID': 'STEAM_0:1:780956870',
+      'vac_banned': true,
       'hacks': '',
       'description': 'Норм игрок, хорошо слайдит',
       'country residence': '🇺🇿'
@@ -876,6 +895,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'muppi',
       'steamID': 'STEAM_0:0:8126414',
+      'vac_banned': true,
       'hacks': '',
       'description': 'Монтажер, дизайнер',
       'country residence': '🇷🇺'
@@ -929,6 +949,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'moonrock',
       'steamID': 'STEAM_0:0:614403768',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': 'aka slowmodoto, сын шлюхи',
       'country residence': '🇷🇺'
@@ -942,6 +963,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'moonrock',
       'steamID': 'STEAM_0:1:484332689',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': 'Twink 2',
       'proofs': 'https://fungun.net/ecd/report/19028/'
@@ -963,6 +985,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'MyDRJIk',
       'steamID': 'STEAM_0:1:621319242',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': 'К его аккаунту имеет доступ игрок kirito',
       'country residence': '🇷🇺'
@@ -977,6 +1000,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Neo',
       'steamID': 'STEAM_0:0:19302488',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': '',
       'proofs': 'https://t.me/database_proofs/19',
@@ -991,6 +1015,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Neo',
       'steamID': 'STEAM_0:1:444002779',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': 'Twink 2'
     },
@@ -1004,6 +1029,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Nicotine',
       'steamID': 'STEAM_0:1:612849428',
+      'vac_banned': true,
       'hacks': 'HPP, RAGE STRAFE',
       'description': 'Twink 1'
     },
@@ -1032,6 +1058,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'nightfall',
       'steamID': 'STEAM_0:0:639491749',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': '',
       'proofs:': 'https://t.me/database_proofs/41',
@@ -1040,6 +1067,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'noduck',
       'steamID': 'STEAM_0:1:615769855',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': '🇰🇿',
       'country residence': '🇷🇺'
@@ -1047,12 +1075,14 @@ window.DATABASE_JSON = {
     {
       'nickname': 'noduck',
       'steamID': 'STEAM_0:0:19265613',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': 'Twink 1'
     },
     {
       'nickname': 'noobik',
       'steamID': 'STEAM_0:0:520001284',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY, STRAFE HELPER',
       'description': '',
       'country residence': '🇷🇺'
@@ -1073,6 +1103,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Nste',
       'steamID': 'STEAM_0:0:197418397',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY, NSTE RECORDER',
       'description': 'Twink 2'
     },
@@ -1091,6 +1122,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'numb',
       'steamID': 'STEAM_0:0:59967055',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': '',
       'proofs': 'https://t.me/database_proofs/29',
@@ -1162,6 +1194,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Брат Proffi (grafimberg)',
       'steamID': 'STEAM_0:1:161116957',
+      'vac_banned': true,
       'hacks': '',
       'description': 'Читак',
     },
@@ -1203,6 +1236,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'rongers',
       'steamID': 'STEAM_0:0:836161766',
+      'vac_banned': true,
       'hacks': '',
       'description': 'Латвиец, норм игрок',
       'country residence': '🇷🇺'
@@ -1289,12 +1323,14 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Sloyan',
       'steamID': 'STEAM_0:0:455457212',
+      'vac_banned': true,
       'hacks': 'BROKOLY, HPP, SCROLL HELPER, BLUE MONDAY, FURION',
       'description': 'Twink 3'
     },
     {
       'nickname': 'Sloyan',
       'steamID': 'STEAM_0:0:598479451',
+      'vac_banned': true,
       'hacks': 'BROKOLY, HPP, SCROLL HELPER, BLUE MONDAY, FURION',
       'description': 'Twink 4'
     },
@@ -1455,6 +1491,7 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Amsoooo',
       'steamID': 'STEAM_0:1:534592974',
+      'vac_banned': true,
       'hacks': 'KNIFEBOT, STRAFE HELPER',
       'description': 'Фрик',
       'country residence': '🇷🇸',
@@ -1576,6 +1613,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:16413963',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -1620,6 +1658,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:40793363',
+      'vac_banned': true,
       'hacks': 'HPP, KNIFEBOT',
       'description': ''
     },
@@ -1638,6 +1677,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:45192192',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY, RAGE STRAFE',
       'description': ''
     },
@@ -1693,6 +1733,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:57571964',
+      'vac_banned': true,
       'hacks': 'HPP, NSTE RECORDER',
       'description': ''
     },
@@ -1802,6 +1843,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:109542491',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -1828,12 +1870,14 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:139904496',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:798619901',
+      'vac_banned': true,
       'hacks': 'FURION',
       'description':
           'Всосал 3-0, затем подрубил и снова всосал 3-0, пишет ЛЮТУЮ дичь в чат',
@@ -1895,12 +1939,14 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:176057829',
+      'vac_banned': true,
       'hacks': 'HPP, NSTE RECORDER',
       'description': ''
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:180240316',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -1932,6 +1978,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:180884837',
+      'vac_banned': true,
       'hacks': 'HPP, NSTE RECORDER',
       'description': ''
     },
@@ -1974,6 +2021,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:646899981',
+      'vac_banned': true,
       'hacks': 'HPP, FURION',
       'description': ''
     },
@@ -2060,6 +2108,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:242403255',
+      'vac_banned': true,
       'hacks': 'NSTE RECORDER',
       'description': ''
     },
@@ -2108,6 +2157,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:702915672',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY',
       'description': ''
     },
@@ -2146,6 +2196,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:443636268',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY',
       'description': ''
     },
@@ -2170,6 +2221,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:423800790',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -2188,6 +2240,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:454375739',
+      'vac_banned': true,
       'hacks': 'FURION, AUTO STRAFE',
       'description': ''
     },
@@ -2332,6 +2385,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:566162697',
+      'vac_banned': true,
       'hacks': 'HPP, KNIFEBOT, BACKTRACK, RAGE STRAFE',
       'description': ''
     },
@@ -2344,6 +2398,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:14282393',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -2380,6 +2435,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:584966718',
+      'vac_banned': true,
       'hacks': 'FURION',
       'description': ''
     },
@@ -2392,6 +2448,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:585427957',
+      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY',
       'description': ''
     },
@@ -2404,6 +2461,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:596601242',
+      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY, BROKOLY',
       'description': ''
     },
@@ -2422,6 +2480,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:602846407',
+      'vac_banned': true,
       'hacks': 'HPP, RAGE STRAFE',
       'description': ''
     },
@@ -2460,6 +2519,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:193524650',
+      'vac_banned': true,
       'hacks': '',
       'description': 'Тупейший сын шлюхи с новорега'
     },
@@ -2532,6 +2592,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:639891820',
+      'vac_banned': true,
       'hacks': 'KNIFEBOT, NSTE RECORDER, HPP',
       'description': ''
     },
@@ -2550,6 +2611,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:645530477',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -2574,6 +2636,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:656741999',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -2654,6 +2717,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:753796651',
+      'vac_banned': true,
       'hacks': 'FURION, RAGE STRAFE',
       'description': ''
     },
@@ -2672,6 +2736,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:766950077',
+      'vac_banned': true,
       'hacks': 'RAGE STRAFE, HPP',
       'description': ''
     },
@@ -2696,6 +2761,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:774720727',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -2714,6 +2780,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:791702455',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -2734,6 +2801,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:806290939',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -2746,6 +2814,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:818633035',
+      'vac_banned': true,
       'hacks': 'FURION',
       'description': ''
     },
@@ -2890,6 +2959,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:160808833',
+      'vac_banned': true,
       'hacks': 'ENHANDED',
       'description': 'Twink for STEAM_0:0:47790432'
     },
@@ -3011,6 +3081,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:741765007',
+      'vac_banned': true,
       'hacks': 'FURION',
       'description': 'jumpbug'
     },
@@ -3083,6 +3154,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:78002471',
+      'vac_banned': true,
       'hacks': 'BLUE MONDAY',
       'description': 'aka skazka'
     },
@@ -3107,6 +3179,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:725985064',
+      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -3191,6 +3264,15 @@ window.DATABASE_JSON = {
       'hacks': '',
       'description': 'Ноющая слабость',
       'country residence': '🇺🇦'
+    }
+  ,
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:6512855',
+      'hacks': 'SCROLL HELPER',
+      'description': 'Фанатка без ника, слабый даже с софтом',
+      'country residence': '🇺🇦',
+      'proofs': 'https://t.me/database_proofs/68'
     }
   ]
 };
