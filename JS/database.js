@@ -47,7 +47,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'КОТЭ',
       'steamID': 'STEAM_0:0:178230123',
-      'vac_banned': true,
       'hacks': 'HPP, STRAFE HELPER',
       'description':
           'Тупица, использует free-ip-stresser и ложит игроков с хнса',
@@ -155,7 +154,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'asdset',
       'steamID': 'STEAM_0:0:606692224',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': 'Twink 1'
     },
@@ -254,7 +252,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'bloody',
       'steamID': 'STEAM_0:0:3674836',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': '',
       'proofs': 'https://t.me/database_proofs/33',
@@ -294,7 +291,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'ceska',
       'steamID': 'STEAM_0:1:4161816',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': '',
       'proofs': 'https://t.me/database_proofs/51',
@@ -398,7 +394,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'f0bosS',
       'steamID': 'STEAM_0:1:188789945',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY',
       'description': 'Twink 1',
       'proofs': 'https://t.me/database_proofs/39'
@@ -449,7 +444,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Garey',
       'steamID': 'STEAM_0:1:35747581',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, GAREY RECORDER/CRASHER AND MORE',
       'description': 'Twink 2'
     },
@@ -477,7 +471,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'hedqi',
       'steamID': 'STEAM_0:1:467208095',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': 'Sale BLUE MONDAY, сын шлюхи',
       'proofs': 'https://t.me/database_proofs/6',
@@ -549,7 +542,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kentuha',
       'steamID': 'STEAM_0:1:580669724',
-      'vac_banned': true,
       'hacks': 'HPP, FURION',
       'description': '',
       'country residence': '🇷🇺'
@@ -557,7 +549,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kentuha',
       'steamID': 'STEAM_0:0:764672859',
-      'vac_banned': true,
       'hacks': 'HPP, FURION, BLUE MONDAY',
       'description': '',
       'proofs': 'https://fungun.net/ecd/report/17660/',
@@ -584,7 +575,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kentuha',
       'steamID': 'STEAM_0:1:14104618',
-      'vac_banned': true,
       'hacks': 'HPP, FURION, BLUE MONDAY',
       'description': 'Twink 5'
     },
@@ -599,7 +589,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kilabeez',
       'steamID': 'STEAM_0:0:631525361',
-      'vac_banned': true,
       'hacks': 'HPP, KILABEEZ PREFIX',
       'description': 'Twink 1'
     },
@@ -612,7 +601,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kilabeez',
       'steamID': 'STEAM_0:1:228538537',
-      'vac_banned': true,
       'hacks': 'HPP, KILABEEZ PREFIX',
       'description':
           'Twink 3 ( maybe ), jumpbug hack, msl detected on ppc-zone(December 25, 2023 year)'
@@ -645,7 +633,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kirito',
       'steamID': 'STEAM_0:1:603457822',
-      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY, KILABEEZ PREFIX, ENHANDED',
       'description': 'Twink 5 (weta)'
     },
@@ -676,7 +663,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kirito',
       'steamID': 'STEAM_0:0:582828258',
-      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY, KILABEEZ PREFIX, ENHANDED',
       'description': 'Twink 10'
     },
@@ -695,7 +681,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kirito',
       'steamID': 'STEAM_0:0:840396124',
-      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY, KILABEEZ PREFIX, ENHANDED',
       'description': 'Twink 13'
     },
@@ -708,7 +693,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kirito',
       'steamID': 'STEAM_0:1:775400681',
-      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY, KILABEEZ PREFIX, ENHANDED',
       'description': 'Twink 15'
     },
@@ -721,7 +705,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'kirito',
       'steamID': 'STEAM_0:1:868530077',
-      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY, KILABEEZ PREFIX, NSTE RECORDER',
       'description': 'Twink 17'
     },
@@ -785,7 +768,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Loncu',
       'steamID': 'STEAM_1:1:582160759',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, GAREY RECORDER',
       'description': 'Twink 1'
     },
@@ -813,7 +795,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Lovely',
       'steamID': 'STEAM_0:0:594210824',
-      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY',
       'description': 'Twink 2'
     },
@@ -861,7 +842,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'm_t',
       'steamID': 'STEAM_0:1:780956870',
-      'vac_banned': true,
       'hacks': '',
       'description': 'Норм игрок, хорошо слайдит',
       'country residence': '🇺🇿'
@@ -896,7 +876,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'muppi',
       'steamID': 'STEAM_0:0:8126414',
-      'vac_banned': true,
       'hacks': '',
       'description': 'Монтажер, дизайнер',
       'country residence': '🇷🇺'
@@ -950,7 +929,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'moonrock',
       'steamID': 'STEAM_0:0:614403768',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': 'aka slowmodoto, сын шлюхи',
       'country residence': '🇷🇺'
@@ -964,7 +942,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'moonrock',
       'steamID': 'STEAM_0:1:484332689',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': 'Twink 2',
       'proofs': 'https://fungun.net/ecd/report/19028/'
@@ -986,7 +963,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'MyDRJIk',
       'steamID': 'STEAM_0:1:621319242',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': 'К его аккаунту имеет доступ игрок kirito',
       'country residence': '🇷🇺'
@@ -1001,7 +977,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Neo',
       'steamID': 'STEAM_0:0:19302488',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': '',
       'proofs': 'https://t.me/database_proofs/19',
@@ -1016,7 +991,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Neo',
       'steamID': 'STEAM_0:1:444002779',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': 'Twink 2'
     },
@@ -1030,7 +1004,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Nicotine',
       'steamID': 'STEAM_0:1:612849428',
-      'vac_banned': true,
       'hacks': 'HPP, RAGE STRAFE',
       'description': 'Twink 1'
     },
@@ -1059,7 +1032,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'nightfall',
       'steamID': 'STEAM_0:0:639491749',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': '',
       'proofs:': 'https://t.me/database_proofs/41',
@@ -1068,7 +1040,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'noduck',
       'steamID': 'STEAM_0:1:615769855',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': '🇰🇿',
       'country residence': '🇷🇺'
@@ -1076,14 +1047,12 @@ window.DATABASE_JSON = {
     {
       'nickname': 'noduck',
       'steamID': 'STEAM_0:0:19265613',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, SCROLL HELPER',
       'description': 'Twink 1'
     },
     {
       'nickname': 'noobik',
       'steamID': 'STEAM_0:0:520001284',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, STRAFE HELPER',
       'description': '',
       'country residence': '🇷🇺'
@@ -1104,7 +1073,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Nste',
       'steamID': 'STEAM_0:0:197418397',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, NSTE RECORDER',
       'description': 'Twink 2'
     },
@@ -1123,7 +1091,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'numb',
       'steamID': 'STEAM_0:0:59967055',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': '',
       'proofs': 'https://t.me/database_proofs/29',
@@ -1195,7 +1162,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Брат Proffi (grafimberg)',
       'steamID': 'STEAM_0:1:161116957',
-      'vac_banned': true,
       'hacks': '',
       'description': 'Читак',
     },
@@ -1237,7 +1203,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'rongers',
       'steamID': 'STEAM_0:0:836161766',
-      'vac_banned': true,
       'hacks': '',
       'description': 'Латвиец, норм игрок',
       'country residence': '🇷🇺'
@@ -1324,14 +1289,12 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Sloyan',
       'steamID': 'STEAM_0:0:455457212',
-      'vac_banned': true,
       'hacks': 'BROKOLY, HPP, SCROLL HELPER, BLUE MONDAY, FURION',
       'description': 'Twink 3'
     },
     {
       'nickname': 'Sloyan',
       'steamID': 'STEAM_0:0:598479451',
-      'vac_banned': true,
       'hacks': 'BROKOLY, HPP, SCROLL HELPER, BLUE MONDAY, FURION',
       'description': 'Twink 4'
     },
@@ -1492,7 +1455,6 @@ window.DATABASE_JSON = {
     {
       'nickname': 'Amsoooo',
       'steamID': 'STEAM_0:1:534592974',
-      'vac_banned': true,
       'hacks': 'KNIFEBOT, STRAFE HELPER',
       'description': 'Фрик',
       'country residence': '🇷🇸',
@@ -1566,14 +1528,6 @@ window.DATABASE_JSON = {
       'description': 'Слабый ноющий скуф'
     },
     {
-      'nickname': 'Levi Ackerman',
-      'steamID': 'STEAM_2:0:581935421',
-      'vac_banned': true,
-      'hacks': '',
-      'description': 'Слабая тупица',
-      'country residence': '🇺🇿'
-    },
-    {
       'nickname': '',
       'steamID': 'STEAM_0:0:1293576',
       'hacks': 'RAGE STRAFE',
@@ -1622,7 +1576,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:16413963',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -1667,7 +1620,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:40793363',
-      'vac_banned': true,
       'hacks': 'HPP, KNIFEBOT',
       'description': ''
     },
@@ -1686,7 +1638,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:45192192',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY, RAGE STRAFE',
       'description': ''
     },
@@ -1742,7 +1693,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:57571964',
-      'vac_banned': true,
       'hacks': 'HPP, NSTE RECORDER',
       'description': ''
     },
@@ -1805,6 +1755,7 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:70104506',
       'hacks': 'SCROLL HELPER, STRAFE HELPER, HPP',
       'description': '',
+      'country residence': '🇬🇧'
     },
     {
       'nickname': '',
@@ -1851,14 +1802,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:109542491',
-      'vac_banned': true,
       'hacks': 'HPP',
-      'description': ''
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:461142453',
-      'hacks': 'HPP, BLUE MONDAY, NSTE RECORDER, FURION',
       'description': ''
     },
     {
@@ -1884,14 +1828,12 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:139904496',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:798619901',
-      'vac_banned': true,
       'hacks': 'FURION',
       'description':
           'Всосал 3-0, затем подрубил и снова всосал 3-0, пишет ЛЮТУЮ дичь в чат',
@@ -1952,21 +1894,13 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:0:802805302',
-      'hacks': 'FURION',
-      'description': ''
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:1:176057829',
-      'vac_banned': true,
       'hacks': 'HPP, NSTE RECORDER',
       'description': ''
     },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:180240316',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -1998,7 +1932,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:180884837',
-      'vac_banned': true,
       'hacks': 'HPP, NSTE RECORDER',
       'description': ''
     },
@@ -2041,7 +1974,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:646899981',
-      'vac_banned': true,
       'hacks': 'HPP, FURION',
       'description': ''
     },
@@ -2057,18 +1989,6 @@ window.DATABASE_JSON = {
       'hacks': 'FURION',
       'description': 'aka muslin_555'
     },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:883805608',
-      'hacks': 'FURION',
-      'description': 'Обоссаная плакса + бомж'
-    },
-    {
-      'nickname': '',
-      'steamID': '',
-      'hacks': 'KNIFEBOT, BACKTRACK',
-      'description': 'Обоссаная плакса + бомж'
-    }, 
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:964159151',
@@ -2140,7 +2060,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:242403255',
-      'vac_banned': true,
       'hacks': 'NSTE RECORDER',
       'description': ''
     },
@@ -2189,7 +2108,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:702915672',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY',
       'description': ''
     },
@@ -2202,7 +2120,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:955019938',
-      'hacks': 'HPP',
+      'hacks': 'HPPH',
       'description': ''
     },
     {
@@ -2228,7 +2146,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:443636268',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY',
       'description': ''
     },
@@ -2253,7 +2170,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:423800790',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -2272,7 +2188,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:454375739',
-      'vac_banned': true,
       'hacks': 'FURION, AUTO STRAFE',
       'description': ''
     },
@@ -2417,7 +2332,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:566162697',
-      'vac_banned': true,
       'hacks': 'HPP, KNIFEBOT, BACKTRACK, RAGE STRAFE',
       'description': ''
     },
@@ -2430,7 +2344,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:14282393',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -2439,18 +2352,6 @@ window.DATABASE_JSON = {
       'steamID': 'STEAM_0:1:656597345',
       'hacks': 'BLUE MONDAY',
       'description': ''
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:47790432',
-      'hacks': 'ENHANDED',
-      'description': ''
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:160808833',
-      'hacks': 'ENHANDED',
-      'description': 'Twink for STEAM_0:0:47790432'
     },
     {
       'nickname': '',
@@ -2479,7 +2380,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:584966718',
-      'vac_banned': true,
       'hacks': 'FURION',
       'description': ''
     },
@@ -2492,7 +2392,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:585427957',
-      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY',
       'description': ''
     },
@@ -2505,7 +2404,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:596601242',
-      'vac_banned': true,
       'hacks': 'HPP, BLUE MONDAY, BROKOLY',
       'description': ''
     },
@@ -2524,7 +2422,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:602846407',
-      'vac_banned': true,
       'hacks': 'HPP, RAGE STRAFE',
       'description': ''
     },
@@ -2563,7 +2460,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:193524650',
-      'vac_banned': true,
       'hacks': '',
       'description': 'Тупейший сын шлюхи с новорега'
     },
@@ -2636,7 +2532,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:639891820',
-      'vac_banned': true,
       'hacks': 'KNIFEBOT, NSTE RECORDER, HPP',
       'description': ''
     },
@@ -2655,7 +2550,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:645530477',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -2667,6 +2561,12 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
+      'steamID': 'STEAM_0:0:650563859',
+      'hacks': 'BLUE MONDAY',
+      'description': ''
+    },
+    {
+      'nickname': '',
       'steamID': 'STEAM_0:1:937425374',
       'hacks': 'BLUE MONDAY',
       'description': ''
@@ -2674,7 +2574,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:656741999',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -2695,6 +2594,12 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:691641958',
+      'hacks': 'HPP',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:695508966',
       'hacks': 'HPP',
       'description': ''
     },
@@ -2749,7 +2654,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:753796651',
-      'vac_banned': true,
       'hacks': 'FURION, RAGE STRAFE',
       'description': ''
     },
@@ -2767,14 +2671,7 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
-      'steamID': 'STEAM_0:0:509777604',
-      'hacks': 'ENHANDED',
-      'description': ''
-    },
-    {
-      'nickname': '',
       'steamID': 'STEAM_0:0:766950077',
-      'vac_banned': true,
       'hacks': 'RAGE STRAFE, HPP',
       'description': ''
     },
@@ -2799,7 +2696,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:774720727',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -2818,8 +2714,13 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:791702455',
-      'vac_banned': true,
       'hacks': 'HPP',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:796868637',
+      'hacks': 'BLUE MONDAY, RAGE STRAFE',
       'description': ''
     },
     {
@@ -2833,7 +2734,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:806290939',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -2846,7 +2746,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:818633035',
-      'vac_banned': true,
       'hacks': 'FURION',
       'description': ''
     },
@@ -2878,6 +2777,12 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:0:845593472',
       'hacks': 'HPP, SCROLL HELPER',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:846896461',
+      'hacks': 'HPP, BLUE MONDAY',
       'description': ''
     },
     {
@@ -2924,6 +2829,12 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
+      'steamID': 'STEAM_0:1:881733832',
+      'hacks': 'BLUE MONDAY',
+      'description': ''
+    },
+    {
+      'nickname': '',
       'steamID': 'STEAM_0:1:860745746',
       'hacks': 'SCROLL HELPER, KILABEEZ PREFIX, ENHANDED, BLUE MONDAY',
       'description': ''
@@ -2954,6 +2865,12 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
+      'steamID': 'STEAM_0:1:883805608',
+      'hacks': 'FURION',
+      'description': 'Обоссаная плакса + бомж'
+    },
+    {
+      'nickname': '',
       'steamID': 'STEAM_0:1:901734902',
       'hacks': 'HPP',
       'description': ''
@@ -2966,6 +2883,18 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
+      'steamID': 'STEAM_0:0:47790432',
+      'hacks': 'ENHANDED',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:160808833',
+      'hacks': 'ENHANDED',
+      'description': 'Twink for STEAM_0:0:47790432'
+    },
+    {
+      'nickname': '',
       'steamID': 'STEAM_0:1:912891327',
       'hacks': 'HPP',
       'description': ''
@@ -2974,6 +2903,12 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:914774145',
       'hacks': 'HPP',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:509777604',
+      'hacks': 'ENHANDED',
       'description': ''
     },
     {
@@ -3076,7 +3011,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:741765007',
-      'vac_banned': true,
       'hacks': 'FURION',
       'description': 'jumpbug'
     },
@@ -3107,6 +3041,12 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:415126385',
+      'hacks': 'HPP,  BLUE MONDAY, NSTE RECORDER, ENHANDED',
+      'description': 'Twink for STEAM_0:1:948298033'
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:1:410815711',
       'hacks': 'HPP,  BLUE MONDAY, NSTE RECORDER, ENHANDED',
       'description': 'Twink for STEAM_0:1:948298033'
     },
@@ -3143,7 +3083,6 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:78002471',
-      'vac_banned': true,
       'hacks': 'BLUE MONDAY',
       'description': 'aka skazka'
     },
@@ -3161,8 +3100,13 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
+      'steamID': 'STEAM_0:0:396708564',
+      'hacks': 'BLUE MONDAY, BROKOLY',
+      'description': 'Twink for STEAM_0:0:621445343'
+    },
+    {
+      'nickname': '',
       'steamID': 'STEAM_0:0:725985064',
-      'vac_banned': true,
       'hacks': 'HPP',
       'description': ''
     },
@@ -3208,6 +3152,14 @@ window.DATABASE_JSON = {
       'country residence': '🇷🇺'
     },
     {
+      'nickname': '2013',
+      'steamID': 'STEAM_0:0:511918102',
+      'hacks': 'SCROLL HELPER',
+      'description': 'Слабый псевдо-олд',
+      'country residence': '🇷🇺',
+      'proofs': 'https://fungun.net/ecd/report/61945/'
+    },
+    {
       'nickname': 'Oproverg',
       'steamID': 'STEAM_0:0:807309438',
       'hacks': '',
@@ -3239,646 +3191,6 @@ window.DATABASE_JSON = {
       'hacks': '',
       'description': 'Ноющая слабость',
       'country residence': '🇺🇦'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:803095179',
-      'vac_banned': true,
-      'hacks': 'EXLOADER, KNIFEBOT',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/172224/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:846289725',
-      'hacks': 'EXLOADER, FURION',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/167999/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:21924074',
-      'hacks': 'EXLOADER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/158487/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:881733832',
-      'hacks': 'BLUE MONDAY',
-      'description': 'Twink for STEAM_0:1:455039867',
-      'proofs': 'https://fungun.net/ecd/report/75055/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:846896461',
-      'hacks': 'BLUE MONDAY',
-      'description': 'Twink for STEAM_0:1:455039867',
-      'proofs': 'https://fungun.net/ecd/report/22339/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:577746557',
-      'hacks': 'EXLOADER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/161141/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:237007633',
-      'hacks': 'EXLOADER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/142189/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:511918102',
-      'hacks': 'SCROLL HELPER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/142200/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:60092736',
-      'hacks': 'STEAMID CHANGER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/142202/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:396708564',
-      'hacks': 'BLUE MONDAY',
-      'description': 'Twink for STEAM_0:0:621445343',
-      'proofs': 'https://fungun.net/ecd/report/140943/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:624490045',
-      'hacks': 'KNIFEBOT',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/145781/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:757166386',
-      'hacks': 'EXLOADER, HPP',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/149178/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:905916975',
-      'hacks': 'OXWARE',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/150672/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:739245620',
-      'hacks': 'OXWARE',
-      'description': 'Twink for STEAM_0:1:905916975',
-      'proofs': 'https://fungun.net/ecd/report/93155/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:414722482',
-      'hacks': 'OXWARE',
-      'description': 'Twink for STEAM_0:1:905916975',
-      'proofs': 'https://fungun.net/ecd/report/80310/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:650563859',
-      'hacks': 'BLUE MONDAY',
-      'description': 'Twink for STEAM_0:1:764774461',
-      'proofs': 'https://fungun.net/ecd/report/101294/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:410815711',
-      'hacks': 'BLUE MONDAY',
-      'description': 'Twink for STEAM_0:1:948298033',
-      'proofs': 'https://fungun.net/ecd/report/64949/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:639442809',
-      'vac_banned': true,
-      'hacks': 'EXLOADER, OXWARE',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/127175/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:630814423',
-      'hacks': 'HPP',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/128555/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:496804350',
-      'hacks': 'ECD дерьмо и на данный момент его в бд нет',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/132184/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:63455038',
-      'vac_banned': true,
-      'hacks': 'BASE HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/133144/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:209093440',
-      'hacks': 'EXLOADER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/133687/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:797650198',
-      'hacks': 'FURION, HPP, NSTE RECORDER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/137334/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:82896636',
-      'vac_banned': true,
-      'hacks': 'KNIFEBOT',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/141690/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:555318240',
-      'vac_banned': true,
-      'hacks': 'EXLOADER, HPP',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/100190/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:194542087',
-      'hacks': 'ECD дерьмо и на данный момент его в бд нет',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/109741/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:79366130',
-      'hacks': 'RURE HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/110062/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:796868637',
-      'hacks': 'EVOL HACK',
-      'description': 'Twink for STEAM_0:0:827211081',
-      'proofs': 'https://fungun.net/ecd/report/29229/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:923457235',
-      'hacks': 'BAD DEMOPLAYER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/113957/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:635241805',
-      'hacks': 'XASK HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/121871/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:457322816',
-      'hacks': 'EXLOADER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/91814/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:224101190',
-      'hacks': 'EXLOADER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/93509/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:23388902',
-      'hacks': 'ALTERNATIVE HACK',
-      'description': 'Twink for STEAM_0:1:660510714',
-      'proofs': 'https://fungun.net/ecd/report/78455/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:198495403',
-      'vac_banned': true,
-      'hacks': 'EXLOADER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/96611/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:112514769',
-      'vac_banned': true,
-      'hacks': 'MIDNIGHT HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/75935/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:104899790',
-      'hacks': 'KNIFEBOT',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/85948/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:420192731',
-      'hacks': 'ECD дерьмо и на данный момент его в бд нет',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/40791/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:175839930',
-      'hacks': 'ALTERNATIVE HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/46043/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:225324361',
-      'hacks': 'WALLHACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/33362/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:813163236',
-      'hacks': 'HPP',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/35770/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:39987796',
-      'hacks': 'WALLHACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/36455/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:38681663',
-      'hacks': 'ECD дерьмо и на данный момент его в бд нет',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/37122/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:763302180',
-      'hacks': 'FURION',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/37551/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:81023826',
-      'hacks': 'MIDNIGHT HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/21253/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:120187750',
-      'hacks': 'ECD дерьмо и на данный момент его в бд нет',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/21583/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:541816155',
-      'hacks': 'ECD дерьмо и на данный момент его в бд нет',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/24341/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:837352661',
-      'hacks': 'ECD дерьмо и на данный момент его в бд нет',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/24086/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:212002278',
-      'hacks': 'ALTERNATIVE HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/25369/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:738925868',
-      'hacks': 'ALTERNATIVE HACK',
-      'description': 'Twink for STEAM_0:1:212002278',
-      'proofs': 'https://fungun.net/ecd/report/18975/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:175096407',
-      'vac_banned': true,
-      'hacks': 'HPP',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/18641/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:714667588',
-      'hacks': 'ECD дерьмо и на данный момент его в бд нет',
-      'description': 'Twink for STEAM_0:0:605043271',
-      'proofs': 'https://fungun.net/ecd/report/19465/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:695508966',
-      'hacks': 'CRYSTAL HACK',
-      'description': 'Twink for STEAM_0:1:915282759',
-      'proofs': 'https://fungun.net/ecd/report/20105/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:116265917',
-      'hacks': 'ECD дерьмо и на данный момент его в бд нет',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/20132/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:549907432',
-      'vac_banned': true,
-      'hacks': 'KNIFEBOT',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/20533/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:528920621',
-      'hacks': 'ECD дерьмо и на данный момент его в бд нет',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/17019/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:226214139',
-      'hacks': 'OXWARE',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/17594/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:430633493',
-      'hacks': 'EXLOADER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/7811/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:1:612279191',
-      'vac_banned': true,
-      'hacks': 'HACK DRIVER INJECT, INTERIUM',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/10267/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:932299909',
-      'hacks': 'ECD дерьмо и на данный момент его в бд нет',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/14261/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:223400627',
-      'hacks': 'RHACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/16097/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'STEAM_0:0:630414991',
-      'hacks': 'ECD дерьмо и на данный момент его в бд нет',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/16117/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #1',
-      'hacks': 'FURION',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/166875/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #2',
-      'hacks': 'HPP',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/167404/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #3',
-      'hacks': 'BLUE MONDAY, FURION',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/167624/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #4',
-      'hacks': 'FURION',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/167986/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #5',
-      'hacks': 'FURION',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/167990/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #6',
-      'hacks': 'FURION, HPP, NSTE RECORDER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/164780/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #7',
-      'hacks': 'FURION',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/166750/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #8',
-      'hacks': 'FURION',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/166752/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #9',
-      'hacks': 'HPP',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/142479/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #10',
-      'hacks': 'FURION, HPP',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/147122/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #11',
-      'hacks': 'FURION, KNIFEBOT',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/150986/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #12',
-      'hacks': 'BLUE MONDAY',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/151535/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #13',
-      'hacks': 'HPP',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/152183/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #14',
-      'hacks': 'HPP',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/152515/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #15',
-      'hacks': 'FURION, HPP',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/154346/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #16',
-      'hacks': 'FURION, HPP',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/157124/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #17',
-      'hacks': 'WALLHACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/134457/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #18',
-      'hacks': 'CHEAT DRIVER LOADER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/140142/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #19',
-      'hacks': 'NAIM HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/102539/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #20',
-      'hacks': 'CRYSTAL HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/92885/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #21',
-      'hacks': 'CRYSTAL HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/92901/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #22',
-      'hacks': 'BLUE MONDAY',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/51742/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #23',
-      'hacks': 'STEAMID CHANGER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/29020/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #24',
-      'hacks': 'OXWARE',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/19369/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #25',
-      'hacks': 'ALTERNATIVE HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/16548/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #26',
-      'hacks': 'ALTERNATIVE HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/16551/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #27',
-      'hacks': 'ALTERNATIVE HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/16553/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #28',
-      'hacks': 'ALTERNATIVE HACK',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/16554/'
-    },
-    {
-      'nickname': '',
-      'steamID': 'ECD дерьмо не смог определить SteamID #29',
-      'hacks': 'EXLOADER',
-      'description': '',
-      'proofs': 'https://fungun.net/ecd/report/13499/'
     }
   ]
 };
