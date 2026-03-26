@@ -198,7 +198,8 @@ window.DATABASE_JSON = {
       'nickname': 'azure',
       'steamID': 'STEAM_0:1:114244707',
       'hacks': 'SCROLL HELPER, KILABEEZ PREFIX',
-      'description': '',
+      'description': '0',
+      'proofs': 'https://t.me/database_proofs/69',
       'country residence': '🇧🇾'
     },
     {
