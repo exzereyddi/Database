@@ -2171,7 +2171,7 @@ window.DATABASE_JSON = {
     {
       'nickname': '',
       'steamID': 'STEAM_0:0:955019938',
-      'hacks': 'HPPH',
+      'hacks': 'HPP',
       'description': ''
     },
     {
