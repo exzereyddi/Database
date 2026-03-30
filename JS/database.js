@@ -1677,6 +1677,12 @@ window.DATABASE_JSON = {
     },
     {
       'nickname': '',
+      'steamID': 'STEAM_0:0:598902534',
+      'hacks': 'BLUE MONDAY',
+      'description': ''
+    },
+    {
+      'nickname': '',
       'steamID': 'STEAM_0:0:45192192',
       'vac_banned': true,
       'hacks': 'BLUE MONDAY, RAGE STRAFE',
@@ -1742,6 +1748,12 @@ window.DATABASE_JSON = {
       'nickname': '',
       'steamID': 'STEAM_0:1:93027363',
       'hacks': 'SCROLL HELPER',
+      'description': ''
+    },
+    {
+      'nickname': '',
+      'steamID': 'STEAM_0:0:775660752',
+      'hacks': 'ENHANDED',
       'description': ''
     },
     {
@@ -3265,8 +3277,7 @@ window.DATABASE_JSON = {
       'hacks': '',
       'description': 'Ноющая слабость',
       'country residence': '🇺🇦'
-    }
-  ,
+    },
     {
       'nickname': '',
       'steamID': 'STEAM_0:1:6512855',
